@@ -1,0 +1,7 @@
+2026-10-15 16:29:13,268 | Added 20 exact + 20 near-duplicate demo rows
+2026-10-15 16:29:13,269 | Rows: 2040
+2026-10-15 16:29:13,271 | Exact duplicates: 20
+2026-10-15 16:29:14,916 | Candidate pairs: 20 out of 2039190 possible (100.00% comparisons avoided)
+2026-10-15 16:29:15,181 | Fuzzy duplicate pairs: 20
+2026-10-15 16:29:15,222 | Rows kept after cleaning: 2000
+2026-10-15 16:29:15,222 | Time per step (seconds): 1_exact=0.002, 2_tfidf_candidates=1.607, 3_verify=0.264

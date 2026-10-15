@@ -1,0 +1,6 @@
+format,avg_read_seconds,file_size_mb
+pickle,0.0065,0.322
+feather,0.00703,0.113
+csv,0.00922,0.119
+parquet,0.02846,0.057
+json,0.04318,0.375
