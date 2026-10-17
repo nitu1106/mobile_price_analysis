@@ -1,0 +1,5 @@
+plot_type,seconds
+Histogram,3.246
+Boxplot,1.153
+KDE,2.522
+Heatmap,0.995

@@ -1,0 +1,167 @@
+OVERALL KEY INSIGHTS
+====================
+1. 21 numeric columns analysed: 12 continuous, 3 discrete, 6 binary.
+2. Highly skewed columns (|skew| > 1): fc, three_g.
+3. Columns that pass the normality test: none.
+4. Columns with outliers: fc, px_height, three_g.
+5. Most skewed column: three_g (skew = 1.23).
+6. If a column is highly skewed, a log or square-root transform can make it more normal before modelling.
+
+
+COLUMN-BY-COLUMN INTERPRETATION
+===============================
+
+[battery_power]  (continuous)
+  - Values range from 501 to 1998; mean = 1238.52, median = 1226.00.
+  - Skewness = 0.03: the distribution is approximately symmetric.
+  - Kurtosis = -1.22: light tails (flat, few extremes).
+  - Outliers (IQR method): 0.
+  - Normality test failed: the data does NOT follow a normal distribution (typical for uniform or skewed data).
+
+[blue]  (binary (0/1))
+  - Values range from 0 to 1; mean = 0.49, median = 0.00.
+  - Mean and median differ noticeably, which points to a right-leaning shape.
+  - Skewness = 0.02: the distribution is approximately symmetric.
+  - Kurtosis = -2.00: light tails (flat, few extremes).
+  - Outliers (IQR method): 0.
+  - Binary feature: 49.5% of rows have the value 1.
+
+[clock_speed]  (continuous)
+  - Values range from 0.5 to 3; mean = 1.52, median = 1.50.
+  - Skewness = 0.18: the distribution is approximately symmetric.
+  - Kurtosis = -1.32: light tails (flat, few extremes).
+  - Outliers (IQR method): 0.
+  - Normality test failed: the data does NOT follow a normal distribution (typical for uniform or skewed data).
+
+[dual_sim]  (binary (0/1))
+  - Values range from 0 to 1; mean = 0.51, median = 1.00.
+  - Mean and median differ noticeably, which points to a left-leaning shape.
+  - Skewness = -0.04: the distribution is approximately symmetric.
+  - Kurtosis = -2.00: light tails (flat, few extremes).
+  - Outliers (IQR method): 0.
+  - Binary feature: 50.9% of rows have the value 1.
+
+[fc]  (continuous)
+  - Values range from 0 to 19; mean = 4.31, median = 3.00.
+  - Mean and median differ noticeably, which points to a right-leaning shape.
+  - Skewness = 1.02: the distribution is highly skewed to the right (positive skew).
+  - Kurtosis = 0.28: normal-like tails.
+  - Outliers (IQR method): 18.
+  - Normality test failed: the data does NOT follow a normal distribution.
+
+[four_g]  (binary (0/1))
+  - Values range from 0 to 1; mean = 0.52, median = 1.00.
+  - Mean and median differ noticeably, which points to a left-leaning shape.
+  - Skewness = -0.09: the distribution is approximately symmetric.
+  - Kurtosis = -1.99: light tails (flat, few extremes).
+  - Outliers (IQR method): 0.
+  - Binary feature: 52.1% of rows have the value 1.
+
+[int_memory]  (continuous)
+  - Values range from 2 to 64; mean = 32.05, median = 32.00.
+  - Skewness = 0.06: the distribution is approximately symmetric.
+  - Kurtosis = -1.22: light tails (flat, few extremes).
+  - Outliers (IQR method): 0.
+  - Normality test failed: the data does NOT follow a normal distribution (typical for uniform or skewed data).
+
+[m_dep]  (discrete)
+  - Values range from 0.1 to 1; mean = 0.50, median = 0.50.
+  - Skewness = 0.09: the distribution is approximately symmetric.
+  - Kurtosis = -1.27: light tails (flat, few extremes).
+  - Outliers (IQR method): 0.
+  - Normality test failed: the data does NOT follow a normal distribution (typical for uniform or skewed data).
+
+[mobile_wt]  (continuous)
+  - Values range from 80 to 200; mean = 140.25, median = 141.00.
+  - Skewness = 0.01: the distribution is approximately symmetric.
+  - Kurtosis = -1.21: light tails (flat, few extremes).
+  - Outliers (IQR method): 0.
+  - Normality test failed: the data does NOT follow a normal distribution (typical for uniform or skewed data).
+
+[n_cores]  (discrete)
+  - Values range from 1 to 8; mean = 4.52, median = 4.00.
+  - Mean and median differ noticeably, which points to a right-leaning shape.
+  - Skewness = 0.00: the distribution is approximately symmetric.
+  - Kurtosis = -1.23: light tails (flat, few extremes).
+  - Outliers (IQR method): 0.
+
+[pc]  (continuous)
+  - Values range from 0 to 20; mean = 9.92, median = 10.00.
+  - Skewness = 0.02: the distribution is approximately symmetric.
+  - Kurtosis = -1.17: light tails (flat, few extremes).
+  - Outliers (IQR method): 0.
+  - Normality test failed: the data does NOT follow a normal distribution (typical for uniform or skewed data).
+
+[px_height]  (continuous)
+  - Values range from 0 to 1960; mean = 645.11, median = 564.00.
+  - Mean and median differ noticeably, which points to a right-leaning shape.
+  - Skewness = 0.67: the distribution is moderately skewed to the right (positive skew).
+  - Kurtosis = -0.32: normal-like tails.
+  - Outliers (IQR method): 2.
+  - Normality test failed: the data does NOT follow a normal distribution.
+
+[px_width]  (continuous)
+  - Values range from 500 to 1998; mean = 1251.52, median = 1247.00.
+  - Skewness = 0.01: the distribution is approximately symmetric.
+  - Kurtosis = -1.19: light tails (flat, few extremes).
+  - Outliers (IQR method): 0.
+  - Normality test failed: the data does NOT follow a normal distribution (typical for uniform or skewed data).
+
+[ram]  (continuous)
+  - Values range from 256 to 3998; mean = 2124.21, median = 2146.50.
+  - Skewness = 0.01: the distribution is approximately symmetric.
+  - Kurtosis = -1.19: light tails (flat, few extremes).
+  - Outliers (IQR method): 0.
+  - Normality test failed: the data does NOT follow a normal distribution (typical for uniform or skewed data).
+
+[sc_h]  (continuous)
+  - Values range from 5 to 19; mean = 12.31, median = 12.00.
+  - Skewness = -0.10: the distribution is approximately symmetric.
+  - Kurtosis = -1.19: light tails (flat, few extremes).
+  - Outliers (IQR method): 0.
+  - Normality test failed: the data does NOT follow a normal distribution (typical for uniform or skewed data).
+
+[sc_w]  (continuous)
+  - Values range from 0 to 18; mean = 5.77, median = 5.00.
+  - Mean and median differ noticeably, which points to a right-leaning shape.
+  - Skewness = 0.63: the distribution is moderately skewed to the right (positive skew).
+  - Kurtosis = -0.39: normal-like tails.
+  - Outliers (IQR method): 0.
+  - Normality test failed: the data does NOT follow a normal distribution.
+
+[talk_time]  (continuous)
+  - Values range from 2 to 20; mean = 11.01, median = 11.00.
+  - Skewness = 0.01: the distribution is approximately symmetric.
+  - Kurtosis = -1.22: light tails (flat, few extremes).
+  - Outliers (IQR method): 0.
+  - Normality test failed: the data does NOT follow a normal distribution (typical for uniform or skewed data).
+
+[three_g]  (binary (0/1))
+  - Values range from 0 to 1; mean = 0.76, median = 1.00.
+  - Mean and median differ noticeably, which points to a left-leaning shape.
+  - Skewness = -1.23: the distribution is highly skewed to the left (negative skew).
+  - Kurtosis = -0.49: normal-like tails.
+  - Outliers (IQR method): 477.
+  - Binary feature: 76.1% of rows have the value 1.
+
+[touch_screen]  (binary (0/1))
+  - Values range from 0 to 1; mean = 0.50, median = 1.00.
+  - Mean and median differ noticeably, which points to a left-leaning shape.
+  - Skewness = -0.01: the distribution is approximately symmetric.
+  - Kurtosis = -2.00: light tails (flat, few extremes).
+  - Outliers (IQR method): 0.
+  - Binary feature: 50.3% of rows have the value 1.
+
+[wifi]  (binary (0/1))
+  - Values range from 0 to 1; mean = 0.51, median = 1.00.
+  - Mean and median differ noticeably, which points to a left-leaning shape.
+  - Skewness = -0.03: the distribution is approximately symmetric.
+  - Kurtosis = -2.00: light tails (flat, few extremes).
+  - Outliers (IQR method): 0.
+  - Binary feature: 50.7% of rows have the value 1.
+
+[price_range]  (discrete)
+  - Values range from 0 to 3; mean = 1.50, median = 1.50.
+  - Skewness = 0.00: the distribution is approximately symmetric.
+  - Kurtosis = -1.36: light tails (flat, few extremes).
+  - Outliers (IQR method): 0.
