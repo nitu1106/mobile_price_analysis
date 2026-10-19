@@ -1,0 +1,9 @@
+CORRELATION INSIGHTS
+====================
+1. 210 pairs tested; 8 are statistically significant (p < 0.00024).
+2. Very highly correlated pairs (|r| >= 0.8): 1
+     - ram & price_range: r = 0.917
+3. Multicollinearity (VIF > 10): price_range, ram
+   Moderate (VIF 5-10): none
+4. Feature groups found by clustering: [four_g, three_g]; [sc_h, sc_w]; [px_height, px_width]; [price_range, ram]; [fc, pc]
+5. If two features are almost the same (|r| very high), keep only one before building a model.

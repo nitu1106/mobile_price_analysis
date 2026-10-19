@@ -1,0 +1,13 @@
+column,lower_limit,upper_limit,iqr_outliers,iqr_percent,zscore_outliers,zscore_percent,both_methods_agree
+fc,-8.0,16.0,18,0.9,12,0.6,12
+px_height,-714.0,1944.0,2,0.1,0,0.0,0
+clock_speed,-1.55,4.45,0,0.0,0,0.0,0
+battery_power,-293.5,2760.5,0,0.0,0,0.0,0
+int_memory,-32.0,96.0,0,0.0,0,0.0,0
+mobile_wt,17.5,261.5,0,0.0,0,0.0,0
+pc,-10.0,30.0,0,0.0,0,0.0,0
+px_width,-262.625,2770.375,0,0.0,0,0.0,0
+ram,-1578.0,5850.0,0,0.0,0,0.0,0
+sc_h,-1.5,26.5,0,0.0,0,0.0,0
+sc_w,-8.5,19.5,0,0.0,0,0.0,0
+talk_time,-9.0,31.0,0,0.0,0,0.0,0

@@ -1,0 +1,10 @@
+KEY RELATIONSHIPS
+=================
+Pairs analysed: 210
+Strong (|r| >= 0.7): 1 | Moderate (0.4-0.7): 4 | Weak or very weak: 205
+
+- ram vs price_range: r = 0.917 (strong positive)
+- fc vs pc: r = 0.645 (moderate positive)
+- four_g vs three_g: r = 0.584 (moderate positive)
+- px_height vs px_width: r = 0.511 (moderate positive)
+- sc_h vs sc_w: r = 0.506 (moderate positive)

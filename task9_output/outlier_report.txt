@@ -1,0 +1,9 @@
+OUTLIER REPORT
+==============
+1. Columns checked: 12 (skipped 9 with few unique values).
+2. Columns containing outliers (IQR): 2; (Z-score): 1.
+3. Rows flagged: 20 (1.00% of the data).
+4. Most affected column: fc (18 IQR outliers, 0.9%).
+5. Removing outlier rows changes the largest column mean by 2.78% and the largest correlation by 0.018.
+6. Few rows are affected, so either removal or capping is safe. Check that the outliers are not valid extreme values (e.g. a real flagship phone).
+7. Disagreement between IQR and Z-score is normal: IQR is stricter for skewed data, Z-score for symmetric data.
