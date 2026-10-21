@@ -1,0 +1,5 @@
+method,flagged,precision,recall,f1
+Isolation Forest,40,0.9,0.6,0.72
+IQR,56,0.661,0.617,0.638
+Z-score,47,0.745,0.583,0.654
+LOF,40,0.975,0.65,0.78

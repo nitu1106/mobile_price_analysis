@@ -1,0 +1,22 @@
+IMPUTATION REPORT
+=================
+Setup: 2000 rows, 20 features, 10% of values hidden at random (MCAR).
+Average absolute correlation between features: 0.029
+
+method  NRMSE  std_change_%  KS_statistic  model_score  score_loss_vs_complete  seconds  average_rank
+  MICE 0.9478          4.40        0.0430       0.7965                  0.0815     0.29          2.25
+   KNN 1.0927          4.06        0.0414       0.7775                  0.1005     0.28          2.75
+  mode 1.3488          2.04        0.0620       0.7980                  0.0800     0.01          3.00
+median 1.1249          3.82        0.0479       0.7905                  0.0875     0.01          3.00
+  mean 1.0029          5.07        0.0539       0.7765                  0.1015     0.00          4.00
+
+BEST AVERAGE RANK: MICE
+RECOMMENDED METHOD: MICE
+
+WHY:
+- The features are almost uncorrelated, so KNN and MICE have little information to use. Simple methods (mean / median) perform about as well and are much faster.
+- Mean/median keep the column centre but shrink the spread (std). Lower std = distorted distribution.
+- Mode is a poor choice for continuous columns (many unique values) but fine for flags and categories.
+- MICE usually keeps the distribution best when features are related, but it is the slowest.
+- Final choice: MICE. Use median for skewed columns, mode for categorical/binary columns, and KNN/MICE when columns are related and the dataset is not huge.
+- Caveat: this test assumes values are missing completely at random. If missingness depends on other values (MAR/MNAR), prefer KNN or MICE and add a 'was_missing' indicator column.

@@ -1,0 +1,14 @@
+ANOMALY DETECTION REPORT
+========================
+1. Features used: 20. Rows: 2000. Expected anomaly rate: 2.0%.
+2. Tuning tried 48 combinations. Best: {'n_estimators': 100, 'max_samples': 1.0, 'max_features': 0.5}.
+   Average precision 0.740 (default settings: 0.349).
+3. On the real data 40 rows were flagged. Stability across seeds: 0.37.
+4. On the planted test the best method by F1 was: LOF.
+   Isolation Forest and LOF can find rows that are unusual only as a COMBINATION of values;
+   IQR and Z-score only check one column at a time.
+5. Domain check: 181 rows break a domain rule; Isolation Forest flagged 5 of them.
+   Impossible values (like a 0 cm screen) are DATA ERRORS: fix or remove them with a rule, even if the model does not flag them.
+   Stability is low (0.37): rows near the threshold change between random seeds. Use more trees, or average the scores of several runs, and trust only the highest-scoring rows.
+   Caveat: the settings were tuned on anomalies we planted ourselves, so they show which settings work best for that kind of anomaly, not a guarantee for real ones.
+6. IMPORTANT: 'contamination' forces the model to flag exactly that share of rows. Always inspect anomalies.csv before deleting: flagged does not always mean wrong.

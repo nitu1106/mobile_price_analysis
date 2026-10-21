@@ -1,0 +1,4 @@
+compared_with,method_flagged,also_flagged_by_IF,jaccard_overlap
+IQR,20,5,0.091
+Z-score,12,2,0.04
+LOF,40,20,0.333
