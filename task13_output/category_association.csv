@@ -1,0 +1,6 @@
+column,unique_values,chi2_p_value,cramers_v
+fc_cat,20,0.3087121659003324,0.101
+m_dep_cat,10,0.3741551390752426,0.069
+n_cores_cat,8,0.488293911066102,0.058
+ram_bin,30,0.0,0.74
+battery_power_bin,30,9.193007313343182e-11,0.182

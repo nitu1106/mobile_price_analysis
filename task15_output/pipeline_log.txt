@@ -1,0 +1,16 @@
+Loaded train.csv: 2000 rows x 21 columns, target = price_range
+
+[1 types]   numeric=14 binary=6 categorical=0 dropped=none
+[2 missing] 0 missing cells -> numeric: median; binary: most frequent; categorical: 'Missing'
+[3 anomaly] action = flag, flagged 32 rows
+[4 encode]  one-hot: [] | frequency: []
+[5 scale]   scaler = standard (no strong skew, few outliers) on 14 numeric columns
+[done]      training data -> 1600 rows x 21 columns in 0.28s
+
+Test data   -> 400 rows x 21 columns (same columns as training: True)
+
+Quick model check on the processed test data:
+  Logistic Regression  accuracy = 0.9700
+  Random Forest        accuracy = 0.8750
+
+Chunked processing: 2000 rows written in chunks of 500 -> chunked_processed.csv

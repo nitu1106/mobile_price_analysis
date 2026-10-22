@@ -1,0 +1,26 @@
+ENCODING REPORT
+===============
+Categorical columns: 5 (unique values: 20, 10, 8, 30, 30)
+
+                    encoding               model  mean_accuracy    std  features
+numeric only (no categories) Logistic Regression         0.3005 0.0143        15
+numeric only (no categories)       Random Forest         0.2845 0.0143        15
+                     one-hot Logistic Regression         0.9015 0.0142       113
+                     one-hot       Random Forest         0.7810 0.0336       113
+                   frequency Logistic Regression         0.3070 0.0216        20
+                   frequency       Random Forest         0.4505 0.0210        20
+                      target Logistic Regression         0.8640 0.0137        20
+                      target       Random Forest         0.8285 0.0228        20
+
+Best result: one-hot with Logistic Regression (accuracy 0.901).
+
+COMPARISON
+- One-hot: creates 98 columns (one per category). Easy to read ('city=Pune'), no assumptions about order, but the width explodes with many categories and most cells are 0.
+- Target:  creates only 5 columns and packs the signal into one number. Strong when categories relate to the target, but harder to explain and it MUST be learned out-of-fold (otherwise the model sees the answer = data leakage).
+- Frequency: creates 5 columns and ignores the target completely. It only helps when how COMMON a category is says something about the target. If categories are equally common, every value becomes the same number and the information is lost.
+
+WHEN TO USE WHICH
+- Few categories (< 10-15): one-hot.
+- Many categories (high cardinality) and a clear target relation: target encoding (with smoothing + cross-fitting).
+- Many categories and popularity matters (e.g. brand size): frequency encoding.
+- Linear models need one-hot or target encoding; tree models can also handle frequency/ordinal codes.

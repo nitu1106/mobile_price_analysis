@@ -1,0 +1,9 @@
+encoding,model,mean_accuracy,std,features
+numeric only (no categories),Logistic Regression,0.3005,0.0143,15
+numeric only (no categories),Random Forest,0.2845,0.0143,15
+one-hot,Logistic Regression,0.9015,0.0142,113
+one-hot,Random Forest,0.781,0.0336,113
+frequency,Logistic Regression,0.307,0.0216,20
+frequency,Random Forest,0.4505,0.021,20
+target,Logistic Regression,0.864,0.0137,20
+target,Random Forest,0.8285,0.0228,20

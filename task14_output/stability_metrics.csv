@@ -1,0 +1,6 @@
+scaler,avg_column_std,min_value,max_value,max_abs_value,avg_abs_skew,bulk_share_of_range,condition_number,has_nan_or_inf
+none (raw),124.222,0,3998,3998,0.212,0.599,10191.63612,FALSE
+standard,1,-1.79,3.38,3.38,0.212,0.599,2.186429531,FALSE
+min-max,0.348,0,1,1,0.212,0.599,14.60893713,FALSE
+robust,0.558,-1.02,2.67,2.67,0.212,0.599,4.33832545,FALSE
+power (Yeo-Johnson),1,-2.59,2.18,2.59,0.155,0.601,2.286460012,FALSE

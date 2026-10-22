@@ -1,0 +1,21 @@
+model,scaler,mean_score,std,seconds
+KNN (distance-based),none (raw),0.918,0.0083,5.34
+KNN (distance-based),standard,0.512,0.0173,0.06
+KNN (distance-based),min-max,0.4005,0.0173,0.06
+KNN (distance-based),robust,0.5465,0.0085,0.09
+KNN (distance-based),power (Yeo-Johnson),0.504,0.0178,0.38
+SVM (distance-based),none (raw),0.9515,0.0118,0.32
+SVM (distance-based),standard,0.877,0.0193,0.77
+SVM (distance-based),min-max,0.8585,0.0152,1.21
+SVM (distance-based),robust,0.8835,0.0171,0.8
+SVM (distance-based),power (Yeo-Johnson),0.8675,0.014,1.6
+Logistic Regression (linear),none (raw),0.728,0.0292,4.47
+Logistic Regression (linear),standard,0.961,0.003,0.06
+Logistic Regression (linear),min-max,0.9185,0.0124,0.14
+Logistic Regression (linear),robust,0.954,0.006,0.09
+Logistic Regression (linear),power (Yeo-Johnson),0.953,0.0083,0.3
+Random Forest (trees),none (raw),0.879,0.0181,1.18
+Random Forest (trees),standard,0.8815,0.0154,1.74
+Random Forest (trees),min-max,0.878,0.0176,1.74
+Random Forest (trees),robust,0.88,0.0161,1.48
+Random Forest (trees),power (Yeo-Johnson),0.8775,0.0172,1.87

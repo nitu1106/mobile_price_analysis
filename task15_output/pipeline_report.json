@@ -1,0 +1,73 @@
+{
+  "config": {
+    "max_missing_col": 0.5,
+    "id_unique_ratio": 0.95,
+    "numeric_impute": "median",
+    "anomaly_action": "flag",
+    "contamination": 0.02,
+    "encoding": "auto",
+    "onehot_max": 10,
+    "scaling": "auto",
+    "seed": 42
+  },
+  "dropped_columns": {},
+  "numeric": [
+    "battery_power",
+    "clock_speed",
+    "fc",
+    "int_memory",
+    "m_dep",
+    "mobile_wt",
+    "n_cores",
+    "pc",
+    "px_height",
+    "px_width",
+    "ram",
+    "sc_h",
+    "sc_w",
+    "talk_time"
+  ],
+  "binary": [
+    "blue",
+    "dual_sim",
+    "four_g",
+    "three_g",
+    "touch_screen",
+    "wifi"
+  ],
+  "categorical": [],
+  "scaler": "standard",
+  "output_columns": [
+    "battery_power",
+    "clock_speed",
+    "fc",
+    "int_memory",
+    "m_dep",
+    "mobile_wt",
+    "n_cores",
+    "pc",
+    "px_height",
+    "px_width",
+    "ram",
+    "sc_h",
+    "sc_w",
+    "talk_time",
+    "blue",
+    "dual_sim",
+    "four_g",
+    "three_g",
+    "touch_screen",
+    "wifi",
+    "is_anomaly"
+  ],
+  "log": [
+    "Loaded train.csv: 2000 rows x 21 columns, target = price_range\n",
+    "[1 types]   numeric=14 binary=6 categorical=0 dropped=none",
+    "[2 missing] 0 missing cells -> numeric: median; binary: most frequent; categorical: 'Missing'",
+    "[3 anomaly] action = flag, flagged 32 rows",
+    "[4 encode]  one-hot: [] | frequency: []",
+    "[5 scale]   scaler = standard (no strong skew, few outliers) on 14 numeric columns",
+    "[done]      training data -> 1600 rows x 21 columns in 0.28s",
+    "\nTest data   -> 400 rows x 21 columns (same columns as training: True)"
+  ]
+}

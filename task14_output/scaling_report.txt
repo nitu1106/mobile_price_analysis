@@ -1,0 +1,32 @@
+SCALING REPORT
+==============
+
+STABILITY
+- Raw data has a condition number of 10192; scaling lowers it to 2.2 - 14.6. A smaller number means safer calculations and faster convergence.
+- Largest |value| after scaling: min-max 1.0, standard 3.38, robust 2.67, power 2.59.
+- Average |skew|: raw 0.212, after power transform 0.155.
+
+BEST SCALER PER MODEL (from the cross-validation above)
+- KNN (distance-based): best = none (raw) (0.918); statistically similar: none (raw)
+- Logistic Regression (linear): best = standard (0.961); statistically similar: standard
+- Random Forest (trees): best = standard (0.881); statistically similar: standard, robust, none (raw), min-max, power (Yeo-Johnson)
+- SVM (distance-based): best = none (raw) (0.952); statistically similar: none (raw)
+
+EFFECT OF SCALING IN THIS DATASET (best scaler vs no scaling)
+- KNN (distance-based): no scaling is BETTER by 0.372.
+- Logistic Regression (linear): scaling HELPS (+0.233 with standard).
+- Random Forest (trees): scaling makes no meaningful difference.
+- SVM (distance-based): no scaling is BETTER by 0.068.
+  Why can raw data win? Distance-based models use the raw size of each column. If the most informative column (here probably 'ram') also has the biggest numbers, it dominates the distance - by luck, this is the right thing to do. Scaling gives all columns equal weight, including noisy ones. This is a quirk of this dataset, NOT a general rule: do not skip scaling just because of it, unless you have checked it like this.
+
+WHICH SCALING FOR WHICH KIND OF MODEL (general rules)
+- Distance-based (KNN, SVM, neural networks, K-means): scaling is normally needed, otherwise big-valued columns dominate.
+- Linear / logistic regression: scaling helps convergence and makes coefficients comparable (standard is the usual choice).
+- Tree models (Random Forest, XGBoost): scaling does NOT matter, they only compare values within one column.
+
+WHICH SCALER FOR WHICH DATA
+- Roughly bell-shaped, few outliers   -> standard
+- Need a fixed 0-1 range (e.g. neural nets) and no big outliers -> min-max
+- Outliers present                    -> robust (min-max and standard get pulled by outliers)
+- Strongly skewed columns             -> power transform (also fixes skew, but changes the shape and is less interpretable)
+- Always fit the scaler on TRAINING data only, then apply it to test data (use a Pipeline).
