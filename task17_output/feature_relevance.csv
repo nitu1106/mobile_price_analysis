@@ -1,0 +1,421 @@
+feature,group,mutual_info
+ram+battery_power,arithmetic,0.9424
+ram+px_width,arithmetic,0.8752
+ram_minus_mean_by_fc_level,cross-products,0.8559
+ram-three_g,arithmetic,0.853
+ram+three_g,arithmetic,0.8418
+ram-fc,arithmetic,0.8399
+ram+fc,arithmetic,0.8322
+ram-pc,arithmetic,0.8314
+ram+pc,arithmetic,0.8282
+ram_minus_mean_by_m_dep_cat,cross-products,0.8212
+ram_minus_mean_by_n_cores_cat,cross-products,0.8209
+ram_minus_mean_by_px_width_level,cross-products,0.8016
+ram_level_profile_emb2,embeddings,0.7382
+fc_minus_mean_by_ram_level,cross-products,0.7335
+ram_level_profile_emb0,embeddings,0.7318
+ram_level_profile_emb1,embeddings,0.7297
+ram*battery_power,arithmetic,0.7113
+ram*three_g,arithmetic,0.6468
+ram*px_width,arithmetic,0.6466
+ram/three_g,arithmetic,0.6444
+ram-px_width,arithmetic,0.4995
+ram-battery_power,arithmetic,0.4419
+svd_emb2,embeddings,0.3936
+ram/px_width,arithmetic,0.3647
+ram/battery_power,arithmetic,0.3561
+ram/pc,arithmetic,0.2907
+ram*pc,arithmetic,0.2615
+ram*fc,arithmetic,0.2129
+ram/fc,arithmetic,0.1907
+svd_emb1,embeddings,0.1726
+ram_level x px_width_level = q1 | q3,cross-products,0.1117
+ram_level x fc_level = q4 | q1,cross-products,0.1065
+ram_level x px_width_level = q4 | q4,cross-products,0.0929
+ram_level x n_cores_cat = q4 | n_cores=3,cross-products,0.0918
+ram_level x px_width_level = q1 | q1,cross-products,0.0908
+ram_level x px_width_level = q4 | q3,cross-products,0.083
+svd_emb0,embeddings,0.0824
+ram_level x fc_level = q1 | q1,cross-products,0.0767
+ram_level x fc_level = q1 | q3,cross-products,0.0767
+ram_level x fc_level = q2 | q1,cross-products,0.0752
+px_width+battery_power,arithmetic,0.074
+ram_level x px_width_level = q1 | q4,cross-products,0.0707
+ram_level x px_width_level = q1 | q2,cross-products,0.0669
+ram_level x fc_level = q4 | q4,cross-products,0.0654
+px_width*battery_power,arithmetic,0.062
+ram_level x fc_level = q4 | q3,cross-products,0.0593
+ram_level x px_width_level = q4 | q1,cross-products,0.0554
+ram_level x px_width_level = q2 | q1,cross-products,0.0511
+ram_level x px_width_level = q4 | q2,cross-products,0.0507
+ram_level x n_cores_cat = q1 | n_cores=6,cross-products,0.0504
+fc-battery_power,arithmetic,0.0491
+ram_level x px_width_level = q2 | q2,cross-products,0.0485
+ram_level x n_cores_cat = q1 | n_cores=2,cross-products,0.0485
+ram_level x m_dep_cat = q4 | m_dep=0.1,cross-products,0.0457
+ram_level x fc_level = q1 | q2,cross-products,0.0454
+ram_minus_mean_by_ram_level,cross-products,0.0453
+ram_level x m_dep_cat = q4 | m_dep=0.5,cross-products,0.0449
+ram_level x n_cores_cat = q2 | n_cores=5,cross-products,0.0437
+ram_level x fc_level = q1 | q4,cross-products,0.0434
+three_g*pc,arithmetic,0.0431
+ram_level x m_dep_cat = q4 | m_dep=0.2,cross-products,0.043
+ram_level x n_cores_cat = q1 | n_cores=8,cross-products,0.0429
+ram_level x m_dep_cat = q1 | m_dep=0.9,cross-products,0.042
+ram_level x n_cores_cat = q4 | n_cores=1,cross-products,0.0398
+ram_level x m_dep_cat = q2 | m_dep=0.2,cross-products,0.039
+ram_level x m_dep_cat = q4 | m_dep=0.9,cross-products,0.0382
+ram_level x n_cores_cat = q4 | n_cores=2,cross-products,0.0381
+ram_level x m_dep_cat = q1 | m_dep=0.5,cross-products,0.0378
+ram_level x px_width_level = q3 | q1,cross-products,0.0378
+ram_level x px_width_level = q2 | q3,cross-products,0.0366
+px_width_minus_mean_by_fc_level,cross-products,0.0363
+ram_level x n_cores_cat = q1 | n_cores=4,cross-products,0.0343
+pc-battery_power,arithmetic,0.0332
+three_g-battery_power,arithmetic,0.0325
+ram_level x fc_level = q2 | q3,cross-products,0.0323
+px_width_level x fc_level = q2 | q3,cross-products,0.0321
+ram_level x n_cores_cat = q1 | n_cores=3,cross-products,0.0317
+ram_level x fc_level = q4 | q2,cross-products,0.0315
+ram_level x n_cores_cat = q3 | n_cores=3,cross-products,0.0314
+ram_level x n_cores_cat = q4 | n_cores=7,cross-products,0.0314
+ram_level x m_dep_cat = q1 | m_dep=0.4,cross-products,0.0307
+ram_level x fc_level = q2 | q4,cross-products,0.0307
+ram_level x n_cores_cat = q1 | n_cores=7,cross-products,0.0304
+ram_level x m_dep_cat = q3 | m_dep=0.8,cross-products,0.03
+m_dep_cat x n_cores_cat = m_dep=0.8 | n_cores=8,cross-products,0.0296
+ram_level x n_cores_cat = q4 | n_cores=6,cross-products,0.0294
+px_width_level x m_dep_cat = q3 | m_dep=0.3,cross-products,0.029
+ram_level x fc_level = q3 | q1,cross-products,0.0283
+ram_level x m_dep_cat = q4 | m_dep=0.7,cross-products,0.0279
+ram_level x fc_level = q3 | q2,cross-products,0.0277
+ram_level x px_width_level = q3 | q3,cross-products,0.0276
+m_dep_cat x n_cores_cat = m_dep=0.9 | n_cores=2,cross-products,0.0273
+three_g+battery_power,arithmetic,0.0272
+fc_level x m_dep_cat = q4 | m_dep=0.4,cross-products,0.0269
+px_width_level x m_dep_cat = q3 | m_dep=0.6,cross-products,0.0269
+fc+battery_power,arithmetic,0.0268
+ram_level x px_width_level = q3 | q4,cross-products,0.0262
+ram_level x n_cores_cat = q3 | n_cores=7,cross-products,0.0261
+fc_level x n_cores_cat = q4 | n_cores=5,cross-products,0.0255
+ram_level x px_width_level = q2 | q4,cross-products,0.0252
+ram_level x m_dep_cat = q1 | m_dep=0.3,cross-products,0.0251
+px_width_level x n_cores_cat = q1 | n_cores=7,cross-products,0.0251
+ram_level x m_dep_cat = q1 | m_dep=0.8,cross-products,0.0249
+ram_level x n_cores_cat = q1 | n_cores=5,cross-products,0.0245
+pc+battery_power,arithmetic,0.0245
+ram_level x n_cores_cat = q3 | n_cores=5,cross-products,0.0239
+m_dep_cat x n_cores_cat = m_dep=0.7 | n_cores=3,cross-products,0.0234
+fc_level x m_dep_cat = q1 | m_dep=0.2,cross-products,0.0234
+px_width-three_g,arithmetic,0.0234
+px_width*three_g,arithmetic,0.023
+ram_level x m_dep_cat = q4 | m_dep=0.6,cross-products,0.0224
+ram_level x m_dep_cat = q4 | m_dep=0.3,cross-products,0.0224
+ram_level x n_cores_cat = q3 | n_cores=6,cross-products,0.0221
+ram_level x m_dep_cat = q4 | m_dep=1.0,cross-products,0.0221
+px_width_level_profile_emb1,embeddings,0.0218
+fc_level x n_cores_cat = q2 | n_cores=5,cross-products,0.0218
+fc_level x n_cores_cat = q2 | n_cores=6,cross-products,0.0217
+px_width_level x m_dep_cat = q4 | m_dep=0.1,cross-products,0.0215
+fc-pc,arithmetic,0.0209
+ram_level x m_dep_cat = q4 | m_dep=0.8,cross-products,0.0205
+px_width_level x n_cores_cat = q4 | n_cores=4,cross-products,0.0201
+fc_level x m_dep_cat = q4 | m_dep=0.5,cross-products,0.02
+ram_level x n_cores_cat = q3 | n_cores=4,cross-products,0.0199
+ram_level x m_dep_cat = q1 | m_dep=0.6,cross-products,0.0199
+fc_level x m_dep_cat = q4 | m_dep=0.3,cross-products,0.0197
+ram_level x n_cores_cat = q2 | n_cores=6,cross-products,0.0194
+px_width+three_g,arithmetic,0.0192
+ram_level x m_dep_cat = q2 | m_dep=1.0,cross-products,0.0192
+m_dep_cat_profile_emb0,embeddings,0.0191
+ram_level x m_dep_cat = q1 | m_dep=0.7,cross-products,0.0189
+px_width_level x m_dep_cat = q4 | m_dep=1.0,cross-products,0.0188
+ram_level x n_cores_cat = q2 | n_cores=8,cross-products,0.0184
+fc_level x n_cores_cat = q4 | n_cores=7,cross-products,0.0184
+ram_level x m_dep_cat = q2 | m_dep=0.1,cross-products,0.0183
+px_width_level x m_dep_cat = q1 | m_dep=0.9,cross-products,0.0182
+ram_level x n_cores_cat = q4 | n_cores=4,cross-products,0.0182
+px_width_level x n_cores_cat = q3 | n_cores=6,cross-products,0.0178
+fc_level x m_dep_cat = q4 | m_dep=0.2,cross-products,0.0174
+ram_level x m_dep_cat = q3 | m_dep=0.5,cross-products,0.0172
+px_width_level x m_dep_cat = q4 | m_dep=0.6,cross-products,0.0171
+px_width_level x fc_level = q3 | q2,cross-products,0.0171
+ram_level x n_cores_cat = q2 | n_cores=4,cross-products,0.0169
+ram_level x px_width_level = q3 | q2,cross-products,0.0168
+ram_level x n_cores_cat = q1 | n_cores=1,cross-products,0.0168
+fc_level x m_dep_cat = q2 | m_dep=0.6,cross-products,0.0168
+m_dep_cat x n_cores_cat = m_dep=0.3 | n_cores=2,cross-products,0.0165
+ram_level x m_dep_cat = q3 | m_dep=1.0,cross-products,0.0164
+ram_level x n_cores_cat = q2 | n_cores=3,cross-products,0.0164
+ram_level x n_cores_cat = q2 | n_cores=1,cross-products,0.0161
+px_width_level x n_cores_cat = q2 | n_cores=2,cross-products,0.0161
+fc_minus_mean_by_px_width_level,cross-products,0.0161
+m_dep_cat x n_cores_cat = m_dep=0.7 | n_cores=4,cross-products,0.0161
+px_width_level x m_dep_cat = q3 | m_dep=0.7,cross-products,0.0159
+ram_level x n_cores_cat = q4 | n_cores=8,cross-products,0.0156
+m_dep_cat x n_cores_cat = m_dep=0.5 | n_cores=7,cross-products,0.0155
+px_width_level x m_dep_cat = q1 | m_dep=0.1,cross-products,0.0152
+ram_level x m_dep_cat = q4 | m_dep=0.4,cross-products,0.0152
+ram_level x n_cores_cat = q3 | n_cores=2,cross-products,0.0151
+fc_level x m_dep_cat = q4 | m_dep=1.0,cross-products,0.0151
+fc_level x m_dep_cat = q2 | m_dep=0.1,cross-products,0.015
+px_width-pc,arithmetic,0.0149
+three_g*battery_power,arithmetic,0.0148
+px_width_level x fc_level = q4 | q4,cross-products,0.0147
+ram_level x n_cores_cat = q4 | n_cores=5,cross-products,0.0147
+m_dep_cat x n_cores_cat = m_dep=0.4 | n_cores=3,cross-products,0.0146
+fc*pc,arithmetic,0.0146
+m_dep_cat x n_cores_cat = m_dep=0.9 | n_cores=5,cross-products,0.0141
+fc_level x n_cores_cat = q4 | n_cores=8,cross-products,0.0138
+fc_level x m_dep_cat = q4 | m_dep=0.1,cross-products,0.0137
+ram_level x m_dep_cat = q3 | m_dep=0.7,cross-products,0.0136
+fc_level x m_dep_cat = q3 | m_dep=0.6,cross-products,0.0136
+px_width_level x m_dep_cat = q3 | m_dep=0.5,cross-products,0.0135
+m_dep_cat_profile_emb1,embeddings,0.0131
+fc/three_g,arithmetic,0.0131
+m_dep_cat x n_cores_cat = m_dep=0.7 | n_cores=6,cross-products,0.0131
+px_width_level x n_cores_cat = q4 | n_cores=5,cross-products,0.0128
+px_width_level x m_dep_cat = q3 | m_dep=1.0,cross-products,0.0126
+fc_minus_mean_by_n_cores_cat,cross-products,0.0126
+m_dep_cat x n_cores_cat = m_dep=0.7 | n_cores=8,cross-products,0.0123
+fc_level x m_dep_cat = q3 | m_dep=0.2,cross-products,0.0123
+px_width_level x n_cores_cat = q1 | n_cores=8,cross-products,0.0122
+ram_level x fc_level = q3 | q4,cross-products,0.0122
+ram_level x m_dep_cat = q1 | m_dep=0.1,cross-products,0.0121
+m_dep_cat x n_cores_cat = m_dep=0.2 | n_cores=5,cross-products,0.0119
+px_width/three_g,arithmetic,0.0115
+px_width_level x n_cores_cat = q4 | n_cores=3,cross-products,0.0115
+px_width_level x m_dep_cat = q1 | m_dep=1.0,cross-products,0.0114
+ram_level x fc_level = q3 | q3,cross-products,0.0113
+three_g-pc,arithmetic,0.0111
+px_width_level x n_cores_cat = q2 | n_cores=6,cross-products,0.011
+m_dep_cat x n_cores_cat = m_dep=0.1 | n_cores=7,cross-products,0.0109
+px_width_level x n_cores_cat = q2 | n_cores=3,cross-products,0.0107
+ram_level x m_dep_cat = q3 | m_dep=0.9,cross-products,0.0105
+px_width_level x fc_level = q3 | q4,cross-products,0.0104
+px_width_level x m_dep_cat = q4 | m_dep=0.3,cross-products,0.01
+px_width+fc,arithmetic,0.0099
+px_width_level x n_cores_cat = q3 | n_cores=4,cross-products,0.0098
+m_dep_cat x n_cores_cat = m_dep=0.6 | n_cores=8,cross-products,0.0096
+m_dep_cat x n_cores_cat = m_dep=0.3 | n_cores=7,cross-products,0.0094
+fc_level x n_cores_cat = q2 | n_cores=4,cross-products,0.0092
+fc_level x n_cores_cat = q3 | n_cores=8,cross-products,0.0092
+px_width_level x m_dep_cat = q3 | m_dep=0.2,cross-products,0.0092
+px_width_level x m_dep_cat = q2 | m_dep=1.0,cross-products,0.0091
+px_width_level x n_cores_cat = q3 | n_cores=3,cross-products,0.0089
+px_width_level x m_dep_cat = q2 | m_dep=0.3,cross-products,0.0088
+fc_level x m_dep_cat = q2 | m_dep=0.3,cross-products,0.0086
+px_width_level x n_cores_cat = q4 | n_cores=8,cross-products,0.0083
+m_dep_cat x n_cores_cat = m_dep=0.5 | n_cores=5,cross-products,0.0082
+fc_level x m_dep_cat = q4 | m_dep=0.6,cross-products,0.0081
+fc_level x m_dep_cat = q3 | m_dep=0.4,cross-products,0.0079
+fc_level x m_dep_cat = q4 | m_dep=0.9,cross-products,0.0078
+m_dep_cat x n_cores_cat = m_dep=0.8 | n_cores=2,cross-products,0.0077
+ram_level x m_dep_cat = q2 | m_dep=0.9,cross-products,0.0077
+px_width_minus_mean_by_m_dep_cat,cross-products,0.0076
+px_width/pc,arithmetic,0.0076
+m_dep_cat x n_cores_cat = m_dep=0.5 | n_cores=8,cross-products,0.0074
+three_g/battery_power,arithmetic,0.0071
+px_width*pc,arithmetic,0.0071
+px_width_level x m_dep_cat = q3 | m_dep=0.8,cross-products,0.0071
+m_dep_cat x n_cores_cat = m_dep=0.1 | n_cores=1,cross-products,0.007
+px_width_level x n_cores_cat = q1 | n_cores=5,cross-products,0.007
+px_width_level x m_dep_cat = q2 | m_dep=0.1,cross-products,0.007
+fc_level x n_cores_cat = q2 | n_cores=3,cross-products,0.0069
+ram_level x m_dep_cat = q3 | m_dep=0.6,cross-products,0.0069
+px_width_level_profile_emb2,embeddings,0.0068
+px_width_level x n_cores_cat = q2 | n_cores=5,cross-products,0.0066
+m_dep_cat x n_cores_cat = m_dep=0.6 | n_cores=2,cross-products,0.0063
+fc_level x n_cores_cat = q2 | n_cores=2,cross-products,0.0063
+fc_level x m_dep_cat = q1 | m_dep=0.3,cross-products,0.0062
+three_g+pc,arithmetic,0.0062
+px_width_level x m_dep_cat = q4 | m_dep=0.4,cross-products,0.006
+px_width_level x m_dep_cat = q2 | m_dep=0.9,cross-products,0.0059
+px_width_minus_mean_by_ram_level,cross-products,0.0055
+fc_level_profile_emb1,embeddings,0.0054
+px_width_level x fc_level = q2 | q2,cross-products,0.0053
+m_dep_cat x n_cores_cat = m_dep=0.7 | n_cores=2,cross-products,0.0053
+ram_level x m_dep_cat = q2 | m_dep=0.8,cross-products,0.005
+m_dep_cat x n_cores_cat = m_dep=0.2 | n_cores=4,cross-products,0.0049
+fc/battery_power,arithmetic,0.0049
+fc_level x m_dep_cat = q1 | m_dep=0.4,cross-products,0.0047
+px_width-fc,arithmetic,0.0047
+m_dep_cat x n_cores_cat = m_dep=0.4 | n_cores=1,cross-products,0.0047
+ram_level x m_dep_cat = q1 | m_dep=0.2,cross-products,0.0047
+px_width_level x fc_level = q3 | q1,cross-products,0.0045
+px_width_level x n_cores_cat = q1 | n_cores=6,cross-products,0.0044
+fc+pc,arithmetic,0.004
+px_width_level x m_dep_cat = q4 | m_dep=0.7,cross-products,0.0037
+m_dep_cat x n_cores_cat = m_dep=0.6 | n_cores=7,cross-products,0.0036
+px_width_minus_mean_by_n_cores_cat,cross-products,0.0036
+ram_level x m_dep_cat = q3 | m_dep=0.2,cross-products,0.0035
+ram_level x m_dep_cat = q2 | m_dep=0.5,cross-products,0.0035
+px_width_level x n_cores_cat = q4 | n_cores=7,cross-products,0.0035
+n_cores_cat_profile_emb2,embeddings,0.0032
+fc_level x n_cores_cat = q2 | n_cores=7,cross-products,0.003
+ram_level x n_cores_cat = q3 | n_cores=1,cross-products,0.003
+px_width_level x n_cores_cat = q2 | n_cores=1,cross-products,0.0027
+m_dep_cat x n_cores_cat = m_dep=0.7 | n_cores=1,cross-products,0.0027
+m_dep_cat x n_cores_cat = m_dep=0.6 | n_cores=5,cross-products,0.0027
+m_dep_cat x n_cores_cat = m_dep=0.1 | n_cores=6,cross-products,0.0024
+m_dep_cat x n_cores_cat = m_dep=0.5 | n_cores=2,cross-products,0.0019
+m_dep_cat x n_cores_cat = m_dep=0.2 | n_cores=1,cross-products,0.0019
+m_dep_cat x n_cores_cat = m_dep=0.6 | n_cores=1,cross-products,0.0017
+m_dep_cat x n_cores_cat = m_dep=0.2 | n_cores=7,cross-products,0.0017
+m_dep_cat x n_cores_cat = m_dep=0.8 | n_cores=1,cross-products,0.0012
+m_dep_cat x n_cores_cat = m_dep=0.8 | n_cores=4,cross-products,0.0011
+ram_level x n_cores_cat = q2 | n_cores=2,cross-products,0.001
+px_width_level x m_dep_cat = q2 | m_dep=0.5,cross-products,0.0008
+px_width_level x fc_level = q2 | q1,cross-products,0.0008
+m_dep_cat x n_cores_cat = m_dep=0.9 | n_cores=8,cross-products,0.0008
+m_dep_cat x n_cores_cat = m_dep=0.3 | n_cores=4,cross-products,0.0007
+px_width_level x n_cores_cat = q3 | n_cores=5,cross-products,0.0007
+px_width_level x n_cores_cat = q3 | n_cores=1,cross-products,0.0006
+fc_level x n_cores_cat = q4 | n_cores=3,cross-products,0.0005
+fc_level x m_dep_cat = q4 | m_dep=0.7,cross-products,0.0005
+ram_level x m_dep_cat = q2 | m_dep=0.3,cross-products,0.0004
+fc_level x m_dep_cat = q3 | m_dep=1.0,cross-products,0.0003
+px_width_level x n_cores_cat = q2 | n_cores=7,cross-products,0.0002
+ram_level x n_cores_cat = q3 | n_cores=8,cross-products,0.0001
+ram_level x m_dep_cat = q3 | m_dep=0.4,cross-products,0.0
+ram_level x m_dep_cat = q2 | m_dep=0.7,cross-products,0.0
+px_width_level x m_dep_cat = q2 | m_dep=0.6,cross-products,0.0
+px_width_level x m_dep_cat = q2 | m_dep=0.8,cross-products,0.0
+px_width_level x m_dep_cat = q4 | m_dep=0.2,cross-products,0.0
+px_width_level x m_dep_cat = q2 | m_dep=0.4,cross-products,0.0
+px_width_level x m_dep_cat = q3 | m_dep=0.9,cross-products,0.0
+px_width_level x m_dep_cat = q1 | m_dep=0.5,cross-products,0.0
+px_width_level x m_dep_cat = q1 | m_dep=0.4,cross-products,0.0
+ram_level x m_dep_cat = q2 | m_dep=0.4,cross-products,0.0
+px_width_level x fc_level = q4 | q2,cross-products,0.0
+n_cores_cat_profile_emb0,embeddings,0.0
+n_cores_cat_profile_emb1,embeddings,0.0
+fc_level_profile_emb2,embeddings,0.0
+ram_level x m_dep_cat = q3 | m_dep=0.1,cross-products,0.0
+ram_level x fc_level = q2 | q2,cross-products,0.0
+fc_level x m_dep_cat = q3 | m_dep=0.3,cross-products,0.0
+fc_level x m_dep_cat = q3 | m_dep=0.7,cross-products,0.0
+fc_level x m_dep_cat = q4 | m_dep=0.8,cross-products,0.0
+fc_level x m_dep_cat = q3 | m_dep=0.8,cross-products,0.0
+fc_level x m_dep_cat = q3 | m_dep=0.5,cross-products,0.0
+fc_level x m_dep_cat = q2 | m_dep=0.2,cross-products,0.0
+fc_level x m_dep_cat = q1 | m_dep=0.9,cross-products,0.0
+fc_level x m_dep_cat = q1 | m_dep=0.8,cross-products,0.0
+fc_level x m_dep_cat = q3 | m_dep=0.9,cross-products,0.0
+fc_level x m_dep_cat = q1 | m_dep=0.1,cross-products,0.0
+fc_level x m_dep_cat = q1 | m_dep=0.7,cross-products,0.0
+fc_level x m_dep_cat = q1 | m_dep=0.5,cross-products,0.0
+fc_level x m_dep_cat = q1 | m_dep=0.6,cross-products,0.0
+fc_level x m_dep_cat = q3 | m_dep=0.1,cross-products,0.0
+px_width_level x n_cores_cat = q3 | n_cores=2,cross-products,0.0
+px_width_level x n_cores_cat = q4 | n_cores=6,cross-products,0.0
+ram_level x m_dep_cat = q2 | m_dep=0.6,cross-products,0.0
+px_width_level x n_cores_cat = q1 | n_cores=1,cross-products,0.0
+px_width_level x m_dep_cat = q3 | m_dep=0.4,cross-products,0.0
+px_width_level x m_dep_cat = q1 | m_dep=0.6,cross-products,0.0
+ram_level x m_dep_cat = q1 | m_dep=1.0,cross-products,0.0
+px_width_level x m_dep_cat = q1 | m_dep=0.7,cross-products,0.0
+px_width_level x n_cores_cat = q1 | n_cores=3,cross-products,0.0
+px_width_level x n_cores_cat = q1 | n_cores=2,cross-products,0.0
+px_width_level x n_cores_cat = q3 | n_cores=7,cross-products,0.0
+px_width_level x n_cores_cat = q4 | n_cores=1,cross-products,0.0
+px_width_level x n_cores_cat = q1 | n_cores=4,cross-products,0.0
+px_width_level x n_cores_cat = q3 | n_cores=8,cross-products,0.0
+px_width_level x n_cores_cat = q4 | n_cores=2,cross-products,0.0
+px_width_level x n_cores_cat = q2 | n_cores=8,cross-products,0.0
+px_width_level x n_cores_cat = q2 | n_cores=4,cross-products,0.0
+px_width_level x fc_level = q1 | q2,cross-products,0.0
+px_width_level x fc_level = q2 | q4,cross-products,0.0
+px_width_level x fc_level = q1 | q4,cross-products,0.0
+px_width_level x fc_level = q3 | q3,cross-products,0.0
+px_width_level x fc_level = q1 | q3,cross-products,0.0
+px_width_level x fc_level = q1 | q1,cross-products,0.0
+px_width_level x fc_level = q4 | q3,cross-products,0.0
+px_width_level x fc_level = q4 | q1,cross-products,0.0
+m_dep_cat_profile_emb2,embeddings,0.0
+px_width_level_profile_emb0,embeddings,0.0
+fc_level_profile_emb0,embeddings,0.0
+px_width_level x m_dep_cat = q1 | m_dep=0.8,cross-products,0.0
+px_width_level x m_dep_cat = q1 | m_dep=0.2,cross-products,0.0
+px_width_level x m_dep_cat = q3 | m_dep=0.1,cross-products,0.0
+ram_level x n_cores_cat = q2 | n_cores=7,cross-products,0.0
+px_width_level x m_dep_cat = q1 | m_dep=0.3,cross-products,0.0
+px_width_level x m_dep_cat = q4 | m_dep=0.5,cross-products,0.0
+px_width_level x m_dep_cat = q4 | m_dep=0.8,cross-products,0.0
+px_width_level x m_dep_cat = q4 | m_dep=0.9,cross-products,0.0
+px_width_level x m_dep_cat = q2 | m_dep=0.2,cross-products,0.0
+px_width_level x m_dep_cat = q2 | m_dep=0.7,cross-products,0.0
+pc*battery_power,arithmetic,0.0
+fc_level x n_cores_cat = q1 | n_cores=7,cross-products,0.0
+fc_level x n_cores_cat = q1 | n_cores=4,cross-products,0.0
+fc_level x m_dep_cat = q2 | m_dep=0.8,cross-products,0.0
+fc_level x m_dep_cat = q1 | m_dep=1.0,cross-products,0.0
+fc_level x m_dep_cat = q2 | m_dep=0.7,cross-products,0.0
+fc_level x m_dep_cat = q2 | m_dep=0.5,cross-products,0.0
+fc_level x m_dep_cat = q2 | m_dep=0.4,cross-products,0.0
+fc_level x m_dep_cat = q2 | m_dep=0.9,cross-products,0.0
+ram_level x m_dep_cat = q3 | m_dep=0.3,cross-products,0.0
+m_dep_cat x n_cores_cat = m_dep=0.5 | n_cores=3,cross-products,0.0
+m_dep_cat x n_cores_cat = m_dep=0.2 | n_cores=3,cross-products,0.0
+m_dep_cat x n_cores_cat = m_dep=0.5 | n_cores=4,cross-products,0.0
+m_dep_cat x n_cores_cat = m_dep=0.9 | n_cores=1,cross-products,0.0
+m_dep_cat x n_cores_cat = m_dep=0.1 | n_cores=2,cross-products,0.0
+m_dep_cat x n_cores_cat = m_dep=0.9 | n_cores=6,cross-products,0.0
+m_dep_cat x n_cores_cat = m_dep=0.8 | n_cores=7,cross-products,0.0
+pc/battery_power,arithmetic,0.0
+fc_level x n_cores_cat = q2 | n_cores=1,cross-products,0.0
+fc_level x n_cores_cat = q4 | n_cores=2,cross-products,0.0
+fc_level x n_cores_cat = q3 | n_cores=7,cross-products,0.0
+fc_level x n_cores_cat = q2 | n_cores=8,cross-products,0.0
+m_dep_cat x n_cores_cat = m_dep=0.1 | n_cores=5,cross-products,0.0
+m_dep_cat x n_cores_cat = m_dep=0.1 | n_cores=4,cross-products,0.0
+m_dep_cat x n_cores_cat = m_dep=0.1 | n_cores=8,cross-products,0.0
+m_dep_cat x n_cores_cat = m_dep=0.1 | n_cores=3,cross-products,0.0
+fc_level x n_cores_cat = q4 | n_cores=1,cross-products,0.0
+fc_level x n_cores_cat = q4 | n_cores=6,cross-products,0.0
+fc_level x n_cores_cat = q1 | n_cores=3,cross-products,0.0
+fc_level x n_cores_cat = q1 | n_cores=8,cross-products,0.0
+fc_level x n_cores_cat = q1 | n_cores=5,cross-products,0.0
+fc_level x n_cores_cat = q1 | n_cores=6,cross-products,0.0
+fc_level x n_cores_cat = q1 | n_cores=1,cross-products,0.0
+fc_level x n_cores_cat = q1 | n_cores=2,cross-products,0.0
+fc_level x n_cores_cat = q3 | n_cores=4,cross-products,0.0
+fc_level x n_cores_cat = q3 | n_cores=2,cross-products,0.0
+fc_level x n_cores_cat = q3 | n_cores=3,cross-products,0.0
+fc_level x n_cores_cat = q3 | n_cores=1,cross-products,0.0
+fc_level x n_cores_cat = q3 | n_cores=5,cross-products,0.0
+fc_level x n_cores_cat = q4 | n_cores=4,cross-products,0.0
+fc_level x n_cores_cat = q3 | n_cores=6,cross-products,0.0
+m_dep_cat x n_cores_cat = m_dep=0.8 | n_cores=5,cross-products,0.0
+fc*battery_power,arithmetic,0.0
+fc/pc,arithmetic,0.0
+fc-three_g,arithmetic,0.0
+fc*three_g,arithmetic,0.0
+fc+three_g,arithmetic,0.0
+m_dep_cat x n_cores_cat = m_dep=0.7 | n_cores=7,cross-products,0.0
+m_dep_cat x n_cores_cat = m_dep=0.5 | n_cores=6,cross-products,0.0
+m_dep_cat x n_cores_cat = m_dep=0.9 | n_cores=7,cross-products,0.0
+m_dep_cat x n_cores_cat = m_dep=0.3 | n_cores=1,cross-products,0.0
+m_dep_cat x n_cores_cat = m_dep=0.4 | n_cores=4,cross-products,0.0
+m_dep_cat x n_cores_cat = m_dep=0.3 | n_cores=5,cross-products,0.0
+m_dep_cat x n_cores_cat = m_dep=0.8 | n_cores=3,cross-products,0.0
+m_dep_cat x n_cores_cat = m_dep=0.3 | n_cores=6,cross-products,0.0
+m_dep_cat x n_cores_cat = m_dep=0.3 | n_cores=8,cross-products,0.0
+m_dep_cat x n_cores_cat = m_dep=0.7 | n_cores=5,cross-products,0.0
+m_dep_cat x n_cores_cat = m_dep=0.4 | n_cores=5,cross-products,0.0
+m_dep_cat x n_cores_cat = m_dep=0.2 | n_cores=6,cross-products,0.0
+m_dep_cat x n_cores_cat = m_dep=0.6 | n_cores=4,cross-products,0.0
+m_dep_cat x n_cores_cat = m_dep=0.2 | n_cores=2,cross-products,0.0
+m_dep_cat x n_cores_cat = m_dep=0.6 | n_cores=3,cross-products,0.0
+m_dep_cat x n_cores_cat = m_dep=0.4 | n_cores=2,cross-products,0.0
+three_g/pc,arithmetic,0.0
+m_dep_cat x n_cores_cat = m_dep=0.2 | n_cores=8,cross-products,0.0
+m_dep_cat x n_cores_cat = m_dep=1.0 | n_cores=4,cross-products,0.0
+px_width-battery_power,arithmetic,0.0
+px_width+pc,arithmetic,0.0
+px_width*fc,arithmetic,0.0
+px_width/fc,arithmetic,0.0
+px_width_minus_mean_by_px_width_level,cross-products,0.0
+px_width/battery_power,arithmetic,0.0
+fc_minus_mean_by_fc_level,cross-products,0.0
+fc_minus_mean_by_m_dep_cat,cross-products,0.0

@@ -1,0 +1,6 @@
+method,features_after,train_score,cv_score,overfit_gap,fit_seconds
+none (all features),209,0.956,0.8705,0.0855,0.196
+PCA (95% variance),86,0.9361,0.882,0.0541,0.207
+SVD (30 components),30,0.9086,0.888,0.0206,0.171
+SelectKBest (k=30),30,0.8982,0.878,0.0203,0.059
+L1 selection,67,0.9276,0.8825,0.0451,2.89

@@ -1,0 +1,20 @@
+INTERACTION FEATURES REPORT
+===========================
+Original numeric features: 20. New: 420 (arithmetic 60, cross 342, embeddings 18).
+
+     feature_set  n_features  Random Forest  Random Forest change  Logistic Regression  Logistic Regression change
+   original only          20         0.8790                0.0000               0.9610                      0.0000
+    + arithmetic          80         0.8945                0.0155               0.9605                     -0.0005
++ cross-products         362         0.8290               -0.0500               0.8330                     -0.1280
+    + embeddings          38         0.8385               -0.0405               0.9205                     -0.0405
+       + all new         440         0.8865                0.0075               0.8530                     -0.1080
+
+READING THE RESULT
+- Random Forest: arithmetic +0.0155 (helps); cross-products -0.0500 (HURTS (too many columns -> overfitting)); embeddings -0.0405 (HURTS (too many columns -> overfitting)); all new +0.0075 (helps)
+- Logistic Regression: arithmetic -0.0005 (no real change); cross-products -0.1280 (HURTS (too many columns -> overfitting)); embeddings -0.0405 (HURTS (too many columns -> overfitting)); all new -0.1080 (HURTS (too many columns -> overfitting))
+- In theory interactions help LINEAR models most: a line cannot represent 'a and b together' by itself.
+- Tree models can find interactions on their own, so gains there are usually small.
+- More columns = more risk of overfitting. Keep only features with a clear score gain or high mutual information.
+- Embeddings (a few numbers per category) compress a category into a short vector. They replace a long one-hot encoding when there are many categories.
+- If the original features already explain the target almost perfectly, there is little room for improvement.
+- Note: the top columns were chosen with mutual information on ALL rows, which flatters the scores slightly. For a final model, do this selection inside the cross-validation.

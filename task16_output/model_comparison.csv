@@ -1,0 +1,6 @@
+feature_set,n_features,Random Forest,Random Forest change,Logistic Regression,Logistic Regression change
+original only,20,0.879,0.0,0.961,0.0
++ datetime,29,0.8695,-0.0095,0.956,-0.005
++ text,32,0.861,-0.018,0.9555,-0.0055
++ domain,29,0.878,-0.001,0.9535,-0.0075
++ all new,50,0.869,-0.01,0.942,-0.019

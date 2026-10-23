@@ -1,0 +1,35 @@
+POLYNOMIAL FEATURES REPORT
+==========================
+Base features: ['ram', 'px_width', 'fc', 'three_g', 'pc', 'battery_power']
+
+ degree  n_features  n_parameters  train_score  cv_score  cv_std  overfit_gap  fit_seconds
+      1           6            24       0.9022    0.8985  0.0196       0.0037        0.023
+      2          27           108       0.9066    0.8870  0.0220       0.0196        0.024
+      3          83           332       0.9314    0.8775  0.0213       0.0539        0.049
+      4         209           836       0.9560    0.8705  0.0227       0.0855        0.237
+      5         461          1844       0.9724    0.8540  0.0211       0.1184        3.837
+
+WHAT HAPPENS AS THE DEGREE GROWS
+- Features: 6 at degree 1 -> 461 at degree 5.
+- Train score goes from 0.902 to 0.972, cross-validated score from 0.898 to 0.854.
+- Overfitting gap (train - cv): +0.004 at degree 1, +0.118 at degree 5.
+- Training time per fit: 0.023s -> 3.837s.
+- Suggested degree (simplest within one standard error of the best): 1.
+
+DIMENSIONALITY REDUCTION AT DEGREE 4
+             method  features_after  train_score  cv_score  overfit_gap  fit_seconds
+none (all features)             209       0.9560    0.8705       0.0855        0.196
+ PCA (95% variance)              86       0.9361    0.8820       0.0541        0.207
+SVD (30 components)              30       0.9086    0.8880       0.0206        0.171
+ SelectKBest (k=30)              30       0.8982    0.8780       0.0203        0.059
+       L1 selection              67       0.9276    0.8825       0.0451        2.890
+
+- Without reduction: 209 features, cv 0.871, gap +0.086.
+- Best reduction: SVD (30 components) -> 30 features, cv 0.888, gap +0.021.
+
+SIMPLE EXPLANATION
+- Polynomial features let a linear model learn curves, but features grow very fast (C(n+d, d) - 1).
+- A high degree fits the training data better but the cross-validated score stops improving or drops: that is overfitting.
+- PCA and SVD compress the features into fewer new columns (hard to interpret). SelectKBest and L1 keep a subset of the ORIGINAL polynomial terms (easier to interpret).
+- If the true relationship is already almost linear (e.g. one feature explains the target well), higher degrees add little.
+- Note: the base features were chosen with mutual information on ALL rows, which flatters the scores slightly. For a final model, do this selection inside the cross-validation.

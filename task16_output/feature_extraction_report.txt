@@ -1,0 +1,22 @@
+FEATURE EXTRACTION REPORT
+=========================
+Original features: 20. New features created: 30 (datetime 9, text 12, domain 9).
+
+  feature_set  n_features  Random Forest  Random Forest change  Logistic Regression  Logistic Regression change
+original only          20         0.8790                0.0000               0.9610                      0.0000
+   + datetime          29         0.8695               -0.0095               0.9560                     -0.0050
+       + text          32         0.8610               -0.0180               0.9555                     -0.0055
+     + domain          29         0.8780               -0.0010               0.9535                     -0.0075
+    + all new          50         0.8690               -0.0100               0.9420                     -0.0190
+
+Features with a clear link to the target (mutual information > 0.05): 1
+  - ram_per_memory (domain): MI 0.2721
+- datetime features: best MI 0.018 -> NOT useful for prediction (no clear link to the target)
+- text features: best MI 0.021 -> NOT useful for prediction (no clear link to the target)
+- domain features: best MI 0.272 -> useful
+
+HOW TO DECIDE WHAT TO KEEP
+- Keep features with a clear link to the target (high mutual information) and a score gain.
+- Drop features that add columns but no gain; they only add noise and training time.
+- Features that are formulas of existing columns (ratios, products) mostly help LINEAR models; tree models can partly find them alone.
+- Random demo dates have no real link to price. Real dates (e.g. launch year) often matter because newer phones are better.
