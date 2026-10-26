@@ -1,0 +1,53 @@
+feature,origin,rf_importance,permutation_importance,permutation_std,mutual_info,avg_rank
+ram_minus_mean_by_fc_level,group stats,0.1102,0.0126,0.0078,0.8523,2.7
+ram,original,0.118,0.009,0.0075,0.8278,3.3
+ram_minus_mean_by_px_width_level,group stats,0.1233,0.0034,0.0079,0.7982,4.0
+ram*px_width,pairwise,0.0974,0.022,0.0066,0.6424,4.3
+battery_per_gram,domain,0.0373,0.0272,0.0072,0.055,8.0
+battery_power,original,0.0482,0.0468,0.0108,0.0267,9.3
+pixel_count,domain,0.0242,0.0098,0.0067,0.0285,11.3
+px_height,original,0.0198,0.006,0.0062,0.0339,12.0
+ram/px_width,pairwise,0.0294,-0.0008,0.0043,0.3745,12.7
+ram/fc,pairwise,0.0113,0.0002,0.0021,0.1947,15.0
+ram/three_g,pairwise,0.0587,-0.003,0.0055,0.6387,17.7
+ram*fc,pairwise,0.0088,-0.0012,0.003,0.1961,18.7
+ram*pc,pairwise,0.0191,-0.0022,0.0037,0.2708,18.7
+ram*three_g,pairwise,0.0519,-0.0034,0.0057,0.6472,19.0
+screen_area,domain,0.0059,0.0006,0.0013,0.0327,20.0
+cpu_power,domain,0.0074,0.0008,0.0016,0.0125,22.7
+clock_speed,original,0.005,0.0012,0.001,0.0177,23.0
+ram/pc,pairwise,0.0236,-0.0066,0.0031,0.2947,24.0
+ram_per_memory,domain,0.0226,-0.0048,0.0024,0.2631,24.0
+fc_minus_mean_by_ram_level,group stats,0.0062,-0.0032,0.0016,0.7424,25.0
+px_width/three_g,pairwise,0.0092,-0.0028,0.0031,0.0289,25.7
+px_width*pc,pairwise,0.0092,-0.0024,0.0022,0.022,26.0
+sc_h,original,0.0052,-0.0014,0.0027,0.0198,27.2
+px_width*three_g,pairwise,0.0087,-0.0034,0.0016,0.0373,27.7
+mobile_wt,original,0.008,-0.0022,0.0029,0.013,28.3
+px_width_minus_mean_by_ram_level,group stats,0.0136,-0.0022,0.0034,0.0051,28.3
+px_width*fc,pairwise,0.0057,-0.0024,0.002,0.0242,29.5
+pc,original,0.0041,-0.0008,0.0018,0.0152,29.7
+wifi,original,0.001,0.0,0.0,0.0215,29.7
+px_width,original,0.0133,-0.0052,0.0034,0.0216,30.0
+three_g,original,0.0015,0.0014,0.0009,0.0012,31.3
+talk_time,original,0.006,-0.0008,0.0013,0.0,31.8
+fc_minus_mean_by_px_width_level,group stats,0.0046,-0.0018,0.0011,0.009,32.2
+px_width_minus_mean_by_fc_level,group stats,0.0137,-0.006,0.0038,0.0112,32.3
+blue,original,0.0008,0.001,0.001,0.009,32.5
+px_width/pc,pairwise,0.0077,-0.002,0.0018,0.0,33.0
+fc/pc,pairwise,0.0044,-0.0024,0.0023,0.0137,34.2
+int_memory,original,0.0082,-0.0034,0.0022,0.0076,35.0
+px_width/fc,pairwise,0.0067,-0.004,0.0015,0.0107,35.7
+touch_screen,original,0.0011,-0.0016,0.002,0.0096,35.7
+n_cores,original,0.0044,-0.0014,0.0016,0.0,36.0
+fc,original,0.0023,-0.0002,0.0017,0.0,36.5
+fc/three_g,pairwise,0.0024,-0.0004,0.0012,0.0,36.5
+sc_w,original,0.0049,-0.0022,0.0011,0.0,37.2
+four_g,original,0.0009,0.0,0.0,0.0,37.3
+dual_sim,original,0.0009,0.0,0.0,0.0,37.3
+total_camera_mp,domain,0.0043,-0.002,0.0013,0.0,38.0
+fc*three_g,pairwise,0.0026,-0.0022,0.0026,0.0,40.5
+m_dep,original,0.0045,-0.0032,0.002,0.0,41.5
+fc*pc,pairwise,0.0037,-0.0024,0.0022,0.0,41.5
+three_g*pc,pairwise,0.0044,-0.0032,0.001,0.0,42.2
+three_g/pc,pairwise,0.0037,-0.0028,0.0027,0.0,42.5

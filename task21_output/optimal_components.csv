@@ -1,0 +1,6 @@
+rule,components_to_keep,of_total
+Cumulative variance >= 95%,18,18 / 20
+Kaiser rule (eigenvalue > 1),10,10 / 20
+Scree elbow,5,5 / 20
+Parallel analysis,6,6 / 20
+"Cross-validated score (accuracy, 1-SE rule)",18,18 / 20

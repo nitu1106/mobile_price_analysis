@@ -1,0 +1,21 @@
+PCA REPORT
+==========
+Features: 20. PC1 explains 8.4%, PC1-PC3 24.4%, PC1-PC18 96.2%.
+
+                                       rule  components_to_keep of_total
+                 Cumulative variance >= 95%                  18  18 / 20
+               Kaiser rule (eigenvalue > 1)                  10  10 / 20
+                                Scree elbow                   5   5 / 20
+                          Parallel analysis                   6   6 / 20
+Cross-validated score (accuracy, 1-SE rule)                  18  18 / 20
+
+- PCA can NOT compress this data well: 18 of 20 components are needed for 95%. The variance is spread almost evenly (PC1 = 8.4%; an even split is 5.0%), so the columns are mostly independent. PCA works best when columns are correlated.
+- With 18 components the model scores 0.9625; with all 20 original features 0.9610.
+
+HOW TO CHOOSE
+- To keep the INFORMATION in the data: use the cumulative-variance rule (18 components for 95%).
+- To keep the PREDICTIVE power: use the cross-validated rule. A component with little variance can still matter for the target, because PCA ignores the target.
+- Kaiser and parallel analysis are statistical rules about structure; Kaiser tends to keep too many, parallel analysis is stricter.
+- The scaler and PCA are fitted inside each cross-validation fold (no leakage).
+- Disadvantage: components are mixtures of original columns, so they are harder to explain (see loadings.csv).
+- Saved: pca_reduced_data.csv with 18 components.

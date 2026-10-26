@@ -1,0 +1,28 @@
+FEATURE EVALUATION REPORT
+=========================
+Original features: 20; new features tested: 32 (domain: 6, pairwise: 20, group stats: 6).
+Validation: 5-fold cross-validation repeated 2 times, same folds for every feature set.
+
+IMPROVEMENT OVER THE BASELINE
+- Logistic Regression: baseline accuracy 0.9612; best set '+ group stats' 0.9632 (+0.0020, p = 0.104, no clear difference; survives correction: no).
+- Random Forest: baseline accuracy 0.8780; best set 'top 15 selected (inside CV)' 0.9093 (+0.0313, p = 0.000, real improvement; survives correction: yes).
+- Gradient Boosting: baseline accuracy 0.9163; best set 'top 15 selected (inside CV)' 0.9245 (+0.0082, p = 0.024, real improvement; survives correction: no).
+
+3 combination(s) show a statistically real improvement (p < 0.05):
+  - Random Forest with '+ domain': +0.0125 (survives multiple-comparison correction: yes)
+  - Random Forest with 'top 15 selected (inside CV)': +0.0313 (survives multiple-comparison correction: yes)
+  - Gradient Boosting with 'top 15 selected (inside CV)': +0.0082 (survives multiple-comparison correction: no)
+  Careful: 15 comparisons were made, so about 0.8 'significant' results are expected by pure chance. With Bonferroni correction the p-value limit is 0.0033, not 0.05.
+
+FEATURE IMPORTANCE
+- 12 of the top 15 features are NEW; 3 are original.
+- Most important feature overall: ram_minus_mean_by_fc_level (group stats).
+- Permutation importance is the most trustworthy: it measures the score LOST on unseen data when a column is shuffled.
+- Random-forest importance can over-rate columns with many distinct values; mutual information ignores the model.
+
+HOW TO DECIDE
+- Keep a new feature only if it (a) lifts the cross-validated score with p < 0.05 or (b) ranks high on importance AND does not hurt.
+- Linear models (Logistic Regression) usually gain most from engineered features; tree models can find them alone.
+- Selecting the top-K inside the cross-validation (last feature set) is the honest way to test selection; choosing the top features on all data first and then cross-validating would flatter the score.
+- The folds of a repeated cross-validation overlap, so the t-test p-values are somewhat optimistic; treat them as a guide.
+- The importance ranking above comes from ONE train/test split, so treat it as descriptive, not as final proof.

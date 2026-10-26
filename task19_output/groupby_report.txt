@@ -1,0 +1,24 @@
+GROUP-BY REPORT
+===============
+Group keys: ['price_range', 'ram_level', 'px_width_level', 'm_dep_cat']. Aggregated columns: ['ram', 'px_width', 'fc', 'three_g', 'pc', 'battery_power'].
+Statistics per group: count, mean, median, var, std, min, max, q25, q75, q90, iqr, cv, value_range, pct_above_mean.
+
+KEY PATTERNS
+- 'ram' differs very strongly between groups of 'price_range' (eta squared 0.84, statistically significant).
+- 'battery_power' differs only weakly between groups of 'price_range' (eta squared 0.05, statistically significant).
+- 'dual_sim' differs only weakly between groups of 'ram_level' (eta squared 0.00, not significant).
+- 'talk_time' differs only weakly between groups of 'ram_level' (eta squared 0.00, not significant).
+- 'px_height' differs moderately between groups of 'px_width_level' (eta squared 0.24, statistically significant).
+- 'ram' differs only weakly between groups of 'px_width_level' (eta squared 0.00, not significant).
+- 'touch_screen' differs only weakly between groups of 'm_dep_cat' (eta squared 0.01, statistically significant).
+- 'dual_sim' differs only weakly between groups of 'm_dep_cat' (eta squared 0.01, not significant).
+
+HOW TO READ THE STATISTICS
+- mean vs median: if they differ, the group has skew or outliers.
+- variance / std: how spread out the group is; coefficient of variation compares spread across different scales.
+- quantiles (q25, q75, q90): the typical range of the group; IQR = q75 - q25.
+- eta squared: share of a feature's variation explained by the groups (0.01 small, 0.06 medium, 0.14 large).
+- ANOVA compares group means; Kruskal-Wallis compares ranks (safer for skewed data). Both significant = real difference.
+- A small p-value alone is not enough with many rows; look at eta squared for the SIZE of the difference.
+
+WARNING: group statistics made with the TARGET as key must never be used as model features (data leakage). This script builds features only from non-target keys.
