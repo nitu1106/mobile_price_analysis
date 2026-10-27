@@ -1,0 +1,5 @@
+method,clusters_found,noise_points,silhouette,ARI_vs_target,NMI_vs_target,purity_vs_target
+K-Means,2,0,0.0677,0.0,0.0008,0.264
+Gaussian Mixture,2,0,0.0494,-0.0006,0.0001,0.255
+Agglomerative,2,0,0.0776,-0.0003,0.0003,0.256
+DBSCAN,1,8,,-0.0,0.0007,0.251

@@ -1,0 +1,27 @@
+RFE REPORT
+==========
+Features: 20. Validation: 5-fold CV, RFE repeated inside every fold.
+
+              model  chosen_k  features_removed  accuracy_all_features  accuracy_chosen_k  accuracy_change  fit_ms_all  fit_ms_chosen  fit_speedup  predict_speedup  rfe_cost_s
+Logistic Regression         5                15                 0.9610             0.9715           0.0105        11.9            8.2         1.44             1.38        0.27
+         Linear SVM         4                16                 0.8510             0.8560           0.0050         8.7            3.8         2.31             1.35        0.13
+      Random Forest         4                16                 0.8815             0.9125           0.0310       294.6          284.4         1.04             0.87        3.32
+
+- Logistic Regression: 5 of 20 features give 0.9715 accuracy (all features: 0.9610); training is 1.44x faster.
+- Linear SVM: 4 of 20 features give 0.8560 accuracy (all features: 0.8510); training is 2.31x faster.
+- Random Forest: 4 of 20 features give 0.9125 accuracy (all features: 0.8815); training is 1.04x faster.
+
+Features chosen by ALL models: ['battery_power', 'px_height', 'px_width', 'ram']
+Agreement between models (Jaccard overlap of the chosen sets):
+                     Logistic Regression  Linear SVM  Random Forest
+Logistic Regression                  1.0         0.8            0.8
+Linear SVM                           0.8         1.0            1.0
+Random Forest                        0.8         1.0            1.0
+
+HOW TO READ THIS
+- RFE is a WRAPPER method: it uses a real model, so it respects feature interactions, but it is slower than simple filters.
+- Different models can pick different features: linear models rank by coefficient size, forests by importance.
+- Choosing the smallest k within one standard error of the best keeps the score and drops useless features.
+- Efficiency: RFE itself costs time (see rfe_cost_s). It pays off when the model is trained many times, when predictions must be fast, or when fewer features means cheaper data collection.
+- 'chosen in % of folds' near 100 = a stable choice; low values mean the feature is borderline.
+- Selection is redone inside each fold, so the scores are not flattered by seeing the test rows.

@@ -1,0 +1,21 @@
+feature,Logistic Regression rank,Logistic Regression chosen in % of folds,Linear SVM rank,Linear SVM chosen in % of folds,Random Forest rank,Random Forest chosen in % of folds,average_rank
+ram,1,100.0,1,100.0,1,100.0,1.0
+battery_power,2,100.0,2,100.0,2,100.0,2.0
+px_height,3,100.0,3,100.0,4,100.0,3.3
+px_width,4,100.0,4,100.0,3,100.0,3.7
+mobile_wt,5,100.0,5,0.0,5,0.0,5.0
+int_memory,6,0.0,6,0.0,6,0.0,6.0
+sc_h,7,0.0,7,0.0,9,0.0,7.7
+n_cores,9,0.0,9,0.0,14,0.0,10.7
+wifi,8,0.0,8,0.0,19,0.0,11.7
+talk_time,16,0.0,14,0.0,8,0.0,12.7
+clock_speed,13,0.0,16,0.0,11,0.0,13.3
+m_dep,11,0.0,17,0.0,13,0.0,13.7
+touch_screen,10,0.0,13,0.0,18,0.0,13.7
+dual_sim,12,0.0,15,0.0,15,0.0,14.0
+four_g,15,0.0,10,0.0,17,0.0,14.0
+fc,14,0.0,19,0.0,12,0.0,15.0
+pc,19,0.0,20,0.0,7,0.0,15.3
+sc_w,18,0.0,18,0.0,10,0.0,15.3
+blue,20,0.0,12,0.0,16,0.0,16.0
+three_g,17,0.0,11,0.0,20,0.0,16.0

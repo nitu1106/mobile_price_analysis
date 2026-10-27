@@ -1,0 +1,26 @@
+MUTUAL INFORMATION REPORT
+=========================
+Top features by MI: ram, px_width, fc, three_g, pc.
+
+accuracy with the top-8 features of each method:
+model                   Logistic/Ridge  Random Forest
+method                                               
+ANOVA F-test                    0.9660         0.8975
+Chi-square                      0.9635         0.8955
+Correlation                     0.9620         0.8940
+L1 (Lasso-style)                0.9645         0.8975
+MI + redundancy filter          0.9085         0.8630
+Mutual information              0.9605         0.9050
+Random forest                   0.9700         0.9015
+
+- Best method here (average over models): Random forest.
+- Agreement: the other methods share on average 66% of their top-8 features with MI. Where they agree, the features are safe to trust.
+- Correlation and the F-test only see STRAIGHT-LINE relationships; MI also sees curves (demo: x1 has correlation 0.01 but MI 1.418).
+- MI scores every feature ALONE. Two near-identical features both get a high score although the second adds nothing; the 'MI + redundancy filter' fixes this.
+- MI estimates on small samples are noisy, and it does not say whether the relation is positive or negative.
+
+INTERPRETABILITY vs PREDICTIVE POWER
+- A simple, explainable model on 5 features reaches 0.919; the black-box random forest on all features reaches 0.884 (difference -0.035).
+- If the gap is small, prefer the simple model: it is easier to explain, cheaper to run and needs fewer inputs.
+- Large gap -> the extra complexity buys real accuracy; then use the complex model and explain it with feature importances.
+- Selection was redone inside every fold, so the scores are not flattered by the test rows.

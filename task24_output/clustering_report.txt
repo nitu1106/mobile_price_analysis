@@ -1,0 +1,36 @@
+CLUSTERING FEATURES REPORT
+==========================
+Clusters: 2 (chosen by silhouette). K-Means silhouette = 0.068 -> weak cluster structure.
+
+          method  clusters_found  noise_points  silhouette  ARI_vs_target  NMI_vs_target  purity_vs_target
+         K-Means               2             0      0.0677         0.0000         0.0008             0.264
+Gaussian Mixture               2             0      0.0494        -0.0006         0.0001             0.255
+   Agglomerative               2             0      0.0776        -0.0003         0.0003             0.256
+          DBSCAN               1             8         NaN        -0.0000         0.0007             0.251
+
+- Match with the real classes (K-Means NMI = 0.001): only 2 clusters for 4 classes, so the clusters can at most split the classes into broad groups (e.g. low vs high). Purity is capped by this too; compare the methods with each other, not with 1.0.
+Silhouette of the TARGET classes: 0.010 without cluster features, 0.010 with K-Means label + distances (higher = classes are better separated).
+
+IMPACT ON MODELS
+                   feature_set               model  accuracy  change  p_value             verdict
+baseline (no cluster features) Logistic Regression    0.9612 -0.0000      NaN                   -
+baseline (no cluster features)       Random Forest    0.8778  0.0000      NaN                   -
+               + K-Means label Logistic Regression    0.9612 -0.0000   1.0000 no clear difference
+               + K-Means label       Random Forest    0.8768 -0.0010   0.8144 no clear difference
+           + K-Means distances Logistic Regression    0.9595 -0.0018   0.2419 no clear difference
+           + K-Means distances       Random Forest    0.8740 -0.0038   0.2637 no clear difference
+   + K-Means label + distances Logistic Regression    0.9590 -0.0023   0.1341 no clear difference
+   + K-Means label + distances       Random Forest    0.8672 -0.0106   0.0570 no clear difference
+      + Gaussian Mixture label Logistic Regression    0.9602 -0.0010   0.1679 no clear difference
+      + Gaussian Mixture label       Random Forest    0.8768 -0.0010   0.8252 no clear difference
+         + Agglomerative label Logistic Regression    0.9610 -0.0003   0.7263 no clear difference
+         + Agglomerative label       Random Forest    0.8790  0.0012   0.8143 no clear difference
+                + DBSCAN label Logistic Regression    0.9608 -0.0005   0.3434 no clear difference
+                + DBSCAN label       Random Forest    0.8705 -0.0072   0.0881 no clear difference
+
+- 12 comparisons were made, so a p-value must be below 0.0042 (Bonferroni) to count as a real change.
+- Cluster features help most when the groups capture structure a model cannot easily find itself, especially LINEAR models (a line cannot make 'group' decisions). Tree models can split the data on their own.
+- If the silhouette is low, the data has no natural groups, and cluster labels add little more than noise.
+- Clustering is learned on the training rows of each fold and only APPLIED to the test rows; the target is never used to cluster.
+- DBSCAN and Agglomerative cannot label new rows, so a new row takes the label of its nearest training row.
+- Scale the data before clustering; otherwise columns with big numbers decide the groups.

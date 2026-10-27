@@ -1,0 +1,8 @@
+,Mutual information,ANOVA F-test,Correlation,Random forest,L1 (Lasso-style),MI + redundancy filter,Chi-square
+Mutual information,1.0,0.62,0.75,0.62,0.62,0.75,0.62
+ANOVA F-test,0.62,1.0,0.62,0.75,1.0,0.62,0.88
+Correlation,0.75,0.62,1.0,0.75,0.62,0.5,0.75
+Random forest,0.62,0.75,0.75,1.0,0.75,0.75,0.75
+L1 (Lasso-style),0.62,1.0,0.62,0.75,1.0,0.62,0.88
+MI + redundancy filter,0.75,0.62,0.5,0.75,0.62,1.0,0.62
+Chi-square,0.62,0.88,0.75,0.75,0.88,0.62,1.0

@@ -1,0 +1,113 @@
+method,k,model,mean,std
+ANOVA F-test,1,Logistic/Ridge,0.7545,0.0354
+ANOVA F-test,1,Random Forest,0.6775,0.0235
+ANOVA F-test,2,Logistic/Ridge,0.8245,0.0316
+ANOVA F-test,2,Random Forest,0.7945,0.0404
+ANOVA F-test,3,Logistic/Ridge,0.8945,0.0222
+ANOVA F-test,3,Random Forest,0.871,0.026
+ANOVA F-test,5,Logistic/Ridge,0.963,0.0151
+ANOVA F-test,5,Random Forest,0.907,0.0151
+ANOVA F-test,8,Logistic/Ridge,0.966,0.0088
+ANOVA F-test,8,Random Forest,0.8975,0.0196
+ANOVA F-test,10,Logistic/Ridge,0.9655,0.0089
+ANOVA F-test,10,Random Forest,0.9035,0.0188
+ANOVA F-test,15,Logistic/Ridge,0.9645,0.0067
+ANOVA F-test,15,Random Forest,0.878,0.0239
+ANOVA F-test,20,Logistic/Ridge,0.961,0.0034
+ANOVA F-test,20,Random Forest,0.872,0.0241
+Chi-square,1,Logistic/Ridge,0.7545,0.0354
+Chi-square,1,Random Forest,0.6775,0.0235
+Chi-square,2,Logistic/Ridge,0.8245,0.0316
+Chi-square,2,Random Forest,0.7945,0.0404
+Chi-square,3,Logistic/Ridge,0.8945,0.0222
+Chi-square,3,Random Forest,0.871,0.026
+Chi-square,5,Logistic/Ridge,0.9555,0.0123
+Chi-square,5,Random Forest,0.9085,0.0153
+Chi-square,8,Logistic/Ridge,0.9635,0.008
+Chi-square,8,Random Forest,0.8955,0.0148
+Chi-square,10,Logistic/Ridge,0.9625,0.0077
+Chi-square,10,Random Forest,0.8975,0.0187
+Chi-square,15,Logistic/Ridge,0.9635,0.0086
+Chi-square,15,Random Forest,0.875,0.0202
+Chi-square,20,Logistic/Ridge,0.961,0.0034
+Chi-square,20,Random Forest,0.8745,0.0247
+Correlation,1,Logistic/Ridge,0.7545,0.0354
+Correlation,1,Random Forest,0.6775,0.0235
+Correlation,2,Logistic/Ridge,0.8245,0.0316
+Correlation,2,Random Forest,0.7945,0.0404
+Correlation,3,Logistic/Ridge,0.8945,0.0222
+Correlation,3,Random Forest,0.871,0.026
+Correlation,5,Logistic/Ridge,0.958,0.0114
+Correlation,5,Random Forest,0.9075,0.0164
+Correlation,8,Logistic/Ridge,0.962,0.0102
+Correlation,8,Random Forest,0.894,0.0227
+Correlation,10,Logistic/Ridge,0.9645,0.0111
+Correlation,10,Random Forest,0.899,0.0245
+Correlation,15,Logistic/Ridge,0.968,0.0069
+Correlation,15,Random Forest,0.8835,0.0247
+Correlation,20,Logistic/Ridge,0.961,0.0034
+Correlation,20,Random Forest,0.878,0.0192
+L1 (Lasso-style),1,Logistic/Ridge,0.7545,0.0354
+L1 (Lasso-style),1,Random Forest,0.6775,0.0235
+L1 (Lasso-style),2,Logistic/Ridge,0.8245,0.0316
+L1 (Lasso-style),2,Random Forest,0.7945,0.0404
+L1 (Lasso-style),3,Logistic/Ridge,0.893,0.0139
+L1 (Lasso-style),3,Random Forest,0.869,0.0165
+L1 (Lasso-style),5,Logistic/Ridge,0.9715,0.0088
+L1 (Lasso-style),5,Random Forest,0.913,0.0159
+L1 (Lasso-style),8,Logistic/Ridge,0.9645,0.0065
+L1 (Lasso-style),8,Random Forest,0.8975,0.0155
+L1 (Lasso-style),10,Logistic/Ridge,0.965,0.0105
+L1 (Lasso-style),10,Random Forest,0.8955,0.0187
+L1 (Lasso-style),15,Logistic/Ridge,0.962,0.0054
+L1 (Lasso-style),15,Random Forest,0.8685,0.018
+L1 (Lasso-style),20,Logistic/Ridge,0.961,0.0034
+L1 (Lasso-style),20,Random Forest,0.874,0.0244
+MI + redundancy filter,1,Logistic/Ridge,0.7545,0.0354
+MI + redundancy filter,1,Random Forest,0.6775,0.0235
+MI + redundancy filter,2,Logistic/Ridge,0.795,0.0362
+MI + redundancy filter,2,Random Forest,0.743,0.0646
+MI + redundancy filter,3,Logistic/Ridge,0.8545,0.053
+MI + redundancy filter,3,Random Forest,0.8195,0.0729
+MI + redundancy filter,5,Logistic/Ridge,0.888,0.0416
+MI + redundancy filter,5,Random Forest,0.8605,0.0467
+MI + redundancy filter,8,Logistic/Ridge,0.9085,0.0184
+MI + redundancy filter,8,Random Forest,0.863,0.0234
+MI + redundancy filter,10,Logistic/Ridge,0.906,0.017
+MI + redundancy filter,10,Random Forest,0.87,0.0212
+MI + redundancy filter,15,Logistic/Ridge,0.921,0.03
+MI + redundancy filter,15,Random Forest,0.8515,0.0322
+MI + redundancy filter,20,Logistic/Ridge,0.961,0.0034
+MI + redundancy filter,20,Random Forest,0.869,0.0215
+Mutual information,1,Logistic/Ridge,0.7545,0.0354
+Mutual information,1,Random Forest,0.6775,0.0235
+Mutual information,2,Logistic/Ridge,0.805,0.0362
+Mutual information,2,Random Forest,0.756,0.0552
+Mutual information,3,Logistic/Ridge,0.842,0.0412
+Mutual information,3,Random Forest,0.8065,0.0605
+Mutual information,5,Logistic/Ridge,0.919,0.0801
+Mutual information,5,Random Forest,0.8775,0.0644
+Mutual information,8,Logistic/Ridge,0.9605,0.0145
+Mutual information,8,Random Forest,0.905,0.0178
+Mutual information,10,Logistic/Ridge,0.9645,0.0133
+Mutual information,10,Random Forest,0.8985,0.0186
+Mutual information,15,Logistic/Ridge,0.968,0.0048
+Mutual information,15,Random Forest,0.8725,0.0234
+Mutual information,20,Logistic/Ridge,0.961,0.0034
+Mutual information,20,Random Forest,0.8705,0.0294
+Random forest,1,Logistic/Ridge,0.7545,0.0354
+Random forest,1,Random Forest,0.6775,0.0235
+Random forest,2,Logistic/Ridge,0.8245,0.0316
+Random forest,2,Random Forest,0.7945,0.0404
+Random forest,3,Logistic/Ridge,0.8945,0.0222
+Random forest,3,Random Forest,0.871,0.026
+Random forest,5,Logistic/Ridge,0.9715,0.0088
+Random forest,5,Random Forest,0.909,0.0188
+Random forest,8,Logistic/Ridge,0.97,0.0073
+Random forest,8,Random Forest,0.9015,0.0166
+Random forest,10,Logistic/Ridge,0.969,0.0096
+Random forest,10,Random Forest,0.894,0.0209
+Random forest,15,Logistic/Ridge,0.966,0.008
+Random forest,15,Random Forest,0.881,0.0307
+Random forest,20,Logistic/Ridge,0.961,0.0034
+Random forest,20,Random Forest,0.8725,0.0248

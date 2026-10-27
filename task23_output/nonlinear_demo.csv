@@ -1,0 +1,4 @@
+feature,abs_correlation,mutual_info
+x1 (curved: y = x1^2),0.01,1.418
+x2 (linear),0.147,0.121
+x3 (pure noise),0.073,0.005

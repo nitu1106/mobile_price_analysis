@@ -1,0 +1,15 @@
+feature_set,model,accuracy,std,change,p_value,verdict
+baseline (no cluster features),Logistic Regression,0.9612,0.005,-0.0,,-
+baseline (no cluster features),Random Forest,0.8778,0.0146,0.0,,-
++ K-Means label,Logistic Regression,0.9612,0.005,-0.0,1.0,no clear difference
++ K-Means label,Random Forest,0.8768,0.0168,-0.001,0.8144,no clear difference
++ K-Means distances,Logistic Regression,0.9595,0.0069,-0.0018,0.2419,no clear difference
++ K-Means distances,Random Forest,0.874,0.0141,-0.0038,0.2637,no clear difference
++ K-Means label + distances,Logistic Regression,0.959,0.0064,-0.0023,0.1341,no clear difference
++ K-Means label + distances,Random Forest,0.8672,0.0228,-0.0106,0.057,no clear difference
++ Gaussian Mixture label,Logistic Regression,0.9602,0.0056,-0.001,0.1679,no clear difference
++ Gaussian Mixture label,Random Forest,0.8768,0.0223,-0.001,0.8252,no clear difference
++ Agglomerative label,Logistic Regression,0.961,0.0045,-0.0003,0.7263,no clear difference
++ Agglomerative label,Random Forest,0.879,0.0218,0.0012,0.8143,no clear difference
++ DBSCAN label,Logistic Regression,0.9608,0.0045,-0.0005,0.3434,no clear difference
++ DBSCAN label,Random Forest,0.8705,0.0206,-0.0072,0.0881,no clear difference
