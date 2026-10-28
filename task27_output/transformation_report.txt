@@ -1,0 +1,28 @@
+LOG AND BOX-COX REPORT
+======================
+Skewed columns (|skew| > 0.5): 5.
+
+           column  skew_before  skew_log  skew_boxcox  boxcox_lambda best_transform  outliers_before  outliers_after_best  max_z_before  max_z_after_best  qq_r_before  qq_r_after_best
+demo_wait_minutes         9.50     -0.20         0.00           0.06        box-cox              110                   10         17.74              4.19         0.65             1.00
+      demo_income         3.53     -0.05         0.00           0.02        box-cox              153                   17         10.50              3.49         0.82             1.00
+               fc         1.02     -0.12        -0.03           0.08        box-cox               18                    0          3.38              1.97         0.94             0.96
+        px_height         0.67     -1.51        -0.11           0.46        box-cox                2                    0          2.96              2.59         0.97             1.00
+             sc_w         0.63     -0.60        -0.09           0.38        box-cox                0                    0          2.81              2.07         0.97             0.98
+
+WHAT HAPPENED
+- demo_wait_minutes: skewness +9.50 -> log -0.20, Box-Cox +0.00 (lambda 0.06, close to log). Best: box-cox. Outliers 110 -> 10, largest |z| 17.7 -> 4.2.
+- demo_income: skewness +3.53 -> log -0.05, Box-Cox +0.00 (lambda 0.02, close to log). Best: box-cox. Outliers 153 -> 17, largest |z| 10.5 -> 3.5.
+- fc: skewness +1.02 -> log -0.12, Box-Cox -0.03 (lambda 0.08, close to log). Best: box-cox. Outliers 18 -> 0, largest |z| 3.4 -> 2.0.
+- px_height: skewness +0.67 -> log -1.51, Box-Cox -0.11 (lambda 0.46, close to a square root). Best: box-cox. Outliers 2 -> 0, largest |z| 3.0 -> 2.6.
+- sc_w: skewness +0.63 -> log -0.60, Box-Cox -0.09 (lambda 0.38, close to a square root). Best: box-cox. Outliers 0 -> 0, largest |z| 2.8 -> 2.1.
+
+HOW TO INTERPRET
+- Skewness near 0 and a Q-Q line close to straight mean the column is now close to normal.
+- A normality test (normaltest_p in the csv) almost always rejects with thousands of rows, even for tiny deviations; judge by skewness and the Q-Q plot instead of the p-value alone.
+- Extreme values lose influence: the largest z-score and the outlier count drop because the long tail is pulled in.
+- Box-Cox picks the best power automatically, so it usually normalises at least as well as the fixed log; log is simpler to explain ('a 10% increase') and needs no fitted parameter.
+- Both need positive values, so a column with zeros or negatives is shifted first (shift_used in the csv).
+- A transformation cannot make a flat (uniform) or multi-peaked column bell-shaped. Skewness can improve only because a few outliers were pulled in, while the main body stays flat: always look at the histogram and the Q-Q plot, not only at the skewness number.
+- Log and Box-Cox only fix RIGHT skew. For left-skewed data reflect it first (max + 1 - x) or use Yeo-Johnson, which accepts any values.
+- Careful with the target relationship: correlation with the target can go up or down (see corr_with_target in the csv); check that the transformed version really helps your model.
+- For modelling, fit the lambda on TRAINING data only (sklearn PowerTransformer(method='box-cox') inside a Pipeline), and apply the SAME lambda to the test data. This script fits on all rows only to describe the effect.

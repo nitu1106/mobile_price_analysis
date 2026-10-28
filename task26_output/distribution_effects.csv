@@ -1,0 +1,5 @@
+scaling,avg_mean,avg_std,min_value,max_value,largest_column_range,smallest_column_range,avg_abs_skew,avg_kurtosis,outlier_share_%,max_abs_value,iqr_smallest_column,iqr_largest_column
+raw (no scaling),274.2401,124.1906,0.0,3998.0,3742.0,0.9,0.2122,-1.2178,1.2425,3998.0,0.0,1857.0
+MinMax,0.4765,0.3481,0.0,1.0,1.0,1.0,0.2122,-1.2178,1.2425,1.0,0.0,1.0
+Standard,0.0,1.0,-1.7869,3.3846,4.4177,2.0,0.2122,-1.2178,1.2425,3.3846,0.0,2.0809
+Robust,-0.0534,0.5583,-1.018,2.6667,3.1667,1.0,0.2122,-1.2178,1.2425,2.6667,0.0,1.0

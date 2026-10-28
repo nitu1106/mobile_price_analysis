@@ -1,0 +1,17 @@
+model,scaling,accuracy,std
+Logistic Regression,raw (no scaling),0.728,0.0292
+Logistic Regression,MinMax,0.9185,0.0124
+Logistic Regression,Standard,0.961,0.003
+Logistic Regression,Robust,0.954,0.006
+KNN,raw (no scaling),0.918,0.0083
+KNN,MinMax,0.4005,0.0173
+KNN,Standard,0.512,0.0173
+KNN,Robust,0.5465,0.0085
+SVM (RBF),raw (no scaling),0.9515,0.0118
+SVM (RBF),MinMax,0.8585,0.0152
+SVM (RBF),Standard,0.877,0.0193
+SVM (RBF),Robust,0.8835,0.0171
+Random Forest,raw (no scaling),0.879,0.0181
+Random Forest,MinMax,0.878,0.0176
+Random Forest,Standard,0.8815,0.0154
+Random Forest,Robust,0.88,0.0161

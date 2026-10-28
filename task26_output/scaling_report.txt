@@ -1,0 +1,34 @@
+SCALING COMPARISON REPORT
+=========================
+
+DISTRIBUTION
+- MinMax puts every column in [0, 1]; Standard gives mean 0 and std 1; Robust centres on the median and divides by the IQR.
+- Skewness is unchanged by all three (verified): linear scaling never fixes skew (use log / Box-Cox for that).
+- Width of the middle 50% of each column (IQR) after scaling, smallest to largest column: MinMax 0.000 - 1.000; Standard 0.000 - 2.081; Robust 0.000 - 1.000.
+  Robust makes the typical spread equal (exactly 1) in every column even when outliers exist; MinMax is stretched by outliers (one extreme value makes the typical data fill only a small part of [0, 1]).
+
+MODEL PERFORMANCE
+scaling              raw (no scaling)  MinMax  Standard  Robust
+model                                                          
+KNN                            0.9180  0.4005    0.5120  0.5465
+Logistic Regression            0.7280  0.9185    0.9610  0.9540
+Random Forest                  0.8790  0.8780    0.8815  0.8800
+SVM (RBF)                      0.9515  0.8585    0.8770  0.8835
+
+- KNN: raw data scores higher by 0.372. Often the most useful column is also the biggest one, so unscaled distance-based models focus on it by luck; do not rely on this in general.
+- Logistic Regression: scaling helps (+0.233, best = Standard).
+- Random Forest: scaling makes no meaningful difference (best Standard, spread 0.003).
+- SVM (RBF): raw data scores higher by 0.068. Often the most useful column is also the biggest one, so unscaled distance-based models focus on it by luck; do not rely on this in general.
+
+CONVERGENCE
+- Logistic Regression iterations: raw (no scaling) = 5000, MinMax = 71, Standard = 23, Robust = 25.
+- SGD epochs: raw (no scaling) = 159, MinMax = 83, Standard = 80, Robust = 80.
+- Gradient descent on 'raw (no scaling)' DIVERGED with learning rate 0.1: huge feature values make every step overshoot. Unscaled data needs a tiny learning rate (and many more steps).
+- Scaled data lets an optimiser take well-sized steps in every direction, so it converges in fewer iterations.
+
+WHICH SCALER?
+- Standard: default choice for roughly bell-shaped data (linear models, SVM, KNN, neural networks).
+- MinMax: needs a fixed 0-1 range (e.g. neural networks, image data) and no extreme outliers.
+- Robust: data with outliers.
+- Tree models (Random Forest) do not need scaling.
+- Always fit the scaler on TRAINING data only (done here with a Pipeline inside cross-validation).

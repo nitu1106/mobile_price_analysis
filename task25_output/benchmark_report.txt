@@ -1,0 +1,21 @@
+FEATURE-SELECTION BENCHMARK REPORT
+==================================
+Data: 2000 rows, 20 features. 5-fold CV, every method learned inside each fold. Models: Logistic Regression, KNN, Random Forest.
+
+            method  accuracy  f1_macro  avg_features  fit_ms  select_ms  total_ms  stability
+               RFE     0.924     0.924         4.333 114.561    405.403   519.964       1.00
+Mutual information     0.904     0.904         7.333  91.466    354.196   445.662       0.51
+  Clustering-based     0.791     0.791        17.000 102.140      3.171   105.311       0.88
+      All features     0.786     0.787        20.000 135.634      0.000   135.634        NaN
+               PCA     0.710     0.709        16.000 133.452      3.816   137.268        NaN
+
+RECOMMENDATION: RFE with about 4.3 of 20 features (0.9242 accuracy). Methods within 0.005 of the best score are treated as equally good; among those the one with the fewest features wins.
+Equally good methods: RFE.
+
+HOW TO READ THE METHODS
+- PCA: new columns, mixtures of all features (hard to explain); only works well when columns are correlated; ignores the target.
+- RFE: uses a real model, so it respects feature interactions; slower; the result depends on the model used to rank.
+- Mutual information: fast, finds curved relations; scores each feature alone (can keep two copies of the same information).
+- Clustering-based: groups similar FEATURES and keeps one per group, so it removes redundancy; it ignores the target, so it may keep a useless feature if it is the most central of its group.
+- Stability near 1 = the same features are chosen in every fold (trustworthy); low = unstable.
+- If 'All features' is as good as the best method, selection only brings speed and simplicity, not accuracy.

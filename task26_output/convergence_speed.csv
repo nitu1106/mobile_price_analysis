@@ -1,0 +1,5 @@
+scaling,logreg_iterations,logreg_converged,logreg_seconds,sgd_epochs,gd_diverged,gd_steps_to_converge,gd_final_loss,best_possible_loss
+raw (no scaling),5000,False,6.429,159,True,not reached in 500,,0.0407
+MinMax,71,True,0.125,83,False,not reached in 500,0.0492,0.0407
+Standard,23,True,0.0428,80,False,24,0.0407,0.0407
+Robust,25,True,0.0349,80,False,70,0.0407,0.0407

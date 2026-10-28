@@ -1,0 +1,16 @@
+method,model,chosen_k,accuracy,f1_macro,fit_ms,select_ms
+All features,Logistic Regression,20,0.961,0.9609,57.9181,0.0
+All features,KNN,20,0.512,0.5154,1.5294,0.0
+All features,Random Forest,20,0.884,0.8836,347.4541,0.0
+PCA,Logistic Regression,18,0.9625,0.9625,26.7881,3.8157
+PCA,KNN,15,0.534,0.5375,5.9579,3.8157
+PCA,Random Forest,15,0.6335,0.6277,367.6107,3.8157
+RFE,Logistic Regression,5,0.9715,0.9714,14.5723,405.4025
+RFE,KNN,4,0.8835,0.8839,2.8742,405.4025
+RFE,Random Forest,4,0.9175,0.9173,326.2374,405.4025
+Mutual information,Logistic Regression,10,0.9645,0.9646,15.5403,354.1956
+Mutual information,KNN,4,0.8435,0.843,2.3384,354.1956
+Mutual information,Random Forest,8,0.905,0.9048,256.5193,354.1956
+Clustering-based,Logistic Regression,18,0.9625,0.9625,18.1183,3.2804
+Clustering-based,KNN,15,0.5285,0.5299,5.9874,2.9516
+Clustering-based,Random Forest,18,0.8815,0.8812,282.3145,3.2804
