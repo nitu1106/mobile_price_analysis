@@ -1,0 +1,9 @@
+column,decision,reason,unique,min,skew,skew_without_outliers,kurtosis,outlier_share
+f0,boxcox,right-skewed (skew 4.2) and all values > 0,2000,0.038263199145926435,4.23,1.078,25.705,0.0855
+f1,minmax,flat / uniform shape (kurtosis -1.2),2000,0.019239516578783977,-0.066,-0.066,-1.223,0.0
+f2,keep,binary column,2,0.0,-0.028,-0.028,-1.999,0.0
+f3,drop,constant column,1,1.0,,,,0.0
+f4,standard,"roughly bell-shaped, few outliers",2000,42.816684898762816,0.06,0.068,-0.085,0.0085
+f5,yeojohnson,strongly skewed (skew 3.2) with negative values or left skew,2000,-18.806808037460538,3.226,1.041,16.727,0.0615
+f6,standard,few distinct values (discrete),6,0.0,-0.079,-0.079,-1.272,0.0
+f7,standard,"roughly bell-shaped, few outliers",2000,-4.389114584864837,-0.045,-0.012,0.14,0.008

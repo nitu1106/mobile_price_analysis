@@ -1,0 +1,25 @@
+features,n_bins,model,accuracy
+equal-width,3,Logistic Regression,0.721
+equal-width,3,Random Forest,0.7175
+equal-width,5,Logistic Regression,0.8205
+equal-width,5,Random Forest,0.807
+equal-width,10,Logistic Regression,0.8695
+equal-width,10,Random Forest,0.8015
+equal-width,20,Logistic Regression,0.811
+equal-width,20,Random Forest,0.77
+equal-frequency,3,Logistic Regression,0.7225
+equal-frequency,3,Random Forest,0.718
+equal-frequency,5,Logistic Regression,0.8285
+equal-frequency,5,Random Forest,0.8065
+equal-frequency,10,Logistic Regression,0.86
+equal-frequency,10,Random Forest,0.806
+equal-frequency,20,Logistic Regression,0.836
+equal-frequency,20,Random Forest,0.762
+k-means,3,Logistic Regression,0.706
+k-means,3,Random Forest,0.7125
+k-means,5,Logistic Regression,0.82
+k-means,5,Random Forest,0.802
+k-means,10,Logistic Regression,0.8625
+k-means,10,Random Forest,0.8035
+k-means,20,Logistic Regression,0.817
+k-means,20,Random Forest,0.763

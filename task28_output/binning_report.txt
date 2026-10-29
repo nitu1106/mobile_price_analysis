@@ -1,0 +1,44 @@
+FEATURE BINNING REPORT
+======================
+Continuous columns binned: 12; 5 bins each. Models: Logistic Regression, KNN, Decision Tree, Random Forest, Naive Bayes.
+
+BIN QUALITY
+         method  balance (1=even)  smallest_bin_%  columns_with_a_bin_under_1%  variance_kept_%  target_information_kept_%
+    equal-width              0.96           14.39                            0            95.58                      83.06
+equal-frequency              0.97           15.60                            2            94.78                      83.35
+        k-means              0.96           14.54                            0            95.66                      83.15
+
+AVERAGE ACCURACY OVER ALL MODELS
+features         raw numbers  equal-width  equal-frequency  k-means
+scenario                                                           
+original data          0.795        0.741            0.743    0.736
+strongly skewed        0.738        0.536            0.743    0.621
+with outliers          0.712        0.246            0.730    0.270
+
+WHAT WE LEARNED
+- original data: best binning = equal-frequency (0.743); raw numbers 0.795.
+- with outliers: best binning = equal-frequency (0.730); raw numbers 0.712.
+- strongly skewed: best binning = equal-frequency (0.743); raw numbers 0.738.
+
+BINNING vs RAW NUMBERS PER MODEL (original data, best binning method for each model)
+- Logistic Regression: raw 0.961, best binning (equal-frequency) 0.829 -> -0.132 (binning hurts).
+- KNN: raw 0.512, best binning (equal-width) 0.582 -> +0.070 (binning helps).
+- Decision Tree: raw 0.815, best binning (equal-width) 0.772 -> -0.043 (binning hurts).
+- Random Forest: raw 0.884, best binning (equal-width) 0.807 -> -0.077 (binning hurts).
+- Naive Bayes: raw 0.804, best binning (equal-frequency) 0.729 -> -0.075 (binning hurts).
+- with outliers: equal-width averages 0.246 versus equal-frequency 0.730 (most rows fall into one or two equal-width bins, so the information is lost).
+- strongly skewed: equal-width averages 0.536 versus equal-frequency 0.743 (most rows fall into one or two equal-width bins, so the information is lost).
+
+GENERAL RULES (check them against the numbers above)
+- Tree models already split numbers into groups themselves, so binning usually adds nothing for them.
+- A bin lets a LINEAR model learn a curve (each bin gets its own weight), and Naive Bayes needs categories or a distribution; but if the relation is already a straight line (as for ram here), binning only loses detail.
+- KNN can gain when raw columns have very different scales or outliers, because bins put every column on a similar footing.
+- Equal-width bins are easy to read ('1000 to 2000') but outliers or skew leave most rows in a few bins.
+- Equal-frequency bins are not affected by outliers or skew (they depend only on the ORDER of the values).
+- K-means bins follow natural groups of values: good on clustered data, less predictable cut points.
+
+INTERPRETABILITY
+- A binned column becomes a lookup table like the one saved in bins_of_ram.csv: bin -> number of rows -> average target. Anyone can read it without maths.
+- Price paid: binning throws away detail inside each bin (see variance_kept_%), and more bins = more columns and a risk of overfitting.
+- Rule of thumb: 5 to 10 bins; check the 'number of bins' chart for your data.
+- Cut points were learned inside every fold, so the scores are not flattered by the test rows.

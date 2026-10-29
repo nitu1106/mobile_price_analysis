@@ -1,0 +1,9 @@
+column,decision,reason,unique,min,skew,skew_without_outliers,kurtosis,outlier_share
+f0,boxcox,right-skewed (skew 3.7) and all values > 0,2000,0.8638258963774039,3.672,1.052,19.758,0.078
+f1,boxcox,right-skewed (skew 3.8) and all values > 0,2000,0.39378700645410514,3.836,1.08,23.224,0.0695
+f2,boxcox,right-skewed (skew 3.4) and all values > 0,2000,0.16851843780552453,3.413,1.082,19.173,0.0705
+f3,boxcox,right-skewed (skew 6.6) and all values > 0,2000,0.23144679251696929,6.613,1.095,103.521,0.085
+f4,boxcox,right-skewed (skew 3.0) and all values > 0,2000,0.28118261722277493,2.996,1.067,12.983,0.0755
+f5,boxcox,right-skewed (skew 7.3) and all values > 0,2000,0.08470253257727507,7.256,1.071,111.031,0.071
+f6,boxcox,right-skewed (skew 4.2) and all values > 0,2000,0.20020652629476257,4.182,1.079,29.07,0.069
+f7,boxcox,right-skewed (skew 3.8) and all values > 0,2000,0.11119664678051763,3.799,1.075,23.082,0.0795

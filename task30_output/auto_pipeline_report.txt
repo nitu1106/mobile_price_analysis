@@ -1,0 +1,52 @@
+AUTO TRANSFORMATION PIPELINE REPORT
+===================================
+
+AVERAGE ACCURACY OVER 3 MODELS
+preprocessing        no scaling  standard scaling for all  AutoTransformer
+dataset                                                                   
+synthetic: mixed          0.676                     0.802            0.831
+synthetic: outliers       0.815                     0.808            0.810
+synthetic: skewed         0.824                     0.812            0.847
+your data                 0.866                     0.783            0.674
+
+- synthetic: mixed: best = AutoTransformer (0.831); AutoTransformer 0.831 vs standard-for-all 0.802 vs no scaling 0.676.
+- synthetic: outliers: best = no scaling (0.815); AutoTransformer 0.810 vs standard-for-all 0.808 vs no scaling 0.815.
+- synthetic: skewed: best = AutoTransformer (0.847); AutoTransformer 0.847 vs standard-for-all 0.811 vs no scaling 0.824.
+- your data: best = no scaling (0.866); AutoTransformer 0.674 vs standard-for-all 0.783 vs no scaling 0.866.
+
+PER MODEL
+preprocessing                            no scaling  standard scaling for all  AutoTransformer
+dataset             model                                                                     
+synthetic: mixed    KNN                       0.592                     0.763            0.804
+                    Logistic Regression       0.821                     0.822            0.845
+                    SVM (RBF)                 0.614                     0.822            0.846
+synthetic: outliers KNN                       0.784                     0.767            0.770
+                    Logistic Regression       0.835                     0.836            0.836
+                    SVM (RBF)                 0.824                     0.823            0.825
+synthetic: skewed   KNN                       0.794                     0.770            0.816
+                    Logistic Regression       0.834                     0.834            0.864
+                    SVM (RBF)                 0.844                     0.830            0.860
+your data           KNN                       0.918                     0.512            0.348
+                    Logistic Regression       0.728                     0.961            0.919
+                    SVM (RBF)                 0.952                     0.877            0.756
+
+- your data: AutoTransformer is NOT the best here (no scaling wins by 0.192); biggest loss: KNN. Possible reason: when one large-valued column carries most of the signal (like ram in the phone data), unscaled distance-based models focus on it by luck, while any scaler gives the many noisy columns an equal vote (see Tasks 14, 26 and 29). Tree models are unaffected. This is a property of the data, not proof that scaling is wrong; compare per model before choosing.
+
+REPRODUCIBILITY
+- Fit twice on the same data: same plan = True, same numbers = True. Fitted pipeline saved and reloaded: same numbers = True.
+- Plan fingerprint 50f97f2c9d90; settings, library versions and the full plan are in pipeline_metadata.json.
+
+EFFICIENCY
+  rows  fit_all_rows_s  fit_2000_row_sample_s  transform_s  rows_per_second  sample_plan_identical
+  2000           0.088                  0.074        0.013           155771                   True
+ 20000           0.176                  0.089        0.029           688115                  False
+100000           0.910                  0.092        0.121           825939                  False
+- Columns with the same decision are transformed together, so time grows about linearly with the number of rows.
+- Learning the plan from a sample is faster and (here) gives the same plan; always check 'sample_plan_identical' on your own data.
+
+HOW TO READ THIS
+- If AutoTransformer is about equal to standard scaling on a dataset, the data was already well behaved; the pipeline did no harm.
+- It should gain most where columns are skewed or have outliers, because there a single fixed scaler is the wrong choice.
+- The thresholds (skew 1.0, outliers 2%, ...) are settings: change them and check the plan table; every decision has a written reason.
+- Everything is learned on the training rows only when used inside a Pipeline (as in the cross-validation above), so there is no leakage.
+- Limits: it looks at columns one at a time (not at relations between columns) and only handles numeric data; combine it with an encoder for categories (Task 15).

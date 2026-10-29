@@ -1,0 +1,8 @@
+model,best_setup,accuracy,raw,gain_vs_raw,equally_good_setups
+"K-Means (clusters vs classes, NMI)",raw (no scaling),0.5049,0.5049,0.0,raw (no scaling)
+KNN (cosine),raw (no scaling),0.555,0.555,0.0,raw (no scaling); L1 norm on raw; Max norm on raw; L2 norm on raw
+KNN (euclidean),raw (no scaling),0.918,0.918,0.0,raw (no scaling)
+KNN (manhattan),raw (no scaling),0.9215,0.9215,0.0,raw (no scaling)
+Logistic Regression,Standardized only,0.961,0.728,0.233,Standardized only
+Random Forest,L2 norm on raw,0.915,0.879,0.036,L2 norm on raw
+SVM (RBF),raw (no scaling),0.9515,0.9515,0.0,raw (no scaling)

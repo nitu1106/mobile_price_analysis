@@ -1,0 +1,61 @@
+scenario,features,model,accuracy,std
+original data,raw numbers,Logistic Regression,0.961,0.003
+original data,raw numbers,KNN,0.512,0.0173
+original data,raw numbers,Decision Tree,0.8155,0.0174
+original data,raw numbers,Random Forest,0.8845,0.0183
+original data,raw numbers,Naive Bayes,0.8045,0.0298
+original data,equal-width,Logistic Regression,0.8205,0.0186
+original data,equal-width,KNN,0.5815,0.0243
+original data,equal-width,Decision Tree,0.772,0.0166
+original data,equal-width,Random Forest,0.807,0.0244
+original data,equal-width,Naive Bayes,0.725,0.0247
+original data,equal-frequency,Logistic Regression,0.8285,0.0294
+original data,equal-frequency,KNN,0.5815,0.0162
+original data,equal-frequency,Decision Tree,0.7695,0.0121
+original data,equal-frequency,Random Forest,0.8065,0.0234
+original data,equal-frequency,Naive Bayes,0.7295,0.0269
+original data,k-means,Logistic Regression,0.82,0.0206
+original data,k-means,KNN,0.569,0.0241
+original data,k-means,Decision Tree,0.7635,0.0203
+original data,k-means,Random Forest,0.802,0.0173
+original data,k-means,Naive Bayes,0.726,0.0252
+with outliers,raw numbers,Logistic Regression,0.8295,0.0177
+with outliers,raw numbers,KNN,0.429,0.0202
+with outliers,raw numbers,Decision Tree,0.817,0.03
+with outliers,raw numbers,Random Forest,0.872,0.0184
+with outliers,raw numbers,Naive Bayes,0.614,0.0175
+with outliers,equal-width,Logistic Regression,0.26,0.0137
+with outliers,equal-width,KNN,0.2525,0.0121
+with outliers,equal-width,Decision Tree,0.2425,0.0199
+with outliers,equal-width,Random Forest,0.246,0.0129
+with outliers,equal-width,Naive Bayes,0.231,0.0077
+with outliers,equal-frequency,Logistic Regression,0.8105,0.0323
+with outliers,equal-frequency,KNN,0.566,0.0306
+with outliers,equal-frequency,Decision Tree,0.7535,0.0159
+with outliers,equal-frequency,Random Forest,0.797,0.0203
+with outliers,equal-frequency,Naive Bayes,0.7235,0.0264
+with outliers,k-means,Logistic Regression,0.2755,0.0134
+with outliers,k-means,KNN,0.2565,0.0308
+with outliers,k-means,Decision Tree,0.2835,0.0168
+with outliers,k-means,Random Forest,0.2625,0.0283
+with outliers,k-means,Naive Bayes,0.2745,0.016
+strongly skewed,raw numbers,Logistic Regression,0.832,0.0222
+strongly skewed,raw numbers,KNN,0.419,0.0131
+strongly skewed,raw numbers,Decision Tree,0.8155,0.0174
+strongly skewed,raw numbers,Random Forest,0.8885,0.0167
+strongly skewed,raw numbers,Naive Bayes,0.737,0.0213
+strongly skewed,equal-width,Logistic Regression,0.5605,0.0196
+strongly skewed,equal-width,KNN,0.4295,0.0187
+strongly skewed,equal-width,Decision Tree,0.5575,0.01
+strongly skewed,equal-width,Random Forest,0.5605,0.0131
+strongly skewed,equal-width,Naive Bayes,0.5705,0.0137
+strongly skewed,equal-frequency,Logistic Regression,0.8285,0.0294
+strongly skewed,equal-frequency,KNN,0.5815,0.0162
+strongly skewed,equal-frequency,Decision Tree,0.7695,0.0121
+strongly skewed,equal-frequency,Random Forest,0.8065,0.0234
+strongly skewed,equal-frequency,Naive Bayes,0.7295,0.0269
+strongly skewed,k-means,Logistic Regression,0.676,0.0111
+strongly skewed,k-means,KNN,0.4485,0.0242
+strongly skewed,k-means,Decision Tree,0.6625,0.0126
+strongly skewed,k-means,Random Forest,0.673,0.0236
+strongly skewed,k-means,Naive Bayes,0.6465,0.0178

@@ -1,0 +1,241 @@
+{
+  "plan_fingerprint": "50f97f2c9d90",
+  "settings": {
+    "skew_limit": 1.0,
+    "outlier_limit": 0.02,
+    "flat_kurtosis": -1.0,
+    "max_fit_rows": 50000,
+    "seed": 42
+  },
+  "versions": {
+    "numpy": "2.5.3",
+    "pandas": "2.3.3",
+    "scikit-learn": "1.7.2"
+  },
+  "data_shape": [
+    2000,
+    20
+  ],
+  "plan": [
+    {
+      "column": "battery_power",
+      "decision": "minmax",
+      "reason": "flat / uniform shape (kurtosis -1.2)",
+      "unique": 1094,
+      "min": 501.0,
+      "skew": 0.032,
+      "skew_without_outliers": 0.032,
+      "kurtosis": -1.224,
+      "outlier_share": 0.0
+    },
+    {
+      "column": "blue",
+      "decision": "keep",
+      "reason": "binary column",
+      "unique": 2,
+      "min": 0.0,
+      "skew": 0.02,
+      "skew_without_outliers": 0.02,
+      "kurtosis": -2.0,
+      "outlier_share": 0.0
+    },
+    {
+      "column": "clock_speed",
+      "decision": "minmax",
+      "reason": "flat / uniform shape (kurtosis -1.3)",
+      "unique": 26,
+      "min": 0.5,
+      "skew": 0.178,
+      "skew_without_outliers": 0.178,
+      "kurtosis": -1.323,
+      "outlier_share": 0.0
+    },
+    {
+      "column": "dual_sim",
+      "decision": "keep",
+      "reason": "binary column",
+      "unique": 2,
+      "min": 0.0,
+      "skew": -0.038,
+      "skew_without_outliers": -0.038,
+      "kurtosis": -1.999,
+      "outlier_share": 0.0
+    },
+    {
+      "column": "fc",
+      "decision": "log1p",
+      "reason": "right-skewed (skew 1.0) with zeros",
+      "unique": 20,
+      "min": 0.0,
+      "skew": 1.019,
+      "skew_without_outliers": 0.969,
+      "kurtosis": 0.273,
+      "outlier_share": 0.009
+    },
+    {
+      "column": "four_g",
+      "decision": "keep",
+      "reason": "binary column",
+      "unique": 2,
+      "min": 0.0,
+      "skew": -0.086,
+      "skew_without_outliers": -0.086,
+      "kurtosis": -1.993,
+      "outlier_share": 0.0
+    },
+    {
+      "column": "int_memory",
+      "decision": "minmax",
+      "reason": "flat / uniform shape (kurtosis -1.2)",
+      "unique": 63,
+      "min": 2.0,
+      "skew": 0.058,
+      "skew_without_outliers": 0.058,
+      "kurtosis": -1.216,
+      "outlier_share": 0.0
+    },
+    {
+      "column": "m_dep",
+      "decision": "standard",
+      "reason": "few distinct values (discrete)",
+      "unique": 10,
+      "min": 0.1,
+      "skew": 0.089,
+      "skew_without_outliers": 0.089,
+      "kurtosis": -1.274,
+      "outlier_share": 0.0
+    },
+    {
+      "column": "mobile_wt",
+      "decision": "minmax",
+      "reason": "flat / uniform shape (kurtosis -1.2)",
+      "unique": 121,
+      "min": 80.0,
+      "skew": 0.007,
+      "skew_without_outliers": 0.007,
+      "kurtosis": -1.21,
+      "outlier_share": 0.0
+    },
+    {
+      "column": "n_cores",
+      "decision": "standard",
+      "reason": "few distinct values (discrete)",
+      "unique": 8,
+      "min": 1.0,
+      "skew": 0.004,
+      "skew_without_outliers": 0.004,
+      "kurtosis": -1.23,
+      "outlier_share": 0.0
+    },
+    {
+      "column": "pc",
+      "decision": "minmax",
+      "reason": "flat / uniform shape (kurtosis -1.2)",
+      "unique": 21,
+      "min": 0.0,
+      "skew": 0.017,
+      "skew_without_outliers": 0.017,
+      "kurtosis": -1.172,
+      "outlier_share": 0.0
+    },
+    {
+      "column": "px_height",
+      "decision": "standard",
+      "reason": "roughly bell-shaped, few outliers",
+      "unique": 1137,
+      "min": 0.0,
+      "skew": 0.666,
+      "skew_without_outliers": 0.665,
+      "kurtosis": -0.318,
+      "outlier_share": 0.001
+    },
+    {
+      "column": "px_width",
+      "decision": "minmax",
+      "reason": "flat / uniform shape (kurtosis -1.2)",
+      "unique": 1109,
+      "min": 500.0,
+      "skew": 0.015,
+      "skew_without_outliers": 0.015,
+      "kurtosis": -1.186,
+      "outlier_share": 0.0
+    },
+    {
+      "column": "ram",
+      "decision": "minmax",
+      "reason": "flat / uniform shape (kurtosis -1.2)",
+      "unique": 1562,
+      "min": 256.0,
+      "skew": 0.007,
+      "skew_without_outliers": 0.007,
+      "kurtosis": -1.192,
+      "outlier_share": 0.0
+    },
+    {
+      "column": "sc_h",
+      "decision": "minmax",
+      "reason": "flat / uniform shape (kurtosis -1.2)",
+      "unique": 15,
+      "min": 5.0,
+      "skew": -0.099,
+      "skew_without_outliers": -0.099,
+      "kurtosis": -1.191,
+      "outlier_share": 0.0
+    },
+    {
+      "column": "sc_w",
+      "decision": "standard",
+      "reason": "roughly bell-shaped, few outliers",
+      "unique": 19,
+      "min": 0.0,
+      "skew": 0.633,
+      "skew_without_outliers": 0.633,
+      "kurtosis": -0.392,
+      "outlier_share": 0.0
+    },
+    {
+      "column": "talk_time",
+      "decision": "minmax",
+      "reason": "flat / uniform shape (kurtosis -1.2)",
+      "unique": 19,
+      "min": 2.0,
+      "skew": 0.01,
+      "skew_without_outliers": 0.01,
+      "kurtosis": -1.219,
+      "outlier_share": 0.0
+    },
+    {
+      "column": "three_g",
+      "decision": "keep",
+      "reason": "binary column",
+      "unique": 2,
+      "min": 0.0,
+      "skew": -1.227,
+      "skew_without_outliers": -1.227,
+      "kurtosis": -0.494,
+      "outlier_share": 0.0
+    },
+    {
+      "column": "touch_screen",
+      "decision": "keep",
+      "reason": "binary column",
+      "unique": 2,
+      "min": 0.0,
+      "skew": -0.012,
+      "skew_without_outliers": -0.012,
+      "kurtosis": -2.0,
+      "outlier_share": 0.0
+    },
+    {
+      "column": "wifi",
+      "decision": "keep",
+      "reason": "binary column",
+      "unique": 2,
+      "min": 0.0,
+      "skew": -0.028,
+      "skew_without_outliers": -0.028,
+      "kurtosis": -1.999,
+      "outlier_share": 0.0
+    }
+  ]
+}

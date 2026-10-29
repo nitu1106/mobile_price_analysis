@@ -1,0 +1,9 @@
+column,decision,reason,unique,min,skew,skew_without_outliers,kurtosis,outlier_share
+f0,robust,skew -2.1 comes from a few outliers only (skew without them: 0.0),2000,-16367.190165655576,-2.089,0.035,80.15,0.0355
+f1,robust,skew 3.6 comes from a few outliers only (skew without them: -0.0),2000,-6852.15611661854,3.649,-0.003,65.734,0.029
+f2,robust,2.5% of values are outliers,2000,-3972.544995288981,0.115,0.019,60.945,0.0245
+f3,robust,skew -2.1 comes from a few outliers only (skew without them: -0.1),2000,-14702.195814452536,-2.07,-0.079,63.93,0.032
+f4,robust,2.9% of values are outliers,2000,-7014.510991644769,0.279,0.069,51.356,0.0295
+f5,robust,skew 6.2 comes from a few outliers only (skew without them: -0.0),2000,-3065.181466746727,6.221,-0.019,149.752,0.028
+f6,robust,skew -1.0 comes from a few outliers only (skew without them: -0.0),2000,-5284.4135189675035,-1.04,-0.032,66.836,0.0295
+f7,robust,skew -2.0 comes from a few outliers only (skew without them: 0.0),2000,-5844.095162606684,-1.963,0.034,90.977,0.027

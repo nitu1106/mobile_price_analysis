@@ -1,0 +1,4 @@
+method,balance (1=even),smallest_bin_%,columns_with_a_bin_under_1%,variance_kept_%,target_information_kept_%
+equal-width,0.96,14.39,0,95.58,83.06
+equal-frequency,0.97,15.6,2,94.78,83.35
+k-means,0.96,14.54,0,95.66,83.15

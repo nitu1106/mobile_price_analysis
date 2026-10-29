@@ -1,0 +1,40 @@
+NORMALIZATION REPORT
+====================
+Normalization works per ROW (it makes each row length 1); scaling works per COLUMN. They solve different problems.
+
+setup                               raw (no scaling)  Standardized only  L1 norm on raw  Standardized + L1 norm  L2 norm on raw  Standardized + L2 norm  Max norm on raw  Standardized + Max norm
+model                                                                                                                                                                                            
+K-Means (clusters vs classes, NMI)             0.505              0.008           0.212                   0.005           0.210                   0.007            0.240                    0.005
+KNN (cosine)                                   0.555              0.537           0.555                   0.537           0.555                   0.537            0.555                    0.537
+KNN (euclidean)                                0.918              0.512           0.568                   0.540           0.555                   0.537            0.552                    0.530
+KNN (manhattan)                                0.922              0.549           0.585                   0.564           0.570                   0.574            0.571                    0.551
+Logistic Regression                            0.728              0.961           0.519                   0.719           0.534                   0.891            0.544                    0.930
+Random Forest                                  0.879              0.882           0.900                   0.869           0.915                   0.868            0.814                    0.858
+SVM (RBF)                                      0.952              0.877           0.593                   0.872           0.581                   0.870            0.572                    0.870
+
+BEST SETUP PER ALGORITHM
+                             model        best_setup  accuracy    raw  gain_vs_raw
+K-Means (clusters vs classes, NMI)  raw (no scaling)    0.5049 0.5049        0.000
+                      KNN (cosine)  raw (no scaling)    0.5550 0.5550        0.000
+                   KNN (euclidean)  raw (no scaling)    0.9180 0.9180        0.000
+                   KNN (manhattan)  raw (no scaling)    0.9215 0.9215        0.000
+               Logistic Regression Standardized only    0.9610 0.7280        0.233
+                     Random Forest    L2 norm on raw    0.9150 0.8790        0.036
+                         SVM (RBF)  raw (no scaling)    0.9515 0.9515        0.000
+
+- K-Means (clusters vs classes, NMI): raw (no scaling) (0.505); 1 setup(s) are equally good: raw (no scaling).
+- KNN (cosine): raw (no scaling) (0.555); 4 setup(s) are equally good: raw (no scaling), L1 norm on raw, Max norm on raw, L2 norm on raw.
+- KNN (euclidean): raw (no scaling) (0.918); 1 setup(s) are equally good: raw (no scaling).
+- KNN (manhattan): raw (no scaling) (0.921); 1 setup(s) are equally good: raw (no scaling).
+- Logistic Regression: Standardized only (0.961); 1 setup(s) are equally good: Standardized only.
+- Random Forest: L2 norm on raw (0.915); 1 setup(s) are equally good: L2 norm on raw.
+- SVM (RBF): raw (no scaling) (0.952); 1 setup(s) are equally good: raw (no scaling).
+
+WHAT TO TAKE FROM THIS
+- KNN with cosine distance ignores row length by definition, so normalizing first changes nothing for it; KNN with euclidean distance on L2-normalized rows ranks neighbours exactly like cosine distance.
+- Euclidean KNN scores 0.555 on L2-normalized raw rows versus 0.918 on raw rows and 0.512 when only the columns are standardized.
+- Normalizing RAW rows lets the biggest columns (e.g. ram) dominate the direction of the row; standardizing the columns first gives every feature a fair vote.
+- L1 is the most gentle (less affected by one huge value), L2 is the standard for text and cosine similarity, Max is simple but one outlier decides the whole row.
+- Row normalization throws away the size of the row. If size carries the signal (big specs = expensive phone) the scores drop; if only proportions matter (word counts, spectra) it helps.
+- Tree models and (mostly) linear models do not need row normalization; use it for distance- and angle-based methods (KNN, SVM, K-Means, text models).
+- Everything above was evaluated with the normalizer inside the cross-validation pipeline (Normalizer has nothing to learn, but the StandardScaler in front of it is fitted on the training rows only).

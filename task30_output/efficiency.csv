@@ -1,0 +1,4 @@
+rows,fit_all_rows_s,fit_2000_row_sample_s,transform_s,rows_per_second,sample_plan_identical
+2000,0.088,0.074,0.013,155771,True
+20000,0.176,0.089,0.029,688115,False
+100000,0.91,0.092,0.121,825939,False

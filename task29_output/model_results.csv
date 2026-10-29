@@ -1,0 +1,57 @@
+setup,model,accuracy,std
+raw (no scaling),KNN (euclidean),0.918,0.0083
+raw (no scaling),KNN (manhattan),0.9215,0.0103
+raw (no scaling),KNN (cosine),0.555,0.0087
+raw (no scaling),SVM (RBF),0.9515,0.0118
+raw (no scaling),Logistic Regression,0.728,0.0292
+raw (no scaling),Random Forest,0.879,0.0181
+raw (no scaling),"K-Means (clusters vs classes, NMI)",0.5049,0.0
+Standardized only,KNN (euclidean),0.512,0.0173
+Standardized only,KNN (manhattan),0.549,0.0149
+Standardized only,KNN (cosine),0.537,0.0099
+Standardized only,SVM (RBF),0.877,0.0193
+Standardized only,Logistic Regression,0.961,0.003
+Standardized only,Random Forest,0.8815,0.0154
+Standardized only,"K-Means (clusters vs classes, NMI)",0.0079,0.0
+L1 norm on raw,KNN (euclidean),0.568,0.0098
+L1 norm on raw,KNN (manhattan),0.585,0.0104
+L1 norm on raw,KNN (cosine),0.555,0.0087
+L1 norm on raw,SVM (RBF),0.593,0.0321
+L1 norm on raw,Logistic Regression,0.519,0.0247
+L1 norm on raw,Random Forest,0.9,0.0206
+L1 norm on raw,"K-Means (clusters vs classes, NMI)",0.2118,0.0
+Standardized + L1 norm,KNN (euclidean),0.54,0.0197
+Standardized + L1 norm,KNN (manhattan),0.5645,0.02
+Standardized + L1 norm,KNN (cosine),0.537,0.0099
+Standardized + L1 norm,SVM (RBF),0.872,0.015
+Standardized + L1 norm,Logistic Regression,0.719,0.0171
+Standardized + L1 norm,Random Forest,0.869,0.0257
+Standardized + L1 norm,"K-Means (clusters vs classes, NMI)",0.005,0.0
+L2 norm on raw,KNN (euclidean),0.555,0.0087
+L2 norm on raw,KNN (manhattan),0.57,0.0152
+L2 norm on raw,KNN (cosine),0.555,0.0087
+L2 norm on raw,SVM (RBF),0.581,0.0388
+L2 norm on raw,Logistic Regression,0.534,0.026
+L2 norm on raw,Random Forest,0.915,0.0065
+L2 norm on raw,"K-Means (clusters vs classes, NMI)",0.2097,0.0
+Standardized + L2 norm,KNN (euclidean),0.537,0.0099
+Standardized + L2 norm,KNN (manhattan),0.574,0.0228
+Standardized + L2 norm,KNN (cosine),0.537,0.0099
+Standardized + L2 norm,SVM (RBF),0.8695,0.0176
+Standardized + L2 norm,Logistic Regression,0.891,0.0201
+Standardized + L2 norm,Random Forest,0.8685,0.0294
+Standardized + L2 norm,"K-Means (clusters vs classes, NMI)",0.0067,0.0
+Max norm on raw,KNN (euclidean),0.5525,0.0201
+Max norm on raw,KNN (manhattan),0.571,0.0179
+Max norm on raw,KNN (cosine),0.555,0.0087
+Max norm on raw,SVM (RBF),0.572,0.0367
+Max norm on raw,Logistic Regression,0.5435,0.0388
+Max norm on raw,Random Forest,0.814,0.0185
+Max norm on raw,"K-Means (clusters vs classes, NMI)",0.2399,0.0
+Standardized + Max norm,KNN (euclidean),0.5295,0.0167
+Standardized + Max norm,KNN (manhattan),0.551,0.0101
+Standardized + Max norm,KNN (cosine),0.537,0.0099
+Standardized + Max norm,SVM (RBF),0.8705,0.0172
+Standardized + Max norm,Logistic Regression,0.93,0.0099
+Standardized + Max norm,Random Forest,0.858,0.0224
+Standardized + Max norm,"K-Means (clusters vs classes, NMI)",0.0049,0.0
