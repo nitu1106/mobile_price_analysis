@@ -1,0 +1,99 @@
+split,feature,group_A,group_B,n_A,n_B,mean_A,mean_B,difference,diff_CI_low,diff_CI_high,t,p_value,mannwhitney_p,cohens_d,effect,q_value,bonferroni_significant,verdict
+blue,battery_power,blue=0,blue=1,1010,990,1233.62475,1243.51111,-9.88636,-48.44212,28.6694,-0.50287,0.61511,0.61428,-0.02249,negligible,0.86115,False,not significant
+blue,clock_speed,blue=0,blue=1,1010,990,1.50495,1.5399,-0.03495,-0.10653,0.03663,-0.95754,0.33841,0.4383,-0.04283,negligible,0.78962,False,not significant
+blue,fc,blue=0,blue=1,1010,990,4.29406,4.32525,-0.03119,-0.41209,0.34971,-0.1606,0.87242,0.96099,-0.00718,negligible,0.98273,False,not significant
+blue,int_memory,blue=0,blue=1,1010,990,31.30693,32.80101,-1.49408,-3.08498,0.09682,-1.8418,0.06565,0.06977,-0.08239,negligible,0.43254,False,not significant
+blue,m_dep,blue=0,blue=1,1010,990,0.50059,0.50293,-0.00234,-0.02764,0.02297,-0.18097,0.85641,0.90064,-0.00809,negligible,0.97591,False,not significant
+blue,mobile_wt,blue=0,blue=1,1010,990,140.5505,139.94141,0.60908,-2.49603,3.71419,0.38469,0.70051,0.71135,0.0172,negligible,0.87989,False,not significant
+blue,n_cores,blue=0,blue=1,1010,990,4.43861,4.60404,-0.16543,-0.36603,0.03518,-1.61724,0.10598,0.10342,-0.07234,negligible,0.55694,False,not significant
+blue,pc,blue=0,blue=1,1010,990,9.97624,9.85556,0.12068,-0.41121,0.65257,0.44497,0.65639,0.6864,0.0199,negligible,0.87989,False,not significant
+blue,px_height,blue=0,blue=1,1010,990,648.12673,642.02828,6.09845,-32.82857,45.02547,0.30724,0.75869,0.8507,0.01374,negligible,0.8958,False,not significant
+blue,px_width,blue=0,blue=1,1010,990,1269.28317,1233.38889,35.89428,-1.97948,73.76804,1.85865,0.06322,0.06595,0.0831,negligible,0.43254,False,not significant
+blue,ram,blue=0,blue=1,1010,990,2095.92079,2153.07677,-57.15598,-152.28936,37.97741,-1.17826,0.23883,0.24271,-0.0527,negligible,0.68841,False,not significant
+blue,sc_h,blue=0,blue=1,1010,990,12.31881,12.29394,0.02487,-0.34476,0.39451,0.13196,0.89503,0.89906,0.0059,negligible,0.98323,False,not significant
+blue,sc_w,blue=0,blue=1,1010,990,5.76436,5.7697,-0.00534,-0.38739,0.37671,-0.02741,0.97813,0.73675,-0.00123,negligible,0.98767,False,not significant
+blue,talk_time,blue=0,blue=1,1010,990,10.93564,11.08788,-0.15224,-0.63162,0.32715,-0.62279,0.5335,0.53794,-0.02786,negligible,0.82988,False,not significant
+dual_sim,battery_power,dual_sim=0,dual_sim=1,981,1019,1257.25484,1220.48086,36.77398,-1.7341,75.28206,1.87284,0.06124,0.06021,0.08374,negligible,0.43254,False,not significant
+dual_sim,clock_speed,dual_sim=0,dual_sim=1,981,1019,1.52334,1.5212,0.00215,-0.06946,0.07375,0.05878,0.95313,0.91891,0.00263,negligible,0.98323,False,not significant
+dual_sim,fc,dual_sim=0,dual_sim=1,981,1019,4.43833,4.18548,0.25285,-0.12781,0.63351,1.30269,0.19283,0.0883,0.05825,negligible,0.62991,False,not significant
+dual_sim,int_memory,dual_sim=0,dual_sim=1,981,1019,32.33639,31.76742,0.56897,-1.02306,2.16101,0.70089,0.48345,0.48673,0.03135,negligible,0.82659,False,not significant
+dual_sim,m_dep,dual_sim=0,dual_sim=1,981,1019,0.50826,0.49549,0.01277,-0.01252,0.03807,0.99019,0.3222,0.33731,0.04428,negligible,0.78335,False,not significant
+dual_sim,mobile_wt,dual_sim=0,dual_sim=1,981,1019,140.57288,139.93719,0.63569,-2.46966,3.74104,0.40146,0.68812,0.67889,0.01795,negligible,0.87989,False,not significant
+dual_sim,n_cores,dual_sim=0,dual_sim=1,981,1019,4.57798,4.46516,0.11282,-0.08791,0.31355,1.10226,0.27048,0.27275,0.04932,negligible,0.72581,False,not significant
+dual_sim,pc,dual_sim=0,dual_sim=1,981,1019,10.02243,9.81452,0.2079,-0.32417,0.73997,0.76631,0.44358,0.42924,0.03428,negligible,0.82659,False,not significant
+dual_sim,px_height,dual_sim=0,dual_sim=1,981,1019,654.5474,636.02061,18.52679,-20.4231,57.47669,0.93284,0.35102,0.42314,0.04175,negligible,0.79551,False,not significant
+dual_sim,px_width,dual_sim=0,dual_sim=1,981,1019,1245.22222,1257.57409,-12.35187,-50.26516,25.56142,-0.63893,0.52294,0.52701,-0.02857,negligible,0.82659,False,not significant
+dual_sim,ram,dual_sim=0,dual_sim=1,981,1019,2078.81753,2167.9156,-89.09807,-184.16385,5.96771,-1.83804,0.0662,0.0664,-0.08219,negligible,0.43254,False,not significant
+dual_sim,sc_h,dual_sim=0,dual_sim=1,981,1019,12.3578,12.25711,0.10068,-0.26914,0.4705,0.53393,0.59345,0.56261,0.02389,negligible,0.85527,False,not significant
+dual_sim,sc_w,dual_sim=0,dual_sim=1,981,1019,5.84098,5.69578,0.1452,-0.23685,0.52725,0.74533,0.45616,0.31843,0.03333,negligible,0.82659,False,not significant
+dual_sim,talk_time,dual_sim=0,dual_sim=1,981,1019,11.23038,10.7998,0.43057,-0.04849,0.90964,1.76266,0.07811,0.07831,0.07884,negligible,0.47843,False,not significant
+four_g,battery_power,four_g=0,four_g=1,957,1043,1231.33438,1245.11026,-13.77588,-52.33792,24.78616,-0.7006,0.48363,0.49116,-0.03135,negligible,0.82659,False,not significant
+four_g,clock_speed,four_g=0,four_g=1,957,1043,1.55893,1.48859,0.07034,-0.00129,0.14198,1.92579,0.05427,0.05549,0.08626,negligible,0.43254,False,not significant
+four_g,fc,four_g=0,four_g=1,957,1043,4.38454,4.24065,0.14388,-0.23715,0.52492,0.74056,0.45905,0.2879,0.03314,negligible,0.82659,False,not significant
+four_g,int_memory,four_g=0,four_g=1,957,1043,31.88192,32.19751,-0.31558,-1.90781,1.27664,-0.38871,0.69753,0.71333,-0.01739,negligible,0.87989,False,not significant
+four_g,m_dep,four_g=0,four_g=1,957,1043,0.5023,0.50125,0.00105,-0.02427,0.02638,0.0815,0.93505,0.99365,0.00365,negligible,0.98323,False,not significant
+four_g,mobile_wt,four_g=0,four_g=1,957,1043,140.85998,139.6884,1.17158,-1.93917,4.28233,0.73862,0.46023,0.46567,0.03309,negligible,0.82659,False,not significant
+four_g,n_cores,four_g=0,four_g=1,957,1043,4.59143,4.45542,0.13601,-0.06477,0.3368,1.32849,0.18417,0.17908,0.05946,negligible,0.62991,False,not significant
+four_g,pc,four_g=0,four_g=1,957,1043,9.95193,9.88399,0.06794,-0.46439,0.60028,0.25031,0.80237,0.79787,0.0112,negligible,0.93359,False,not significant
+four_g,px_height,four_g=0,four_g=1,957,1043,654.01776,636.93289,17.08488,-21.85467,56.02443,0.86047,0.38964,0.30803,0.0385,negligible,0.79551,False,not significant
+four_g,px_width,four_g=0,four_g=1,957,1043,1248.15569,1254.59827,-6.44258,-44.40225,31.51709,-0.33285,0.73928,0.72523,-0.0149,negligible,0.8958,False,not significant
+four_g,ram,four_g=0,four_g=1,957,1043,2115.93312,2131.81016,-15.87704,-111.0598,79.30572,-0.32713,0.7436,0.7598,-0.01463,negligible,0.8958,False,not significant
+four_g,sc_h,four_g=0,four_g=1,957,1043,12.18704,12.41611,-0.22906,-0.59902,0.14089,-1.21429,0.22478,0.23331,-0.05437,negligible,0.67531,False,not significant
+four_g,sc_w,four_g=0,four_g=1,957,1043,5.59875,5.92138,-0.32263,-0.70445,0.05918,-1.65718,0.09764,0.11636,-0.07409,negligible,0.55694,False,not significant
+four_g,talk_time,four_g=0,four_g=1,957,1043,11.27691,10.76702,0.50989,0.03113,0.98865,2.08866,0.03686,0.03747,0.0934,negligible,0.43254,False,not significant
+three_g,battery_power,three_g=0,three_g=1,477,1523,1229.47379,1241.35128,-11.87749,-57.26091,33.50594,-0.51373,0.60758,0.5972,-0.02703,negligible,0.86115,False,not significant
+three_g,clock_speed,three_g=0,three_g=1,477,1523,1.58994,1.50105,0.08889,0.00424,0.17354,2.06122,0.03961,0.0482,0.10902,negligible,0.43254,False,not significant
+three_g,fc,three_g=0,three_g=1,477,1523,4.2956,4.31385,-0.01826,-0.45113,0.41462,-0.08278,0.93404,0.53708,-0.0042,negligible,0.98323,False,not significant
+three_g,int_memory,three_g=0,three_g=1,477,1523,32.3501,31.95141,0.39869,-1.45189,2.24928,0.42289,0.67249,0.66248,0.02197,negligible,0.87989,False,not significant
+three_g,m_dep,three_g=0,three_g=1,477,1523,0.50797,0.4998,0.00816,-0.02176,0.03809,0.53546,0.59248,0.61931,0.0283,negligible,0.85527,False,not significant
+three_g,mobile_wt,three_g=0,three_g=1,477,1523,140.15094,140.27971,-0.12877,-3.82605,3.56851,-0.06837,0.94551,0.95189,-0.00364,negligible,0.98323,False,not significant
+three_g,n_cores,three_g=0,three_g=1,477,1523,4.58071,4.50164,0.07907,-0.15983,0.31797,0.64972,0.51607,0.49649,0.03456,negligible,0.82659,False,not significant
+three_g,pc,three_g=0,three_g=1,477,1523,9.93082,9.91202,0.0188,-0.59715,0.63475,0.05992,0.95224,0.96021,0.0031,negligible,0.98323,False,not significant
+three_g,px_height,three_g=0,three_g=1,477,1523,669.8218,637.3677,32.45411,-14.10295,79.01116,1.3684,0.17158,0.22573,0.07315,negligible,0.62991,False,not significant
+three_g,px_width,three_g=0,three_g=1,477,1523,1251.24528,1251.60013,-0.35485,-45.40567,44.69597,-0.01546,0.98767,0.9692,-0.00082,negligible,0.98767,False,not significant
+three_g,ram,three_g=0,three_g=1,477,1523,2093.60587,2133.79908,-40.19321,-151.95998,71.57356,-0.70591,0.48045,0.47655,-0.03705,negligible,0.82659,False,not significant
+three_g,sc_h,three_g=0,three_g=1,477,1523,12.21593,12.33487,-0.11893,-0.55175,0.31388,-0.53939,0.58977,0.58895,-0.02822,negligible,0.85527,False,not significant
+three_g,sc_w,three_g=0,three_g=1,477,1523,5.52621,5.84242,-0.31621,-0.75036,0.11793,-1.4296,0.1532,0.28381,-0.0726,negligible,0.62991,False,not significant
+three_g,talk_time,three_g=0,three_g=1,477,1523,11.42767,10.8805,0.54717,-0.02006,1.1144,1.89358,0.05865,0.05676,0.10021,negligible,0.43254,False,not significant
+touch_screen,battery_power,touch_screen=0,touch_screen=1,994,1006,1243.166,1233.92644,9.23955,-29.30832,47.78743,0.47007,0.63836,0.64407,0.02102,negligible,0.87989,False,not significant
+touch_screen,clock_speed,touch_screen=0,touch_screen=1,994,1006,1.50604,1.53827,-0.03223,-0.10381,0.03934,-0.88321,0.37723,0.40891,-0.0395,negligible,0.79551,False,not significant
+touch_screen,fc,touch_screen=0,touch_screen=1,994,1006,4.37425,4.24553,0.12872,-0.25215,0.50959,0.6628,0.50754,0.46642,0.02964,negligible,0.82659,False,not significant
+touch_screen,int_memory,touch_screen=0,touch_screen=1,994,1006,32.53924,31.55964,0.97959,-0.61147,2.57065,1.20745,0.2274,0.20345,0.05399,negligible,0.67531,False,not significant
+touch_screen,m_dep,touch_screen=0,touch_screen=1,994,1006,0.50252,0.50099,0.00152,-0.02378,0.02682,0.11789,0.90616,0.95958,0.00527,negligible,0.98323,False,not significant
+touch_screen,mobile_wt,touch_screen=0,touch_screen=1,994,1006,140.76056,139.74354,1.01702,-2.08772,4.12177,0.64242,0.52068,0.51615,0.02873,negligible,0.82659,False,not significant
+touch_screen,n_cores,touch_screen=0,touch_screen=1,994,1006,4.46579,4.57455,-0.10876,-0.3094,0.09189,-1.06303,0.2879,0.28716,-0.04754,negligible,0.74247,False,not significant
+touch_screen,pc,touch_screen=0,touch_screen=1,994,1006,9.96982,9.86382,0.106,-0.42603,0.63804,0.39074,0.69603,0.681,0.01748,negligible,0.87989,False,not significant
+touch_screen,px_height,touch_screen=0,touch_screen=1,994,1006,635.33702,654.76243,-19.4254,-58.34121,19.4904,-0.97894,0.32773,0.41749,-0.04377,negligible,0.78335,False,not significant
+touch_screen,px_width,touch_screen=0,touch_screen=1,994,1006,1252.22334,1250.8161,1.40724,-36.51312,39.32759,0.07278,0.94199,0.93655,0.00326,negligible,0.98323,False,not significant
+touch_screen,ram,touch_screen=0,touch_screen=1,994,1006,2157.43863,2091.3837,66.05493,-29.06089,161.17076,1.36196,0.17336,0.16801,0.06091,negligible,0.62991,False,not significant
+touch_screen,sc_h,touch_screen=0,touch_screen=1,994,1006,12.39135,12.22266,0.16868,-0.20085,0.53822,0.89522,0.37078,0.35888,0.04003,negligible,0.79551,False,not significant
+touch_screen,sc_w,touch_screen=0,touch_screen=1,994,1006,5.71127,5.82207,-0.1108,-0.49296,0.27136,-0.56859,0.5697,0.49989,-0.02543,negligible,0.85527,False,not significant
+touch_screen,talk_time,touch_screen=0,touch_screen=1,994,1006,10.9165,11.10437,-0.18787,-0.6672,0.29145,-0.76869,0.44217,0.44274,-0.03438,negligible,0.82659,False,not significant
+wifi,battery_power,wifi=0,wifi=1,986,1014,1242.23529,1234.90434,7.33095,-31.22866,45.89057,0.37285,0.7093,0.70515,0.01668,negligible,0.87989,False,not significant
+wifi,clock_speed,wifi=0,wifi=1,986,1014,1.54249,1.50256,0.03993,-0.03164,0.1115,1.09413,0.27403,0.28912,0.04894,negligible,0.72581,False,not significant
+wifi,fc,wifi=0,wifi=1,986,1014,4.2211,4.39546,-0.17437,-0.55476,0.20602,-0.89898,0.36877,0.76201,-0.04016,negligible,0.79551,False,not significant
+wifi,int_memory,wifi=0,wifi=1,986,1014,31.91785,32.1716,-0.25375,-1.84595,1.33845,-0.31255,0.75466,0.72983,-0.01398,negligible,0.8958,False,not significant
+wifi,m_dep,wifi=0,wifi=1,986,1014,0.51004,0.49369,0.01635,-0.00895,0.04165,1.26761,0.20509,0.19499,0.05671,negligible,0.64834,False,not significant
+wifi,mobile_wt,wifi=0,wifi=1,986,1014,140.26369,140.23471,0.02898,-3.07744,3.1354,0.01829,0.98541,0.99326,0.00082,negligible,0.98767,False,not significant
+wifi,n_cores,wifi=0,wifi=1,986,1014,4.54361,4.49803,0.04558,-0.15517,0.24633,0.44531,0.65615,0.66086,0.01992,negligible,0.87989,False,not significant
+wifi,pc,wifi=0,wifi=1,986,1014,9.88337,9.94872,-0.06535,-0.59763,0.46692,-0.24078,0.80975,0.79107,-0.01077,negligible,0.93359,False,not significant
+wifi,px_height,wifi=0,wifi=1,986,1014,621.79108,667.78107,-45.98999,-84.88146,-7.09852,-2.31911,0.02049,0.00666,-0.10375,negligible,0.33467,False,not significant
+wifi,px_width,wifi=0,wifi=1,986,1014,1238.23022,1264.43393,-26.2037,-64.11035,11.70295,-1.35569,0.17535,0.17115,-0.06064,negligible,0.62991,False,not significant
+wifi,ram,wifi=0,wifi=1,986,1014,2099.28296,2148.45464,-49.17167,-144.29468,45.95133,-1.01377,0.31081,0.30347,-0.04533,negligible,0.78102,False,not significant
+wifi,sc_h,wifi=0,wifi=1,986,1014,12.19574,12.4142,-0.21846,-0.58784,0.15092,-1.15986,0.24624,0.22486,-0.05186,negligible,0.68948,False,not significant
+wifi,sc_w,wifi=0,wifi=1,986,1014,5.61055,5.91913,-0.30858,-0.69042,0.07325,-1.58494,0.11314,0.13509,-0.07086,negligible,0.55694,False,not significant
+wifi,talk_time,wifi=0,wifi=1,986,1014,11.17444,10.85207,0.32237,-0.15675,0.80149,1.31954,0.18714,0.18927,0.05901,negligible,0.62991,False,not significant
+price_range: lowest vs highest,battery_power,price_range 0,price_range 3,500,500,1116.902,1379.984,-263.082,-314.32709,-211.83691,-10.07428,0.0,0.0,-0.63715,medium,0.0,True,significant and meaningful
+price_range: lowest vs highest,clock_speed,price_range 0,price_range 3,500,500,1.5502,1.5204,0.0298,-0.07236,0.13196,0.57244,0.56716,0.57398,0.0362,negligible,0.85527,False,not significant
+price_range: lowest vs highest,fc,price_range 0,price_range 3,500,500,4.084,4.316,-0.232,-0.76055,0.29655,-0.86135,0.38925,0.39472,-0.05448,negligible,0.79551,False,not significant
+price_range: lowest vs highest,int_memory,price_range 0,price_range 3,500,500,31.174,33.976,-2.802,-5.03795,-0.56605,-2.45913,0.0141,0.01395,-0.15553,negligible,0.27628,False,not significant
+price_range: lowest vs highest,m_dep,price_range 0,price_range 3,500,500,0.4902,0.502,-0.0118,-0.0478,0.0242,-0.64325,0.52021,0.55033,-0.04068,negligible,0.82659,False,not significant
+price_range: lowest vs highest,mobile_wt,price_range 0,price_range 3,500,500,140.552,136.32,4.232,-0.19285,8.65685,1.87682,0.06083,0.06303,0.1187,negligible,0.43254,False,not significant
+price_range: lowest vs highest,n_cores,price_range 0,price_range 3,500,500,4.6,4.502,0.098,-0.18532,0.38132,0.67876,0.49745,0.49934,0.04293,negligible,0.82659,False,not significant
+price_range: lowest vs highest,pc,price_range 0,price_range 3,500,500,9.574,10.15,-0.576,-1.33191,0.17991,-1.4953,0.13515,0.14391,-0.09457,negligible,0.62991,False,not significant
+price_range: lowest vs highest,px_height,price_range 0,price_range 3,500,500,536.408,744.848,-208.44,-262.0405,-154.8395,-7.6317,0.0,0.0,-0.48267,small,0.0,True,significant and meaningful
+price_range: lowest vs highest,px_width,price_range 0,price_range 3,500,500,1150.27,1369.838,-219.568,-271.69029,-167.44571,-8.26649,0.0,0.0,-0.52282,medium,0.0,True,significant and meaningful
+price_range: lowest vs highest,ram,price_range 0,price_range 3,500,500,785.314,3449.232,-2663.918,-2710.85541,-2616.98059,-111.37308,0.0,0.0,-7.04385,large,0.0,True,significant and meaningful
+price_range: lowest vs highest,sc_h,price_range 0,price_range 3,500,500,12.324,12.68,-0.356,-0.87577,0.16377,-1.34404,0.17924,0.16872,-0.085,negligible,0.62991,False,not significant
+price_range: lowest vs highest,sc_w,price_range 0,price_range 3,500,500,5.682,6.128,-0.446,-0.99876,0.10676,-1.58336,0.11366,0.31065,-0.10014,negligible,0.55694,False,not significant
+price_range: lowest vs highest,talk_time,price_range 0,price_range 3,500,500,10.612,11.098,-0.486,-1.15869,0.18669,-1.41774,0.15658,0.15521,-0.08967,negligible,0.62991,False,not significant

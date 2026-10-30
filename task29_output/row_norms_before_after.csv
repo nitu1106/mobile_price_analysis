@@ -1,9 +1,9 @@
 data,normalization,avg row L1,avg row L2,avg row max,std of row L2 length
 raw,none,5484.803,3017.7009,2351.219,835.2212
-raw,L1,1.0,0.5482,0.4247,0.0478
-raw,L2,1.8372,1.0,0.7669,0.0
-raw,Max,2.4648,1.3286,1.0,0.1864
+raw,L1,1,0.5482,0.4247,0.0478
+raw,L2,1.8372,1,0.7669,0
+raw,Max,2.4648,1.3286,1,0.1864
 standardized,none,17.8692,4.4467,1.7529,0.4763
-standardized,L1,1.0,0.2494,0.0984,0.0083
-standardized,L2,4.0145,1.0,0.3937,0.0
-standardized,Max,10.3583,2.5746,1.0,0.2847
+standardized,L1,1,0.2494,0.0984,0.0083
+standardized,L2,4.0145,1,0.3937,0
+standardized,Max,10.3583,2.5746,1,0.2847

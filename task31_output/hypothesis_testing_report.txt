@@ -1,0 +1,28 @@
+HYPOTHESIS TESTING REPORT
+=========================
+Significance level 0.05; p-values corrected with Benjamini-Hochberg (q-values) because 112 tests were run.
+
+ANOVA (feature averages across the target classes)
+- Significant AND meaningful: 4 feature(s): ram, battery_power, px_width, px_height.
+- Not useful for telling the classes apart (not significant or negligible effect): 10 feature(s): mobile_wt, int_memory, n_cores, sc_h, sc_w, talk_time, m_dep, pc, fc, clock_speed.
+
+- Strongest: 'ram' (F = 3520.1, eta squared = 0.84: the classes explain 84% of its variation).
+- Tukey post-hoc: 16 of 18 class pairs differ for the top features (see tukey_posthoc.csv).
+
+t-TESTS (two-group splits)
+- 98 tests: not significant: 94; significant and meaningful: 4.
+- Splits with meaningful differences: price_range: lowest vs highest (4).
+- The Mann-Whitney check (no bell-shape assumption) agrees with the t-test on 100% of the tests.
+
+WHAT THIS MEANS
+FEATURE SELECTION
+- Keep features with a significant AND meaningful ANOVA effect: their averages really differ between the target classes.
+- Features that are not significant, or significant with a negligible effect, carry little class information on their own; candidates to drop (but a feature can still help in combination with others, so confirm with a model, Tasks 20, 22, 25).
+DATA SEGMENTATION
+- A two-group split with large Cohen's d (about 0.5 or more) on several features defines groups that really behave differently, so separate segments or models can make sense. Splits where every effect is negligible give no reason to segment.
+
+WARNINGS
+- Significant is not the same as important: with many rows a tiny difference gets a tiny p-value. Read the effect size.
+- A test shows that averages differ, not why (correlation is not causation).
+- ANOVA assumes similar variances (see levene_p) and roughly bell-shaped groups; Welch t-test relaxes the variance assumption and Kruskal-Wallis / Mann-Whitney do not assume a shape. With large samples the averages are fairly robust.
+- Many tests mean some false alarms; that is why q-values (not raw p-values) decide the verdict.

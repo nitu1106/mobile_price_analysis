@@ -1,0 +1,15 @@
+feature,mean_0,mean_1,mean_2,mean_3,F,p_value,kruskal_p,levene_p,eta_squared,effect,q_value,verdict
+ram,785.314,1679.49,2582.816,3449.232,3520.11082,0.0,0.0,0.0,0.84104,large,0.0,significant and meaningful
+battery_power,1116.902,1228.868,1228.32,1379.984,31.59816,0.0,0.0,0.00079,0.04534,small,0.0,significant and meaningful
+px_width,1150.27,1251.908,1234.046,1369.838,22.62088,0.0,0.0,0.51732,0.03288,small,0.0,significant and meaningful
+px_height,536.408,666.892,632.284,744.848,19.48484,0.0,0.0,0.0,0.02845,small,0.0,significant and meaningful
+mobile_wt,140.552,140.51,143.614,136.32,3.59432,0.01312,0.01274,0.10305,0.00537,negligible,0.03673,significant but negligible effect
+int_memory,31.174,32.116,30.92,33.976,2.923,0.03278,0.03253,0.65293,0.00437,negligible,0.07648,not significant
+n_cores,4.6,4.298,4.682,4.502,2.62542,0.04894,0.04859,0.91718,0.00393,negligible,0.09787,not significant
+sc_h,12.324,12.212,12.01,12.68,2.22598,0.08325,0.08253,0.83637,0.00333,negligible,0.14569,not significant
+sc_w,5.682,5.544,5.714,6.128,1.671,0.17121,0.45106,0.0009,0.00251,negligible,0.25294,not significant
+talk_time,10.612,11.362,10.972,11.098,1.62881,0.18067,0.17964,0.73006,0.00244,negligible,0.25294,not significant
+m_dep,0.4902,0.524,0.4908,0.502,1.50068,0.21246,0.20587,0.89951,0.00225,negligible,0.2704,not significant
+pc,9.574,9.924,10.018,10.15,0.82545,0.47975,0.49978,0.86162,0.00124,negligible,0.5487,not significant
+fc,4.084,4.34,4.498,4.316,0.77218,0.5095,0.55649,0.51569,0.00116,negligible,0.5487,not significant
+clock_speed,1.5502,1.4886,1.5298,1.5204,0.49371,0.68668,0.73583,0.03917,0.00074,negligible,0.68668,not significant

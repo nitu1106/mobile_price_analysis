@@ -1,0 +1,21 @@
+CONFIDENCE INTERVAL REPORT
+==========================
+12 continuous features analysed with 95% intervals (2000 bootstrap resamples).
+
+HOW TO READ THEM
+- Example: for 'ram' the mean is 2124.2 and the plausible range for the TRUE mean is 2076.6 to 2171.8. This is NOT the range of individual phones (that is about 445 to 3826 for the middle 90%).
+
+RELIABILITY
+- Precise estimates of the mean (half-width < 5% of the mean): 12 of 12.
+- Features where the formula (t) interval may not be trustworthy (skewed, or it disagrees with the bootstrap by 15% or more): fc. For those prefer the bootstrap interval, and use the median instead of the mean.
+- Simulation: the 95% t-interval contained the true mean 94.5% to 98.0% of the time (promised: 95%); the bootstrap 92.5% to 98.0%. The bootstrap used only 200 repeats, so expect about +/-1.5 points of random noise; a percentile bootstrap can be a little too narrow when the sample is small.
+- Coverage above the promised level for the largest sample comes from drawing a big part of only 2000 rows without replacement: the 'population' is small, so the true uncertainty is smaller than the formula assumes (finite-population effect).
+- Sample size: the interval width falls with 1/sqrt(n): with 20 rows the width is 1015.7, with 2000 rows 95.1. To halve the width you need four times the data.
+- Groups: the intervals of 'ram' for neighbouring price_range groups DO NOT overlap, so the group means really differ.
+
+WHY THIS MATTERS FOR FEATURE DISTRIBUTIONS
+- A narrow interval means the feature's average (and spread) is stable: a new sample of phones would give nearly the same value, so thresholds, bins and scaling parameters learned from it are reliable.
+- A wide interval warns that the estimate depends on which rows you happened to get: be careful with decisions based on it.
+- Higher confidence (99%) gives a wider interval; lower (90%) a narrower one. The choice is yours; always state it.
+- Confidence intervals assume the rows are an independent random sample; they cannot repair a biased or duplicated dataset.
+- 'Overlapping intervals' is only a rough check; use a proper test (Task 31) to confirm a difference between groups.

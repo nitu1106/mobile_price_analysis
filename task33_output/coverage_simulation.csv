@@ -1,0 +1,5 @@
+sample_size,t_interval_coverage_%,bootstrap_coverage_%
+20,94.9,95.5
+50,94.5,92.5
+100,96.6,94.0
+500,98.0,98.0

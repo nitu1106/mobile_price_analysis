@@ -1,0 +1,15 @@
+feature,chi2,dof,p_value,q_value,cramers_v,strength,verdict,assumptions_ok
+ram_bin,2920.832,9,0.0,0.0,0.69716,strong,significant relation,True
+battery_power_bin,89.056,9,0.0,0.0,0.11559,weak/moderate,significant relation,True
+px_width_bin,71.84134,9,0.0,0.0,0.10241,weak/moderate,significant relation,True
+px_height_bin,53.59877,9,0.0,0.0,0.08628,very weak,significant but very weak,True
+sc_w_bin,21.86545,9,0.00932,0.13973,0.04633,very weak,independent (no evidence of a relation),True
+int_memory_bin,17.94164,9,0.03586,0.34227,0.03862,very weak,independent (no evidence of a relation),True
+touch_screen,3.88014,3,0.2747,0.88476,0.02097,very weak,independent (no evidence of a relation),True
+m_dep,28.72913,27,0.37416,0.88476,0.01692,very weak,independent (no evidence of a relation),True
+four_g,3.17988,3,0.36471,0.88476,0.00945,very weak,independent (no evidence of a relation),True
+dual_sim,1.28646,3,0.73235,0.9451,0.0,very weak,independent (no evidence of a relation),True
+blue,1.43214,3,0.69802,0.9451,0.0,very weak,independent (no evidence of a relation),True
+three_g,1.37376,3,0.7117,0.9451,0.0,very weak,independent (no evidence of a relation),True
+n_cores,20.52445,21,0.48829,0.88476,0.0,very weak,independent (no evidence of a relation),True
+wifi,0.85617,3,0.83599,0.9451,0.0,very weak,independent (no evidence of a relation),True

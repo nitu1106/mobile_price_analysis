@@ -1,0 +1,2 @@
+variable_1,variable_2,rows,table,chi2,dof,p_value,cramers_v,min_expected_count,cells_with_expected>=5_%,assumptions_ok,fisher_exact_p,q_value,strength,verdict
+four_g,three_g,2000,2x2,682.6858,1,0.0,0.584,228.2445,100.0,True,,0.0,strong,significant relation

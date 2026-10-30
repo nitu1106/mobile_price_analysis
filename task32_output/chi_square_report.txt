@@ -1,0 +1,29 @@
+CHI-SQUARE REPORT
+=================
+105 pairs of categorical variables tested; p-values corrected with Benjamini-Hochberg (q-values), significance level 0.05.
+
+RELATION WITH THE TARGET 'price_range'
+- Significant and not very weak: 3 feature(s): ram_bin, battery_power_bin, px_width_bin.
+- No evidence of a relation (or very weak): 11 feature(s): px_height_bin, sc_w_bin, int_memory_bin, touch_screen, m_dep, four_g, dual_sim, blue, three_g, n_cores, wifi.
+- Strongest: 'ram_bin' (chi-square 2920.8, Cramer's V 0.70).
+
+PREDICTIVE IMPACT
+                         feature_set  n_features               model  accuracy   std
+                significant features           3 Logistic Regression     0.789 0.027
+                significant features           3       Random Forest     0.788 0.017
+non-significant / very weak features          11 Logistic Regression     0.280 0.013
+non-significant / very weak features          11       Random Forest     0.270 0.022
+            all categorical features          14 Logistic Regression     0.794 0.025
+            all categorical features          14       Random Forest     0.784 0.017
+(guessing the biggest class: 0.250)
+- Features the test calls significant give 0.788 accuracy; the others give 0.275: the test correctly separated useful from useless features.
+
+REDUNDANCY: 1 feature pair(s) with V >= 0.5. Two features that say the same thing add little together; keep one.
+
+HOW TO INTERPRET
+- Chi-square tests dependence, not cause. It does not say the direction; the residuals show which cells drive the relation.
+- p-value: is there evidence of ANY relation? Cramer's V: how strong? A tiny p with a tiny V is a real but practically useless relation.
+- Assumption: expected counts should be >= 5 in at least 80% of cells (and none below 1). The column 'assumptions_ok' flags pairs where this fails; for small 2x2 tables use the Fisher exact p-value instead.
+- Binned columns (_bin) test a numeric feature through its groups: this finds relations of any shape but loses detail inside each group.
+- The chi-square test looks at ONE feature against the target; a feature that looks weak alone can still help in combination with others.
+- For modelling: keep strongly related features, drop clearly independent ones (confirm with a model), and merge or drop redundant pairs.
