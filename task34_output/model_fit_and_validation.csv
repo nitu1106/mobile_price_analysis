@@ -1,0 +1,18 @@
+,value
+R_squared,0.91863
+adjusted_R_squared,0.91781
+F_statistic,1117.11442
+F_test_p_value,0.0
+AIC,1146.5205
+residual_std_error,0.32061
+breusch_pagan_p (equal variance?),1e-05
+jarque_bera_p (normal residuals?),0.0
+durbin_watson (about 2 = independent),1.97581
+in_sample_R2,0.91863
+train_R2,0.91808
+test_R2,0.9193
+cross_validated_R2,0.91663
+cross_validated_R2_std,0.00429
+logistic_cv_AUC,0.99944
+logistic_cv_accuracy,0.986
+majority_class_accuracy,0.5

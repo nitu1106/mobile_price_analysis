@@ -1,0 +1,16 @@
+statistic,resamples_per_run,runs,lower_end_std,upper_end_std,mean_width,interval_end_movement_as_%_of_width
+mean of ram,200,20,3.58545,3.85615,91.7718,4.0544
+mean of ram,1000,20,2.29799,1.91861,95.83262,2.19998
+mean of ram,5000,20,1.38388,0.79918,95.53338,1.14257
+median of battery_power,200,20,2.02955,2.07511,73.665,2.78603
+median of battery_power,1000,20,1.14684,1.1365,74.46438,1.53318
+median of battery_power,5000,20,0.6853,0.33527,74.62687,0.68379
+std of battery_power,200,20,0.74379,0.76048,16.44298,4.5742
+std of battery_power,1000,20,0.40852,0.37497,16.87369,2.32162
+std of battery_power,5000,20,0.14586,0.16605,16.94973,0.9201
+90th percentile of ram,200,20,5.3505,4.5454,90.7535,5.45208
+90th percentile of ram,1000,20,3.14892,1.68946,92.83887,2.60579
+90th percentile of ram,5000,20,0.70326,0.48325,92.31613,0.64264
+correlation ram vs price_range,200,20,0.00091,0.00058,0.01274,5.83142
+correlation ram vs price_range,1000,20,0.00018,0.0002,0.01294,1.48916
+correlation ram vs price_range,5000,20,0.00013,0.0001,0.01303,0.90298

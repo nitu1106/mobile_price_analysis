@@ -1,0 +1,13 @@
+area,recommendation
+feature engineering,"Interactions are worth testing between the strongest predictors (ram, battery_power, px_width); the others add little to build on (Task 17)."
+feature engineering,"16 feature(s) show no evidence of a relation with the target alone (mobile_wt, int_memory, n_cores, sc_h, sc_w, talk_time, m_dep, touch_screen...). Keep them out of the first model; test them again inside interactions/ratios before discarding completely (they can matter in combination)."
+preprocessing,"SKEWED features (|skew| > 1): fc, three_g. Apply log / Box-Cox / Yeo-Johnson (Task 27); the mean of a skewed column and its t-interval are less reliable."
+preprocessing,"SCALING: features have very different units; scale before distance- or gradient-based models (Tasks 14, 26). Tree models do not need it."
+preprocessing,MULTICOLLINEARITY: 0 feature(s) with VIF > 10. No action needed for coefficient stability.
+preprocessing,Fit every scaler / transformer / selector on the training rows only (use a Pipeline) to avoid data leakage.
+model development,"A plain LINEAR model explains the target with cross-validated R-squared 0.92: a linear/logistic regression is a strong, explainable baseline."
+model development,"Start with the 3 strongest predictor(s) (ram, battery_power, px_width) and check by cross-validation whether adding the 'some evidence' features helps (Tasks 20, 22, 25)."
+model development,"Only a few features carry the signal: expect simple models to perform nearly as well as complex ones; prefer the simple, explainable one."
+model development,"Report effect sizes (eta-squared, Cohen's d, Cramer's V, standardised coefficients) next to every p-value: with this many rows almost any difference becomes 'significant'."
+model development,Use confidence intervals (Task 33/36) on the final scores and on the key coefficients: a single accuracy number hides how much it could vary.
+model development,"Statistical tests show association, not cause: do not read the coefficients as 'what to change to raise the price'."

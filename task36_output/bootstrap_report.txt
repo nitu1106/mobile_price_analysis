@@ -1,0 +1,31 @@
+BOOTSTRAPPING REPORT
+====================
+5000 resamples of 2000 rows; 95% intervals. Statistics: mean of ram, median of battery_power, std of battery_power, 90th percentile of ram, correlation ram vs price_range, slope of price_range on ram, share of 1 in blue.
+
+                     statistic  estimate  bootstrap_std_error    bias  percentile_low  percentile_high   BCa_low  BCa_high
+                   mean of ram 2124.2130              23.8719 -0.3370       2076.9514        2171.0924 2077.0173 2172.4736
+       median of battery_power 1226.0000              19.5547  1.9831       1191.0000        1266.0000 1193.0000 1265.7920
+          std of battery_power  439.4182               4.2921 -0.1691        430.7169         447.6635  431.0583  447.5858
+        90th percentile of ram 3637.7000              23.7404  0.0252       3592.1000        3685.0000 3592.3000 3685.8000
+correlation ram vs price_range    0.9170               0.0034 -0.0000          0.9104           0.9234    0.9100    0.9231
+   slope of price_range on ram    0.0009               0.0000  0.0000          0.0009           0.0010    0.0009    0.0010
+            share of 1 in blue    0.4950               0.0112 -0.0003          0.4730           0.5165    0.4725    0.5170
+
+WHAT THE NUMBERS SAY
+- Least precise statistic: 'share of 1 in blue' (interval width 8.8% of its value); most precise: 'correlation ram vs price_range'.
+- Where a textbook formula exists, the bootstrap interval is broadly similar to it, with exceptions listed below (average end-point difference 19.2% of the interval width). The bootstrap needs no formula, so it also works for medians, percentiles and other statistics that have none.
+- For 'std of battery_power' the formula interval differs clearly from the bootstrap (61% of the interval width): the formula assumes a bell-shaped column (or other conditions), while the bootstrap makes no shape assumption, so it is the safer interval to report here.
+- For 'slope of price_range on ram' the formula interval differs clearly from the bootstrap (25% of the interval width): the formula assumes a bell-shaped column (or other conditions), while the bootstrap makes no shape assumption, so it is the safer interval to report here.
+- Bootstrap distributions that are visibly lopsided (skewness above 0.3): none; the percentile, basic and BCa intervals are therefore almost the same.
+- Estimates with a noticeable bias (more than a quarter of the standard error): none.
+
+STABILITY
+- Number of resamples: the standard error settled (within 2% of its final value) after 2000 resamples at most; 5000 resamples are more than enough for these statistics (about 1000-2000 is a common default; use more for the tails of the distribution).
+- Repeating the whole bootstrap 20 times: with 200 resamples the interval ends move by about 4.5% of the interval width, with 5000 resamples only 0.9%. This is pure Monte-Carlo noise; set a random seed to make results reproducible.
+- Sample size: the interval width shrinks like 1/sqrt(n) (width x sqrt(n) stays near 4230); four times as much data halves the uncertainty.
+
+WHEN THE BOOTSTRAP IS (NOT) ENOUGH
+- It needs a representative, independent sample: it cannot fix a biased dataset, duplicated rows or time/group dependence (then resample whole groups).
+- It estimates uncertainty of the SAMPLE statistic; it does not reveal values outside what the sample contains (e.g. the extreme tail of a distribution).
+- For very small samples or extreme statistics (maximum, minimum) the bootstrap can fail.
+- Percentile = simplest; basic = reflects it; BCa = best general choice (corrects bias and skew) but slower.

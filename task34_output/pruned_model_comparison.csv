@@ -1,0 +1,3 @@
+model,predictors,R_squared,adjusted_R_squared,AIC,average_std_error_of_coefficients
+all predictors,20,0.9186,0.9178,1146.5205,0.0071
+VIF-pruned (all VIF <= 10),20,0.9186,0.9178,1146.5205,0.0071

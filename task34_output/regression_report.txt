@@ -1,0 +1,28 @@
+REGRESSION REPORT
+=================
+LINEAR REGRESSION: R-squared 0.919 (adjusted 0.918); the model as a whole is significant (F-test p = 0).
+- Significant predictors after correction: 5 of 20: ram, battery_power, px_height, px_width, mobile_wt.
+- With a medium or large effect (f-squared >= 0.15): ram, battery_power.
+- Not significant (candidates to drop): int_memory, dual_sim, three_g, wifi, clock_speed, sc_h, n_cores, fc, m_dep, touch_screen, talk_time, sc_w, blue, pc, four_g.
+- Reading a coefficient: for 'ram' the coefficient is 0.0009472: +1 unit raises the predicted price_range by that much with the other features held fixed; in standard deviations that is +0.92.
+
+LOGISTIC REGRESSION (price_range above 1.5 (high) versus 1.5 or below (low))
+- Warning: the classes are (almost) perfectly separable, so the unpenalised estimates are unreliable. Odds ratios are shrunk estimates; p-values are not reported.
+- Odds ratio per 1 SD: 1 = no effect, 2 = doubles the odds of 'high', 0.5 = halves them.
+- WARNING: at least one odds ratio is astronomically large because 'high' and 'low' are almost perfectly separated by that feature (see unreliable_exact_value in the csv). The direction and 'very strong' are trustworthy; the exact number and its p-value are not. A penalised or tree model handles this better.
+- Largest effect: 'ram', odds ratio 2.19e+40 per 1 SD (nan).
+
+MULTICOLLINEARITY
+- Highest VIF 1.7 (pc); features with VIF above 5: none.
+- No feature needed removing: the predictors do not overlap enough to make the coefficients unstable.
+- The pruned model explains almost as much as the full model: the removed features were largely redundant.
+- Multicollinearity does not hurt predictions, but it makes individual coefficients unstable and p-values unreliable.
+
+VALIDATION
+- In-sample R-squared 0.919, test 0.919, cross-validated 0.917: the model holds on unseen rows.
+- Residual checks: unequal variance (Breusch-Pagan p = 1.1e-05) present; non-normal residuals (Jarque-Bera p = 3.1e-10) present. With big samples the tests flag tiny deviations; the robust p-values (p_value_robust) are shown for comparison.
+
+CAUTIONS
+- A linear model on an ordered target such as price_range (0-3) is an approximation; the logistic model answers a simpler yes/no question.
+- Significant does not mean important: check f-squared / odds ratios. Association does not mean cause.
+- Coefficients describe the effect of one feature with the others held fixed; if features overlap, that is not a realistic comparison (see VIF).
