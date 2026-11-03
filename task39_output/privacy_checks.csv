@@ -1,0 +1,6 @@
+,value
+median_distance_synthetic_to_train,3.3516
+median_distance_holdout_to_train,3.3415
+share_of_synthetic_rows_closer_than_5%_of_holdout_rows,0.0457
+exact_copies,0.0
+membership_inference_AUC,0.497

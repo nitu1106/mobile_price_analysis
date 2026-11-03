@@ -1,0 +1,27 @@
+SURVIVAL ANALYSIS REPORT
+========================
+
+IMPORTANT: THE TIME-TO-EVENT DATA HERE IS SIMULATED. The Kaggle mobile price data has no time or event columns, so survival analysis does not apply to it directly. The simulation lets us check that the methods work (we know the true effects). The numbers below are NOT facts about real phones.
+
+DATA: 2000 subjects, 1098 events, 45% censored.
+
+KAPLAN-MEIER
+- Median survival: 28.6 months. S(12) = 0.78, S(24) = 0.55, S(36) = 0.40 (chance of surviving beyond 12, 24, 36 months).
+- How to read a curve: it starts at 1 and steps down at each event; ticks of censoring are not events; the curve only ends where data ends; the shaded band is the uncertainty.
+- Log-rank tests: price_range: p = 0 (curves differ); touch_screen: p = 0 (curves differ).
+
+COX MODEL
+- Concordance 0.72: given two subjects, the model ranks who fails first correctly 72% of the time (50% = coin toss).
+- Significant covariates (q < 0.05): battery_power (HR 0.66), touch_screen (HR 1.44), mobile_wt (HR 1.40), price_range (HR 0.73).
+- Hazard ratio per 1 SD: HR 1.5 = 50% higher hazard (events come sooner) for a subject 1 SD higher on that feature; HR 0.7 = 30% lower hazard.
+- Simulation check: the true effect lies inside the 95% interval for 18 of 21 covariates; of the 16 covariates with NO true effect, 0 were wrongly flagged significant.
+- Real effects recovered (right direction and inside the interval): touch_screen, mobile_wt, price_range, ram. Not recovered: battery_power (estimated HR 0.66, true 0.61). This usually happens when features overlap strongly (multicollinearity, see Task 34): the model cannot tell which of the overlapping features carries the effect.
+- Proportional-hazards check: assumption is questionable for blue, touch_screen.
+- Cox vs Kaplan-Meier per risk group: largest difference between predicted and observed survival 0.023 (good agreement).
+
+WHEN IS SURVIVAL ANALYSIS APPLICABLE?
+- You need, for every subject, a time (until the event or until the last observation) and an indicator whether the event happened.
+- Typical uses: time until customer churn, machine failure, loan default, patient relapse, phone replacement.
+- Ignoring censoring (e.g. averaging only the observed times) gives badly wrong answers; Kaplan-Meier and Cox use the censored subjects correctly.
+- Assumptions: censoring is unrelated to the outcome risk (non-informative), subjects are independent, and for Cox the hazard ratios are constant over time.
+- Association is not causation: a hazard ratio describes how the event rate differs, not what would happen if you changed the feature.

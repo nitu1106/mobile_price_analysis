@@ -1,0 +1,3 @@
+covariance,components,BIC,average_KS,max_correlation_difference,real_vs_synthetic_classifier_AUC
+full,4,59026.2101,0.0611,0.0746,0.896
+diag,8,52474.4405,0.0586,0.5348,0.9079

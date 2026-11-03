@@ -1,0 +1,4 @@
+algorithm,clusters,noise_points,silhouette,davies_bouldin,calinski_harabasz,agreement_with_KMeans_ARI,NMI_with_target
+K-Means,2,0,0.0677,3.6926,144.6878,1.0,0.0008
+Hierarchical (Ward),2,0,0.0776,3.2934,132.6521,0.2782,0.0003
+DBSCAN,1,70,,,,0.0049,0.0012

@@ -1,0 +1,7 @@
+real_rows,model,real only,real + 1x synthetic,real + 10x synthetic,synthetic only,gain_1x,gain_10x
+100,Logistic Regression,0.6207,0.5503,0.4067,0.3577,-0.0703,-0.214
+100,Random Forest,0.6753,0.592,0.421,0.3583,-0.0833,-0.2543
+200,Logistic Regression,0.7593,0.614,0.473,0.4123,-0.1453,-0.2863
+200,Random Forest,0.7613,0.6937,0.4647,0.4023,-0.0677,-0.2967
+500,Logistic Regression,0.92,0.7903,0.4583,0.414,-0.1297,-0.4617
+500,Random Forest,0.838,0.7833,0.4727,0.3317,-0.0547,-0.3653

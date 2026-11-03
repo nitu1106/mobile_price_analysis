@@ -1,0 +1,5 @@
+linkage,silhouette,cophenetic_correlation,smallest_cluster_share_%,note
+ward,0.0776,0.3101,24.35,
+average,0.1239,0.3709,0.1,tiny cluster of outliers: silhouette is misleading
+complete,0.0274,0.2472,38.65,
+single,0.1521,0.3458,0.05,tiny cluster of outliers: silhouette is misleading

@@ -1,0 +1,25 @@
+CLUSTERING REPORT
+=================
+20 standardised features, 2000 rows. Elbow: k = 5. K-Means silhouette: k = 2 (0.068). Hierarchical silhouette: k = 2. Used: k = 2.
+
+CLUSTER STRUCTURE: silhouette 0.07 means no real cluster structure.
+- The data does not form clearly separated groups (rows form one cloud). K-Means still divides it, but the segments are 'slices' of the cloud, not natural groups. Treat them as a convenient grouping, not as discovered types. Many independent features make distances less informative (curse of dimensionality).
+
+ALGORITHMS
+          algorithm  clusters  noise_points  silhouette  davies_bouldin  calinski_harabasz  agreement_with_KMeans_ARI  NMI_with_target
+            K-Means         2             0       0.068           3.693            144.688                      1.000            0.001
+Hierarchical (Ward)         2             0       0.078           3.293            132.652                      0.278            0.000
+             DBSCAN         1            70         NaN             NaN                NaN                      0.005            0.001
+- DBSCAN: no setting gives 2+ clusters with less than 50% noise: the data has no dense separated regions.
+- Linkage methods: ward silhouette 0.08; average silhouette 0.12 (inflated: it only cuts off a tiny outlier cluster of 0.1% of the rows); complete silhouette 0.03; single silhouette 0.15 (inflated: it only cuts off a tiny outlier cluster of 0.1% of the rows). A high silhouette is only meaningful when the clusters have a reasonable size; compare it together with the cluster sizes.
+- Stability: segments found on 80% subsamples match the full-data segments with ARI 0.78 (moderately stable).
+
+SEGMENTS (K-Means)
+- Segment 0 (52.2% of rows): high four_g, three_g; average price_range 1.52.
+- Segment 1 (47.8% of rows): low four_g, three_g; average price_range 1.48.
+
+HOW TO USE THIS
+- Elbow and silhouette often disagree: the elbow is a judgement call, the silhouette is a number; use both, plus whether the segments make sense and are stable.
+- Name segments only if they are stable and clearly different (look at the z-score heatmap: values beyond +/-0.5 stand out).
+- The target was not used to build the segments; if the segments still differ a lot in the target, they carry useful information (see segment_profiles.png).
+- Scale first (done); outliers can create tiny clusters in K-Means and noise points in DBSCAN.

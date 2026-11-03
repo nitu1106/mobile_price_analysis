@@ -1,0 +1,22 @@
+covariate,log_HR,HR_per_1_SD,HR_ci_low,HR_ci_high,std_error,p_value,q_value,significant,meaning,true_log_HR,true_inside_CI
+battery_power,-0.41894,0.65774,0.60927,0.71007,0.03906,0.0,0.0,True,lower hazard: event later,-0.5,False
+touch_screen,0.3672,1.44369,1.35742,1.53545,0.03144,0.0,0.0,True,higher hazard: event sooner,0.4,True
+mobile_wt,0.33355,1.39591,1.31406,1.48285,0.03083,0.0,0.0,True,higher hazard: event sooner,0.35,True
+price_range,-0.31817,0.72748,0.58988,0.89717,0.10697,0.00294,0.01541,True,lower hazard: event later,-0.3,True
+ram,-0.21727,0.80471,0.65774,0.98452,0.1029,0.03472,0.1301,False,no clear effect,-0.2,True
+sc_w,0.07493,1.07781,1.00368,1.15741,0.03635,0.0393,0.1301,False,no clear effect,0.0,False
+int_memory,-0.06249,0.93942,0.88416,0.99814,0.03093,0.04337,0.1301,False,no clear effect,0.0,False
+m_dep,-0.04007,0.96072,0.9049,1.01999,0.03054,0.18953,0.49752,False,no clear effect,0.0,True
+px_width,-0.03906,0.96169,0.89393,1.03459,0.03728,0.29478,0.68781,False,no clear effect,0.0,True
+pc,0.03703,1.03772,0.95988,1.12188,0.03978,0.35199,0.71676,False,no clear effect,0.0,True
+px_height,0.03288,1.03343,0.95958,1.11296,0.03783,0.38469,0.71676,False,no clear effect,0.0,True
+clock_speed,-0.02355,0.97672,0.9196,1.0374,0.03075,0.44371,0.71676,False,no clear effect,0.0,True
+n_cores,-0.02352,0.97675,0.91986,1.03716,0.03062,0.44232,0.71676,False,no clear effect,0.0,True
+four_g,0.02122,1.02144,0.94917,1.09923,0.03744,0.57096,0.847,False,no clear effect,0.0,True
+blue,0.0158,1.01593,0.95688,1.07862,0.03055,0.605,0.847,False,no clear effect,0.0,True
+dual_sim,0.01231,1.01239,0.95375,1.07463,0.03044,0.68597,0.87485,False,no clear effect,0.0,True
+sc_h,-0.01216,0.98792,0.92049,1.06029,0.03607,0.73612,0.87485,False,no clear effect,0.0,True
+wifi,0.00934,1.00939,0.95056,1.07185,0.03064,0.76037,0.87485,False,no clear effect,0.0,True
+three_g,-0.00636,0.99366,0.92382,1.06877,0.03718,0.8641,0.87485,False,no clear effect,0.0,True
+fc,0.00632,1.00634,0.93022,1.0887,0.04013,0.87485,0.87485,False,no clear effect,0.0,True
+talk_time,0.0048,1.00482,0.94653,1.06669,0.03049,0.87479,0.87485,False,no clear effect,0.0,True

@@ -1,0 +1,3 @@
+model,"TRTR (train real, test real)","TSTR (train synthetic, test real)",real + synthetic,TSTR / TRTR
+Random Forest,0.8717,0.6867,0.845,0.7878
+Logistic Regression,0.96,0.725,0.8467,0.7552

@@ -1,0 +1,36 @@
+SYNTHETIC DATA (GMM) REPORT
+===========================
+GMM with 8 component(s), 'diag' covariance, fitted on 1400 real rows; 1400 synthetic rows generated. Evaluation on 600 holdout rows the GMM never saw.
+
+VERDICT
+                                               check  passed                value
+           Feature distributions (average KS < 0.10)    True                0.059
+  Correlations on average (mean |difference| < 0.05)    True                0.035
+No strong correlation lost (max |difference| < 0.20)   False                0.535
+      Hard to tell from real (classifier AUC < 0.60)   False                0.908
+                         Useful (TSTR / TRTR > 0.90)   False                 0.76
+      No copies (no exact copies, close share < 10%)    True 0 copies, 4.6% close
+             Membership inference fails (AUC < 0.55)    True                0.497
+
+SIMILARITY: average KS 0.059; correlation difference 0.035 on average. A classifier separates real from synthetic with AUC 0.91 (real vs real: 0.51).
+- Largest lost correlation: sc_h & sc_w: real r = 0.52, synthetic r = -0.01. 
+- Covariance types: full (4 components): classifier AUC 0.90, max correlation difference 0.07; diag (8 components): classifier AUC 0.91, max correlation difference 0.53. BIC rewards simple models; if correlations matter, prefer the covariance type with the smaller correlation error even if its BIC is not the lowest.
+- Worst feature: clock_speed (KS 0.141). A GMM is made of bell-shaped clouds, so skewed, uniform, discrete or bounded columns are only approximated (see distribution_overlays.png).
+
+USEFULNESS (accuracy)
+- Random Forest: train on real 0.872, train on synthetic 0.687, real + synthetic 0.845.
+- Logistic Regression: train on real 0.960, train on synthetic 0.725, real + synthetic 0.847.
+- Augmenting SMALL real samples (average over sizes and models): adding as many synthetic rows as real rows (1x) changes accuracy by -0.092; adding 10x as many changes it by -0.313. Too much synthetic data drowns the real rows and spreads the generator's mistakes.
+- Best case: Random Forest with 500 real rows (-0.055 with 1x synthetic).
+- Synthetic rows cannot contain MORE information than the real rows the GMM was fitted on. Augmentation helps mainly when the real sample is tiny and the GMM captures its structure; with enough real data it adds nothing, and a poor GMM can add noise.
+
+PRIVACY
+- Synthetic rows are not closer to the real train rows than unseen real rows are (4.6% fall below the 5% threshold; about 5% expected); exact copies: 0.
+- Membership-inference attack AUC 0.50: the attacker learns almost nothing about who was in the training data.
+- A GMM with few components is smooth and rarely copies rows; a GMM with many components can sit on single records and reproduce them.
+- These checks are empirical. They are NOT a formal privacy guarantee (that needs differential privacy). Rare/outlier people are the most at risk: check them separately.
+
+LIMITS
+- Discrete and bounded columns are rounded and clipped after sampling, which slightly distorts their distributions.
+- Relationships the GMM cannot represent (non-Gaussian clouds, strong non-linear structure) are lost.
+- Always keep a real holdout for evaluation; never test a model on rows the generator was fitted on.

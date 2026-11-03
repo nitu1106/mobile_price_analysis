@@ -1,0 +1,8 @@
+check,passed,value
+Feature distributions (average KS < 0.10),True,0.059
+Correlations on average (mean |difference| < 0.05),True,0.035
+No strong correlation lost (max |difference| < 0.20),False,0.535
+Hard to tell from real (classifier AUC < 0.60),False,0.908
+Useful (TSTR / TRTR > 0.90),False,0.76
+"No copies (no exact copies, close share < 10%)",True,"0 copies, 4.6% close"
+Membership inference fails (AUC < 0.55),True,0.497
