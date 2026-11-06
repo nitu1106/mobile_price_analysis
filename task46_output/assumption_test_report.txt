@@ -1,0 +1,25 @@
+LINEAR REGRESSION ASSUMPTION TESTS
+Feature: ram
+Target: price_range
+
+Breusch-Pagan test (heteroscedasticity)
+Statistic: 0.0122
+p-value: 0.9120
+Interpretation: p < 0.05 suggests non-constant residual variance (heteroscedasticity).
+
+Shapiro-Wilk test (normality)
+Statistic: 0.9892
+p-value: 0.0048
+Interpretation: p < 0.05 suggests residuals may not be normally distributed.
+
+Jarque-Bera test (normality)
+Statistic: 5.8225
+p-value: 0.0544
+
+Durbin-Watson statistic (residual autocorrelation)
+Value: 2.0048
+A value near 2 generally suggests little autocorrelation.
+
+Note: price_range is a category-like 0-3 target in the common Mobile Price Classification dataset.
+Linear regression is used here because the assignment asks for it; logistic regression and a decision tree
+are more natural choices for this classification target.

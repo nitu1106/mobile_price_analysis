@@ -1,0 +1,49 @@
+DECISION TREE RULES
+Each line shows a condition used to split the data.
+
+|--- numeric__ram <= 2231.50
+|   |--- numeric__ram <= 1052.50
+|   |   |--- numeric__px_height <= 1449.00
+|   |   |   |--- numeric__battery_power <= 1816.50
+|   |   |   |   |--- class: 0
+|   |   |   |--- numeric__battery_power >  1816.50
+|   |   |   |   |--- class: 0
+|   |   |--- numeric__px_height >  1449.00
+|   |   |   |--- numeric__ram <= 605.00
+|   |   |   |   |--- class: 0
+|   |   |   |--- numeric__ram >  605.00
+|   |   |   |   |--- class: 1
+|   |--- numeric__ram >  1052.50
+|   |   |--- numeric__ram <= 1473.50
+|   |   |   |--- numeric__battery_power <= 1063.50
+|   |   |   |   |--- class: 0
+|   |   |   |--- numeric__battery_power >  1063.50
+|   |   |   |   |--- class: 1
+|   |   |--- numeric__ram >  1473.50
+|   |   |   |--- numeric__battery_power <= 1462.50
+|   |   |   |   |--- class: 1
+|   |   |   |--- numeric__battery_power >  1462.50
+|   |   |   |   |--- class: 2
+|--- numeric__ram >  2231.50
+|   |--- numeric__ram <= 3116.00
+|   |   |--- numeric__battery_power <= 1354.00
+|   |   |   |--- numeric__ram <= 2600.50
+|   |   |   |   |--- class: 2
+|   |   |   |--- numeric__ram >  2600.50
+|   |   |   |   |--- class: 2
+|   |   |--- numeric__battery_power >  1354.00
+|   |   |   |--- numeric__px_width <= 1199.50
+|   |   |   |   |--- class: 2
+|   |   |   |--- numeric__px_width >  1199.50
+|   |   |   |   |--- class: 3
+|   |--- numeric__ram >  3116.00
+|   |   |--- numeric__battery_power <= 910.50
+|   |   |   |--- numeric__px_height <= 576.00
+|   |   |   |   |--- class: 2
+|   |   |   |--- numeric__px_height >  576.00
+|   |   |   |   |--- class: 3
+|   |   |--- numeric__battery_power >  910.50
+|   |   |   |--- numeric__ram <= 3314.50
+|   |   |   |   |--- class: 3
+|   |   |   |--- numeric__ram >  3314.50
+|   |   |   |   |--- class: 3
