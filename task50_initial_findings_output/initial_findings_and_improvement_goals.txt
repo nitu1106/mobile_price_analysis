@@ -1,0 +1,42 @@
+
+MOBILE PRICE ANALYSIS - INITIAL FINDINGS
+========================================
+
+1. Objective
+Compare baseline models for predicting mobile phone price ranges.
+
+2. Model evaluation results
+              model  accuracy  precision_weighted  recall_weighted  f1_weighted
+Logistic Regression     0.965              0.9650            0.965       0.9650
+  Linear Regression     0.925              0.9319            0.925       0.9256
+      Decision Tree     0.830              0.8349            0.830       0.8317
+
+Best baseline by weighted F1-score: Logistic Regression (0.9650)
+Lowest baseline by weighted F1-score: Decision Tree (0.8317)
+
+3. Key insights
+- Accuracy is the overall fraction of correct predictions.
+- Precision tells us how many predicted classes were correct.
+- Recall tells us how many actual class examples were found.
+- Weighted F1 balances precision and recall and accounts for class sizes.
+- Logistic regression is relatively easy to interpret using its coefficients.
+- A shallow decision tree is easy to explain using its yes/no split rules.
+- Linear regression is designed for numeric targets, not class labels; rounding its output is only an assignment baseline.
+
+4. Interpretability vs predictive power
+Simple models are easier to explain and debug. More complex models, such as random
+forests, combine many trees and may predict better, but are harder to explain as a
+whole. Feature importance can help explain which inputs influence predictions.
+
+5. Improvement goals
+- Hyperparameter tuning: test tree depth, minimum samples per leaf/split and logistic regularization.
+- Feature engineering: create total pixel count (px_height * px_width) and screen aspect ratio if columns exist.
+- Use cross-validation to check whether results are stable.
+- Compare Random Forest and boosting models using the same data split.
+- Avoid data leakage by fitting preprocessing only on training data.
+
+6. Next step
+Train a Random Forest classifier and compare its scores and feature importance with
+the baseline models.
+
+Note: This report uses the actual metrics saved by Task 49. No scores are made up.

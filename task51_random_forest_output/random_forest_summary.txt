@@ -1,0 +1,16 @@
+RANDOM FOREST SUMMARY
+
+Dataset: Actual train.csv
+
+accuracy: 0.8775
+precision_weighted: 0.8776
+recall_weighted: 0.8775
+f1_weighted: 0.8774
+
+Impurity-based feature importance:
+It measures how much features reduce split impurity inside the decision trees.
+
+Permutation feature importance:
+It shuffles each test feature and measures the change in weighted F1-score.
+
+A larger positive decrease in performance means the model depends more on that feature.

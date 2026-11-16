@@ -1,0 +1,11 @@
+BASELINE MODEL COMPARISON
+
+1. Linear Regression is not naturally a classification algorithm. Its predictions were rounded to the nearest price category for baseline comparison.
+
+2. Logistic Regression is interpretable through its coefficients and is suitable for classification.
+
+3. Decision Tree is interpretable through its decision rules and feature splits.
+
+4. Models were evaluated using accuracy, weighted precision, weighted recall, and weighted F1-score.
+
+5. The model with the highest weighted F1-score performed best in this baseline comparison.
