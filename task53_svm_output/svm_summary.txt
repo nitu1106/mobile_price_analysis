@@ -1,0 +1,12 @@
+SVM SUMMARY
+Best scaling: StandardScaler
+Best parameters: {'svm__C': 10, 'svm__kernel': 'linear'}
+
+       scaling best_kernel  best_C best_gamma  cv_f1_weighted  accuracy  precision_weighted  recall_weighted  f1_weighted
+StandardScaler      linear      10   not used          0.9562    0.9750              0.9750           0.9750       0.9750
+  RobustScaler      linear      10   not used          0.9574    0.9675              0.9675           0.9675       0.9675
+  MinMaxScaler      linear      10   not used          0.9518    0.9625              0.9627           0.9625       0.9625
+
+StandardScaler: centers features and scales to unit variance.
+MinMaxScaler: scales values to a fixed range, usually 0 to 1.
+RobustScaler: uses median and interquartile range and is less affected by outliers.

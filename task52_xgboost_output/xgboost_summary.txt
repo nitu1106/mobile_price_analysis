@@ -1,0 +1,10 @@
+XGBOOST SUMMARY
+Dataset: train.csv
+Best parameters: {'xgb__learning_rate': 0.1, 'xgb__max_depth': 3, 'xgb__n_estimators': 200}
+Best CV weighted F1: 0.8978
+accuracy: 0.9400
+precision_weighted: 0.9400
+recall_weighted: 0.9400
+f1_weighted: 0.9399
+
+SHAP measures each feature's contribution to model output. Larger mean absolute SHAP means a larger average contribution.

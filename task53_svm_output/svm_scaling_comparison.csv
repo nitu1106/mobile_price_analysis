@@ -1,0 +1,4 @@
+scaling,best_kernel,best_C,best_gamma,cv_f1_weighted,accuracy,precision_weighted,recall_weighted,f1_weighted
+StandardScaler,linear,10,not used,0.9562213037163639,0.975,0.975047504750475,0.975,0.9749993749843746
+RobustScaler,linear,10,not used,0.9573729492316234,0.9675,0.96754900490049,0.9675,0.9675122503062576
+MinMaxScaler,linear,10,not used,0.951766479908534,0.9625,0.9626925627736843,0.9625,0.9625356276721199

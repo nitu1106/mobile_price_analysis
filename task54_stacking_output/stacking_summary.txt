@@ -1,0 +1,14 @@
+STACKING ENSEMBLE SUMMARY
+
+Base models: Random Forest, XGBoost and SVM.
+Meta-learner: Logistic Regression.
+The base models make predictions; the meta-learner learns how to combine them.
+
+            model  accuracy  precision_weighted  recall_weighted  f1_weighted
+Stacking Ensemble    0.9425              0.9425           0.9425       0.9423
+          XGBoost    0.9400              0.9400           0.9400       0.9399
+              SVM    0.8950              0.8969           0.8950       0.8956
+    Random Forest    0.8725              0.8716           0.8725       0.8719
+
+Best model by weighted F1-score: Stacking Ensemble
+Stacking may not always outperform each individual model. Compare the measured scores.

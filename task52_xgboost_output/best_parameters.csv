@@ -1,0 +1,2 @@
+xgb__learning_rate,xgb__max_depth,xgb__n_estimators
+0.1,3,200
