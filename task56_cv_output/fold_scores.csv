@@ -1,0 +1,26 @@
+CV Method,Fold / Repeat-Fold,Weighted F1,Accuracy
+K-Fold,1,0.892873992,0.8925
+K-Fold,2,0.884373133,0.885
+K-Fold,3,0.871776563,0.8725
+K-Fold,4,0.867525887,0.8675
+K-Fold,5,0.85693728,0.8575
+Stratified K-Fold,1,0.876675447,0.8775
+Stratified K-Fold,2,0.906887769,0.9075
+Stratified K-Fold,3,0.862695063,0.8625
+Stratified K-Fold,4,0.860839074,0.86
+Stratified K-Fold,5,0.889199089,0.89
+Repeated Stratified K-Fold,1,0.876675447,0.8775
+Repeated Stratified K-Fold,2,0.906887769,0.9075
+Repeated Stratified K-Fold,3,0.862695063,0.8625
+Repeated Stratified K-Fold,4,0.860839074,0.86
+Repeated Stratified K-Fold,5,0.889199089,0.89
+Repeated Stratified K-Fold,6,0.882772732,0.8825
+Repeated Stratified K-Fold,7,0.8672013,0.8675
+Repeated Stratified K-Fold,8,0.884652174,0.885
+Repeated Stratified K-Fold,9,0.874217124,0.875
+Repeated Stratified K-Fold,10,0.883947158,0.885
+Repeated Stratified K-Fold,11,0.881225863,0.8825
+Repeated Stratified K-Fold,12,0.889383804,0.89
+Repeated Stratified K-Fold,13,0.902628745,0.9025
+Repeated Stratified K-Fold,14,0.847755556,0.8475
+Repeated Stratified K-Fold,15,0.857865211,0.8575
