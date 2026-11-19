@@ -1,0 +1,46 @@
+MOBILE PRICE ANALYSIS - MODEL EVALUATION REPORT
+=======================================================
+
+DATASET OVERVIEW
+Rows used: 2000
+Numeric features: 20
+Feature names: battery_power, blue, clock_speed, dual_sim, fc, four_g, int_memory, m_dep, mobile_wt, n_cores, pc, px_height, px_width, ram, sc_h, sc_w, talk_time, three_g, touch_screen, wifi
+Missing feature values: 0
+Duplicate rows: 0
+
+TARGET CLASS DISTRIBUTION
+Price range 0: 500 rows
+Price range 1: 500 rows
+Price range 2: 500 rows
+Price range 3: 500 rows
+
+MODEL COMPARISON - 5-FOLD STRATIFIED CROSS-VALIDATION
+        model  accuracy_mean  accuracy_std  precision_weighted_mean  recall_weighted_mean  f1_weighted_mean  f1_weighted_std  average_fit_time_seconds
+Random Forest          0.885      0.017176                 0.886231                 0.885          0.884824         0.016946                  0.761325
+      SVM RBF          0.877      0.019326                 0.879835                 0.877          0.877667         0.019112                  0.345878
+  Extra Trees          0.875      0.009487                 0.874560                 0.875          0.874052         0.009791                  0.461215
+
+Best model by mean weighted F1: Random Forest
+Mean weighted F1: 0.8848
+Weighted F1 standard deviation: 0.0169
+
+IMPROVEMENT PLAN
+1. Data quality: inspect missing values, duplicate rows, invalid values and class balance.
+2. Feature engineering: test useful combinations of existing mobile features.
+   Examples if columns exist: pixel count = px_height x px_width; screen area = sc_h x sc_w;
+   battery capacity per unit weight = battery_power / weight.
+3. Feature importance: use SHAP or permutation importance to identify influential features.
+4. Hyperparameter tuning: use GridSearchCV or RandomizedSearchCV on the best candidates.
+   For trees tune n_estimators, max_depth, min_samples_split and max_features.
+   For SVM tune C and gamma; keep scaling inside the pipeline.
+5. Algorithm selection: compare tree models, SVM, Gradient Boosting and XGBoost fairly.
+6. Generalization: reserve a final untouched test set and evaluate after model selection.
+7. Probability calibration: compare sigmoid and isotonic if confidence scores matter.
+
+INTERPRETATION
+- Higher accuracy, precision, recall and F1 are generally better.
+- Lower cross-validation F1 standard deviation suggests more stable performance.
+- Select metrics based on the task goal; do not rely on accuracy alone.
+- Cross-validation is an estimate; confirm the final choice on an untouched test set.
+
+See model_evaluation_summary.csv for the numeric comparison.
