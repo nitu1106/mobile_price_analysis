@@ -1,0 +1,3 @@
+Method,Best CV Accuracy,Test Accuracy,Test Weighted F1,Time (seconds),Best Parameters
+Grid Search,0.8631225508452145,0.8875,0.8870540597949192,15.651070833206177,"{'model__max_depth': None, 'model__min_samples_split': 5, 'model__n_estimators': 200}"
+Random Search,0.8750026350738875,0.9025,0.9029084259025342,11.078253030776978,"{'model__n_estimators': 200, 'model__min_samples_split': 5, 'model__max_features': None, 'model__max_depth': None}"

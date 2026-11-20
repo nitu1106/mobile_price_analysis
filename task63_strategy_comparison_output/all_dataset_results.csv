@@ -1,0 +1,13 @@
+Dataset,Method,Best CV Accuracy,Test Accuracy,Test Weighted F1,Time (seconds),Best Parameters
+Mobile Price,Grid Search,0.8631225508452145,0.8875,0.8870540597949192,15.42257571220398,"{'model__max_depth': None, 'model__min_samples_split': 5, 'model__n_estimators': 200}"
+Mobile Price,Random Search,0.8756268547992309,0.9025,0.9026257897245228,5.857087850570679,"{'model__n_estimators': 150, 'model__min_samples_split': 5, 'model__max_features': None, 'model__max_depth': 20}"
+Mobile Price,Bayesian Optimization,0.8787538091456973,0.8975,0.8978325226847249,11.14798903465271,"OrderedDict({'model__max_depth': 15, 'model__max_features': None, 'model__min_samples_split': 3, 'model__n_estimators': 119})"
+Iris,Grid Search,0.9583333333333334,0.9666666666666667,0.9665831244778613,3.2434887886047363,"{'model__max_depth': None, 'model__min_samples_split': 5, 'model__n_estimators': 100}"
+Iris,Random Search,0.9583333333333334,0.9666666666666667,0.9665831244778613,3.275038719177246,"{'model__n_estimators': 100, 'model__min_samples_split': 5, 'model__max_features': 'log2', 'model__max_depth': None}"
+Iris,Bayesian Optimization,0.9583333333333334,0.9666666666666667,0.9665831244778613,5.1180949211120605,"OrderedDict({'model__max_depth': 10, 'model__max_features': None, 'model__min_samples_split': 8, 'model__n_estimators': 132})"
+Wine,Grid Search,0.9790189125295509,1.0,1.0,3.8334462642669678,"{'model__max_depth': None, 'model__min_samples_split': 2, 'model__n_estimators': 200}"
+Wine,Random Search,0.9790189125295509,1.0,1.0,4.054455041885376,"{'model__n_estimators': 100, 'model__min_samples_split': 5, 'model__max_features': 'log2', 'model__max_depth': None}"
+Wine,Bayesian Optimization,0.9790189125295509,1.0,1.0,6.210234642028809,"OrderedDict({'model__max_depth': 20, 'model__max_features': 'sqrt', 'model__min_samples_split': 6, 'model__n_estimators': 180})"
+Breast Cancer,Grid Search,0.9604246543511096,0.9473684210526315,0.9473684210526315,4.177294015884399,"{'model__max_depth': None, 'model__min_samples_split': 5, 'model__n_estimators': 200}"
+Breast Cancer,Random Search,0.9626466829324968,0.956140350877193,0.9560273762928302,4.2527382373809814,"{'model__n_estimators': 100, 'model__min_samples_split': 5, 'model__max_features': 'log2', 'model__max_depth': None}"
+Breast Cancer,Bayesian Optimization,0.9560532125014524,0.9473684210526315,0.9473684210526315,6.220798015594482,"OrderedDict({'model__max_depth': 15, 'model__max_features': 'log2', 'model__min_samples_split': 5, 'model__n_estimators': 172})"

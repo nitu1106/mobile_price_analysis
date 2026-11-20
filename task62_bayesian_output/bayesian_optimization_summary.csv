@@ -1,0 +1,2 @@
+Best CV Accuracy,Test Accuracy,Test Weighted F1,Time (seconds),Best Parameters
+0.878128418276404,0.9025,0.9027938344723245,61.49418091773987,"OrderedDict({'model__max_depth': 20, 'model__max_features': None, 'model__min_samples_split': 3, 'model__n_estimators': 138})"
