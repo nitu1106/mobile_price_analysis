@@ -1,0 +1,2 @@
+Rows,Features,CPU Cores,Selected Strategy,Reason,Best CV Accuracy,Test Accuracy,Weighted F1,Time (seconds),Best Parameters
+2000,20,8,Grid Search,Small dataset and manageable feature count.,0.8631225508452145,0.8875,0.8870540597949192,10.212601661682129,"{'model__max_depth': None, 'model__min_samples_split': 5, 'model__n_estimators': 200}"

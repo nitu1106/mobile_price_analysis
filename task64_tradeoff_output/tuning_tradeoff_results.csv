@@ -1,0 +1,4 @@
+Method,Best CV Accuracy,Test Accuracy,Weighted F1,Time (seconds),Best Parameters
+Grid Search,0.8631225508452145,0.8875,0.8870540597949192,15.374866485595703,"{'model__max_depth': None, 'model__min_samples_split': 5, 'model__n_estimators': 200}"
+Random Search,0.863745599426608,0.885,0.8843855170295888,5.078284502029419,"{'model__n_estimators': 150, 'model__min_samples_split': 5, 'model__max_features': 'sqrt', 'model__max_depth': 15}"
+Bayesian Optimization,0.8624959888319713,0.8925,0.8920750293816109,6.936154127120972,"OrderedDict({'model__max_depth': 15, 'model__max_features': 'sqrt', 'model__min_samples_split': 5, 'model__n_estimators': 172})"
