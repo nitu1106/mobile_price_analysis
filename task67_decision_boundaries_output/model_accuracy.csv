@@ -1,0 +1,4 @@
+Model,Test Accuracy,Training Time (seconds)
+SVM,0.8275,0.127028226852417
+Random Forest,0.7825,0.3940448760986328
+XGBoost,0.815,0.3630948066711426

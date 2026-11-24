@@ -1,0 +1,22 @@
+INTERPRETABILITY METHODS - SIMPLE COMPARISON
+
+SHAP:
+Explains how much each feature contributes to a prediction.
+Can be used for global and individual explanations. Detailed, but may take
+more time and needs the SHAP package.
+
+LIME:
+Explains one individual prediction by creating nearby sample inputs and
+fitting a simple local explanation. Easy to understand, but results can vary.
+
+PARTIAL DEPENDENCE PLOT (PDP):
+Shows how the model's average prediction changes when a feature changes.
+Useful for understanding the overall effect of a feature. Correlated features
+can make its interpretation less reliable.
+
+PERMUTATION IMPORTANCE:
+Shuffles one feature and checks how much model accuracy decreases.
+Simple and model-independent, but correlated features can affect the ranking.
+
+Use SHAP for feature contributions, LIME for one prediction, PDP for average
+feature behaviour, and permutation importance for a simple importance ranking.
