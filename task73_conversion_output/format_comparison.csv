@@ -1,0 +1,5 @@
+Format,Accuracy,Latency_ms_per_row
+Original scikit-learn,0.9325,0.0004378000012366101
+ONNX Runtime (CPU),0.9325,0.0007800499952281825
+Keras reference,0.9225,
+TensorFlow Lite (CPU),0.9225,0.003209249989595264

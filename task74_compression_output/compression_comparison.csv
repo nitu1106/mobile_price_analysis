@@ -1,0 +1,5 @@
+Method,Test_Accuracy,Agreement_with_baseline,Latency_ms_per_row,Model_size_KB,Note
+Baseline Random Forest,0.8775,1.0,0.17712084999948274,10686.7509765625,Reference model
+Smaller Random Forest,0.865,0.9075,0.05863370000588475,654.3935546875,Fewer trees and limited depth; pruning-like size reduction
+Distilled Decision Tree,0.83,0.8675,0.004322000000684056,6.9072265625,Small student trained on teacher predictions
+ONNX dynamic quantization,0.8775,1.0,0.010075049998704344,6334.8955078125,Quantized ONNX model; quantization support can depend on package versions
